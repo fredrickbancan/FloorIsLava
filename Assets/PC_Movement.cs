@@ -34,6 +34,9 @@ public class PC_Movement : MonoBehaviour
         {
             playerBody.velocity += playerTransform.forward * walkSpeed;
         }
-        playerBody.velocity = new Vector3(Mathf.Clamp(playerBody.velocity.x, -maxVel, maxVel), playerBody.velocity.y, Mathf.Clamp(playerBody.velocity.z, -maxVel, maxVel));
+
+        float prevy = playerBody.velocity.y;
+        playerBody.velocity = Vector3.ClampMagnitude(new Vector3(playerBody.velocity.x, 0, playerBody.velocity.z), maxVel);
+        playerBody.velocity = new Vector3(playerBody.velocity.x, prevy, playerBody.velocity.z);
     }
 }
