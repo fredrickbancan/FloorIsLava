@@ -23,10 +23,17 @@ public class PC_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.5F,-0.2F,0), Vector3.down), 0.5F) ||
+        //using rays on every bottom corner and edge of the player box to determine if they are standing on the ground.
+        isGrounded = 
+            Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.5F, -0.2F, 0), Vector3.down), 0.5F) ||
             Physics.Raycast(new Ray(playerTransform.position + new Vector3(-0.5F, -0.2F, 0), Vector3.down), 0.5F) ||
             Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.0F, -0.2F, 0.5F), Vector3.down), 0.5F) ||
-            Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.0F, -0.2F, -0.5F), Vector3.down), 0.5F);
+            Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.0F, -0.2F, -0.5F), Vector3.down), 0.5F) ||
+
+            Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.5F, -0.2F, 0.5F), Vector3.down), 0.5F) ||
+            Physics.Raycast(new Ray(playerTransform.position + new Vector3(-0.5F, -0.2F, -0.5F), Vector3.down), 0.5F) ||
+            Physics.Raycast(new Ray(playerTransform.position + new Vector3(-0.5F, -0.2F, 0.5F), Vector3.down), 0.5F) ||
+            Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.5F, -0.2F, -0.5F), Vector3.down), 0.5F);
         isJumping = Input.GetKeyDown(KeyCode.Space);
         isWalkingFowards = Input.GetKey(KeyCode.W);
         isWalkingBack = Input.GetKey(KeyCode.S);
@@ -60,5 +67,6 @@ public class PC_Movement : MonoBehaviour
         float prevy = playerBody.velocity.y;
         playerBody.velocity = Vector3.ClampMagnitude(new Vector3(playerBody.velocity.x, 0, playerBody.velocity.z), maxVel);
         playerBody.velocity = new Vector3(playerBody.velocity.x, prevy, playerBody.velocity.z);
+
     }
 }
