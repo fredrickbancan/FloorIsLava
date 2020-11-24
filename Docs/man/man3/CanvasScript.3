@@ -1,0 +1,106 @@
+.TH "CanvasScript" 3 "Tue Nov 24 2020" "Version 1.0" "FloorIsLava" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CanvasScript \- Class for core logic of main canvas (hud)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits MonoBehaviour\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBonWin\fP ()"
+.br
+.RI "Called when the player has won, sets displayWinText to TRUE "
+.ti -1c
+.RI "void \fBonLoss\fP ()"
+.br
+.RI "Called when the player has lost, sets displayLossText to TRUE "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Text \fBwinText\fP"
+.br
+.RI "Reference to text which shows on win "
+.ti -1c
+.RI "Text \fBlossText\fP"
+.br
+.RI "Reference to text which shows on loss "
+.ti -1c
+.RI "int \fBmaxLossTextDisplayTicks\fP = 100"
+.br
+.RI "n of ticks the loss text exists before being disabled "
+.ti -1c
+.RI "int \fBmaxWinTextDisplayTicks\fP = 100"
+.br
+.RI "n of ticks the win text exists before being disabled "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class for core logic of main canvas (hud) 
+
+
+.PP
+Definition at line 7 of file CanvasScript\&.cs\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void CanvasScript\&.onLoss ()"
+
+.PP
+Called when the player has lost, sets displayLossText to TRUE 
+.PP
+Definition at line 98 of file CanvasScript\&.cs\&.
+.PP
+.nf
+99     {
+100         displayLossText = true;
+101     }
+.fi
+.SS "void CanvasScript\&.onWin ()"
+
+.PP
+Called when the player has won, sets displayWinText to TRUE 
+.PP
+Definition at line 90 of file CanvasScript\&.cs\&.
+.PP
+.nf
+91     {
+92         displayWinText = true;
+93     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "Text CanvasScript\&.lossText"
+
+.PP
+Reference to text which shows on loss 
+.PP
+Definition at line 17 of file CanvasScript\&.cs\&.
+.SS "int CanvasScript\&.maxLossTextDisplayTicks = 100"
+
+.PP
+n of ticks the loss text exists before being disabled 
+.PP
+Definition at line 27 of file CanvasScript\&.cs\&.
+.SS "int CanvasScript\&.maxWinTextDisplayTicks = 100"
+
+.PP
+n of ticks the win text exists before being disabled 
+.PP
+Definition at line 37 of file CanvasScript\&.cs\&.
+.SS "Text CanvasScript\&.winText"
+
+.PP
+Reference to text which shows on win 
+.PP
+Definition at line 12 of file CanvasScript\&.cs\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FloorIsLava from the source code\&.

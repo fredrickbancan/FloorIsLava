@@ -1,0 +1,149 @@
+\hypertarget{class_canvas_script}{}\doxysection{Canvas\+Script Class Reference}
+\label{class_canvas_script}\index{CanvasScript@{CanvasScript}}
+
+
+Class for core logic of main canvas (hud)  
+
+
+Inheritance diagram for Canvas\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_canvas_script}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_canvas_script_ae339faa23c9205694bff5f2a9f9ce7a4}{on\+Win}} ()
+\begin{DoxyCompactList}\small\item\em Called when the player has won, sets display\+Win\+Text to T\+R\+UE \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_canvas_script_ad3806a782fa0e9026e3167422c64a735}{on\+Loss}} ()
+\begin{DoxyCompactList}\small\item\em Called when the player has lost, sets display\+Loss\+Text to T\+R\+UE \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Text \mbox{\hyperlink{class_canvas_script_ad895a27077a6c7a1368e2ee7f6f467f9}{win\+Text}}
+\begin{DoxyCompactList}\small\item\em Reference to text which shows on win \end{DoxyCompactList}\item 
+Text \mbox{\hyperlink{class_canvas_script_accc2510263c8ae587337dddd85b52869}{loss\+Text}}
+\begin{DoxyCompactList}\small\item\em Reference to text which shows on loss \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_canvas_script_aaa20089f1f93887cc5a5b1b5f42812b8}{max\+Loss\+Text\+Display\+Ticks}} = 100
+\begin{DoxyCompactList}\small\item\em n of ticks the loss text exists before being disabled \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_canvas_script_a8387725e5b8d845e02eda507f3e3514e}{max\+Win\+Text\+Display\+Ticks}} = 100
+\begin{DoxyCompactList}\small\item\em n of ticks the win text exists before being disabled \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for core logic of main canvas (hud) 
+
+
+
+Definition at line 7 of file Canvas\+Script.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_canvas_script_ad3806a782fa0e9026e3167422c64a735}\label{class_canvas_script_ad3806a782fa0e9026e3167422c64a735}} 
+\index{CanvasScript@{CanvasScript}!onLoss@{onLoss}}
+\index{onLoss@{onLoss}!CanvasScript@{CanvasScript}}
+\doxysubsubsection{\texorpdfstring{onLoss()}{onLoss()}}
+{\footnotesize\ttfamily void Canvas\+Script.\+on\+Loss (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when the player has lost, sets display\+Loss\+Text to T\+R\+UE 
+
+
+
+Definition at line 98 of file Canvas\+Script.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99     \{}
+\DoxyCodeLine{100         displayLossText = \textcolor{keyword}{true};}
+\DoxyCodeLine{101     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_script_ae339faa23c9205694bff5f2a9f9ce7a4}\label{class_canvas_script_ae339faa23c9205694bff5f2a9f9ce7a4}} 
+\index{CanvasScript@{CanvasScript}!onWin@{onWin}}
+\index{onWin@{onWin}!CanvasScript@{CanvasScript}}
+\doxysubsubsection{\texorpdfstring{onWin()}{onWin()}}
+{\footnotesize\ttfamily void Canvas\+Script.\+on\+Win (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when the player has won, sets display\+Win\+Text to T\+R\+UE 
+
+
+
+Definition at line 90 of file Canvas\+Script.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91     \{}
+\DoxyCodeLine{92         displayWinText = \textcolor{keyword}{true};}
+\DoxyCodeLine{93     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_canvas_script_accc2510263c8ae587337dddd85b52869}\label{class_canvas_script_accc2510263c8ae587337dddd85b52869}} 
+\index{CanvasScript@{CanvasScript}!lossText@{lossText}}
+\index{lossText@{lossText}!CanvasScript@{CanvasScript}}
+\doxysubsubsection{\texorpdfstring{lossText}{lossText}}
+{\footnotesize\ttfamily Text Canvas\+Script.\+loss\+Text}
+
+
+
+Reference to text which shows on loss 
+
+
+
+Definition at line 17 of file Canvas\+Script.\+cs.
+
+\mbox{\Hypertarget{class_canvas_script_aaa20089f1f93887cc5a5b1b5f42812b8}\label{class_canvas_script_aaa20089f1f93887cc5a5b1b5f42812b8}} 
+\index{CanvasScript@{CanvasScript}!maxLossTextDisplayTicks@{maxLossTextDisplayTicks}}
+\index{maxLossTextDisplayTicks@{maxLossTextDisplayTicks}!CanvasScript@{CanvasScript}}
+\doxysubsubsection{\texorpdfstring{maxLossTextDisplayTicks}{maxLossTextDisplayTicks}}
+{\footnotesize\ttfamily int Canvas\+Script.\+max\+Loss\+Text\+Display\+Ticks = 100}
+
+
+
+n of ticks the loss text exists before being disabled 
+
+
+
+Definition at line 27 of file Canvas\+Script.\+cs.
+
+\mbox{\Hypertarget{class_canvas_script_a8387725e5b8d845e02eda507f3e3514e}\label{class_canvas_script_a8387725e5b8d845e02eda507f3e3514e}} 
+\index{CanvasScript@{CanvasScript}!maxWinTextDisplayTicks@{maxWinTextDisplayTicks}}
+\index{maxWinTextDisplayTicks@{maxWinTextDisplayTicks}!CanvasScript@{CanvasScript}}
+\doxysubsubsection{\texorpdfstring{maxWinTextDisplayTicks}{maxWinTextDisplayTicks}}
+{\footnotesize\ttfamily int Canvas\+Script.\+max\+Win\+Text\+Display\+Ticks = 100}
+
+
+
+n of ticks the win text exists before being disabled 
+
+
+
+Definition at line 37 of file Canvas\+Script.\+cs.
+
+\mbox{\Hypertarget{class_canvas_script_ad895a27077a6c7a1368e2ee7f6f467f9}\label{class_canvas_script_ad895a27077a6c7a1368e2ee7f6f467f9}} 
+\index{CanvasScript@{CanvasScript}!winText@{winText}}
+\index{winText@{winText}!CanvasScript@{CanvasScript}}
+\doxysubsubsection{\texorpdfstring{winText}{winText}}
+{\footnotesize\ttfamily Text Canvas\+Script.\+win\+Text}
+
+
+
+Reference to text which shows on win 
+
+
+
+Definition at line 12 of file Canvas\+Script.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Floor\+Is\+Lava/\+Assets/\+Scripts/\mbox{\hyperlink{_canvas_script_8cs}{Canvas\+Script.\+cs}}\end{DoxyCompactItemize}

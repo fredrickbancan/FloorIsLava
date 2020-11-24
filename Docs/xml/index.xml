@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.20" xml:lang="en-US">
+  <compound refid="class_canvas_script" kind="class"><name>CanvasScript</name>
+    <member refid="class_canvas_script_1ad895a27077a6c7a1368e2ee7f6f467f9" kind="variable"><name>winText</name></member>
+    <member refid="class_canvas_script_1accc2510263c8ae587337dddd85b52869" kind="variable"><name>lossText</name></member>
+    <member refid="class_canvas_script_1aaa20089f1f93887cc5a5b1b5f42812b8" kind="variable"><name>maxLossTextDisplayTicks</name></member>
+    <member refid="class_canvas_script_1a8387725e5b8d845e02eda507f3e3514e" kind="variable"><name>maxWinTextDisplayTicks</name></member>
+    <member refid="class_canvas_script_1adfdad6120c1f09070b598858bf4e2eed" kind="variable"><name>lossTextDisplayTicks</name></member>
+    <member refid="class_canvas_script_1a9737083d48a464ab93bf8e688efcd709" kind="variable"><name>winTextDisplayTicks</name></member>
+    <member refid="class_canvas_script_1ae96103759accaacc3163cb4eee2f6568" kind="variable"><name>displayWinText</name></member>
+    <member refid="class_canvas_script_1afa81268b9406d04d237efb7900a0b624" kind="variable"><name>displayLossText</name></member>
+    <member refid="class_canvas_script_1a5a33664ee164b7eb56d8491b438499ba" kind="function"><name>Update</name></member>
+    <member refid="class_canvas_script_1ae339faa23c9205694bff5f2a9f9ce7a4" kind="function"><name>onWin</name></member>
+    <member refid="class_canvas_script_1ad3806a782fa0e9026e3167422c64a735" kind="function"><name>onLoss</name></member>
+  </compound>
+  <compound refid="classlava_script" kind="class"><name>lavaScript</name>
+    <member refid="classlava_script_1a86046d5ca45fc1d025ab95ee6d818d11" kind="variable"><name>lavaTransform</name></member>
+    <member refid="classlava_script_1a055c0df9f55aa81a901f6b275b52839c" kind="variable"><name>startHeight</name></member>
+    <member refid="classlava_script_1abca9120810f8c09f476f4ef755346cb1" kind="variable"><name>moveSpeed</name></member>
+    <member refid="classlava_script_1a11aaca301871da134a47fdba4a787ef2" kind="function"><name>Start</name></member>
+    <member refid="classlava_script_1a2ac92810050f16332fd966d340938184" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_p_c___mouse_look" kind="class"><name>PC_MouseLook</name>
+    <member refid="class_p_c___mouse_look_1affa930b038b6ae57fa68e429b636054b" kind="variable"><name>prevMouseX</name></member>
+    <member refid="class_p_c___mouse_look_1a1f73cb059faa099b88a752b5fcd31985" kind="variable"><name>yRot</name></member>
+    <member refid="class_p_c___mouse_look_1ab9d6717daecfc10e2c96fdc3cb5f8fb8" kind="variable"><name>playerBody</name></member>
+    <member refid="class_p_c___mouse_look_1ac6a67b858bac4d5934a1ea8982c1566e" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_p_c___movement" kind="class"><name>PC_Movement</name>
+    <member refid="class_p_c___movement_1a001bb6ad7ee608a270cb1adfde71ca66" kind="variable"><name>playerBody</name></member>
+    <member refid="class_p_c___movement_1abf8204b782bb180404fbb38fa6301d15" kind="variable"><name>playerTransform</name></member>
+    <member refid="class_p_c___movement_1aa826cf2ae48541b3a5911fb219a53a64" kind="variable"><name>jumpForce</name></member>
+    <member refid="class_p_c___movement_1a3eace894901d8d851e3d83ac820d6083" kind="variable"><name>walkSpeed</name></member>
+    <member refid="class_p_c___movement_1aefcd88b4ecc3c47dc059d0cfc6dab619" kind="variable"><name>maxVel</name></member>
+    <member refid="class_p_c___movement_1aac02227825d942a2fcb43f9495ab677b" kind="variable"><name>isJumping</name></member>
+    <member refid="class_p_c___movement_1a4925e830df4f7177e95b877a44630e50" kind="variable"><name>isWalkingFowards</name></member>
+    <member refid="class_p_c___movement_1aa810a5651df017cad38fc83fd11043d3" kind="variable"><name>isWalkingBack</name></member>
+    <member refid="class_p_c___movement_1af1b1494928b97050a7e3728fe24317fe" kind="variable"><name>isStrafingRight</name></member>
+    <member refid="class_p_c___movement_1acefa24eefb2a5f8c1bd2aa16a8535fac" kind="variable"><name>isStrafingLeft</name></member>
+    <member refid="class_p_c___movement_1ac84c14c634ede8508af66dae4315b7e0" kind="variable"><name>isGrounded</name></member>
+    <member refid="class_p_c___movement_1a5fa6dcf809fe4c35032990a90cc387e9" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_player_script" kind="class"><name>PlayerScript</name>
+    <member refid="class_player_script_1adc4f3dcd2e4f0b801ff6d13e95e3e4d3" kind="variable"><name>cs</name></member>
+    <member refid="class_player_script_1a50797cd94984e84d427d6be998907965" kind="variable"><name>player</name></member>
+    <member refid="class_player_script_1a92f4f84ae798cf617031fa24a6b1589d" kind="variable"><name>maxRespawnTicks</name></member>
+    <member refid="class_player_script_1a90ea767adedc4185b76a5c25ddff0f6e" kind="variable"><name>ticksSinceWinLoss</name></member>
+    <member refid="class_player_script_1a9d4aceaf9bfa5b4dfdd3515fe8e6afde" kind="variable"><name>hasWonOrLost</name></member>
+    <member refid="class_player_script_1a9464a6aa07d259841f54bc24a9522f7c" kind="function"><name>Update</name></member>
+    <member refid="class_player_script_1a7f13d1a39a3a90c097c07a7a37cd103c" kind="function"><name>OnTriggerEnter</name></member>
+  </compound>
+  <compound refid="namespace_unity_engine" kind="namespace"><name>UnityEngine</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_scene_management" kind="namespace"><name>UnityEngine::SceneManagement</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_u_i" kind="namespace"><name>UnityEngine::UI</name>
+  </compound>
+  <compound refid="_canvas_script_8cs" kind="file"><name>CanvasScript.cs</name>
+  </compound>
+  <compound refid="lava_script_8cs" kind="file"><name>lavaScript.cs</name>
+  </compound>
+  <compound refid="_p_c___mouse_look_8cs" kind="file"><name>PC_MouseLook.cs</name>
+  </compound>
+  <compound refid="_p_c___movement_8cs" kind="file"><name>PC_Movement.cs</name>
+  </compound>
+  <compound refid="_player_script_8cs" kind="file"><name>PlayerScript.cs</name>
+  </compound>
+  <compound refid="dir_b4a201941fc250eca15b0c5215dcd444" kind="dir"><name>FloorIsLava/Assets</name>
+  </compound>
+  <compound refid="dir_650d003c1b6bca0b1027be23060b5750" kind="dir"><name>FloorIsLava</name>
+  </compound>
+  <compound refid="dir_12a1ab564983e13a7d0b24c0a20ea472" kind="dir"><name>FloorIsLava/Assets/Scripts</name>
+  </compound>
+</doxygenindex>

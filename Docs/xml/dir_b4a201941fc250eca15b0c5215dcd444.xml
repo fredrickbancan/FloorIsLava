@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
+  <compounddef id="dir_b4a201941fc250eca15b0c5215dcd444" kind="dir">
+    <compoundname>FloorIsLava/Assets</compoundname>
+    <innerdir refid="dir_12a1ab564983e13a7d0b24c0a20ea472">FloorIsLava/Assets/Scripts</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="FloorIsLava/Assets/"/>
+  </compounddef>
+</doxygen>

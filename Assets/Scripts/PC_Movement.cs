@@ -1,26 +1,47 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Class for PC movement of player (keyboard)
+/// </summary>
 public class PC_Movement : MonoBehaviour
 {
+    /// <summary>
+    /// ref to player rigidbody for physics
+    /// </summary>
     public Rigidbody playerBody;
+
+    /// <summary>
+    /// ref to player transform for movement
+    /// </summary>
     public Transform playerTransform;
+
+    /// <summary>
+    /// editable value to determine the power of the players jump
+    /// </summary>
     public float jumpForce;
+
+    /// <summary>
+    /// editable value to determine the speed of player movement
+    /// </summary>
     public float walkSpeed;
+
+    /// <summary>
+    /// editable value to determine the players maximum horizontal velocity
+    /// </summary>
     public float maxVel;
+
+
     bool isJumping = false;
     bool isWalkingFowards = false;
     bool isWalkingBack = false;
     bool isStrafingRight = false;
     bool isStrafingLeft = false;
     bool isGrounded = true;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+  
+    /// <summary>
+    /// Detects if the player is grounded using multiple raycasts below the player.
+    /// If the player is grounded, then depending on input keys being pressed, they will move or jump.
+    /// </summary>
     void Update()
     {
         //using rays on every bottom corner and edge of the player box to determine if they are standing on the ground.

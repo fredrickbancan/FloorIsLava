@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
+  <compounddef id="class_p_c___movement" kind="class" language="C#" prot="public">
+    <compoundname>PC_Movement</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_p_c___movement_1a001bb6ad7ee608a270cb1adfde71ca66" prot="public" static="no" mutable="no">
+        <type>Rigidbody</type>
+        <definition>Rigidbody PC_Movement.playerBody</definition>
+        <argsstring></argsstring>
+        <name>playerBody</name>
+        <briefdescription>
+<para>ref to player rigidbody for physics </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/PC_Movement.cs" line="11" column="22" bodyfile="FloorIsLava/Assets/Scripts/PC_Movement.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_c___movement_1abf8204b782bb180404fbb38fa6301d15" prot="public" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform PC_Movement.playerTransform</definition>
+        <argsstring></argsstring>
+        <name>playerTransform</name>
+        <briefdescription>
+<para>ref to player transform for movement </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/PC_Movement.cs" line="16" column="22" bodyfile="FloorIsLava/Assets/Scripts/PC_Movement.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_c___movement_1aa826cf2ae48541b3a5911fb219a53a64" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PC_Movement.jumpForce</definition>
+        <argsstring></argsstring>
+        <name>jumpForce</name>
+        <briefdescription>
+<para>editable value to determine the power of the players jump </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/PC_Movement.cs" line="21" column="18" bodyfile="FloorIsLava/Assets/Scripts/PC_Movement.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_c___movement_1a3eace894901d8d851e3d83ac820d6083" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PC_Movement.walkSpeed</definition>
+        <argsstring></argsstring>
+        <name>walkSpeed</name>
+        <briefdescription>
+<para>editable value to determine the speed of player movement </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/PC_Movement.cs" line="26" column="18" bodyfile="FloorIsLava/Assets/Scripts/PC_Movement.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_c___movement_1aefcd88b4ecc3c47dc059d0cfc6dab619" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PC_Movement.maxVel</definition>
+        <argsstring></argsstring>
+        <name>maxVel</name>
+        <briefdescription>
+<para>editable value to determine the players maximum horizontal velocity </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/PC_Movement.cs" line="31" column="18" bodyfile="FloorIsLava/Assets/Scripts/PC_Movement.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_p_c___movement_1aac02227825d942a2fcb43f9495ab677b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PC_Movement.isJumping</definition>
+        <argsstring></argsstring>
+        <name>isJumping</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/PC_Movement.cs" line="34" column="10" bodyfile="FloorIsLava/Assets/Scripts/PC_Movement.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_c___movement_1a4925e830df4f7177e95b877a44630e50" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PC_Movement.isWalkingFowards</definition>
+        <argsstring></argsstring>
+        <name>isWalkingFowards</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/PC_Movement.cs" line="35" column="10" bodyfile="FloorIsLava/Assets/Scripts/PC_Movement.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_c___movement_1aa810a5651df017cad38fc83fd11043d3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PC_Movement.isWalkingBack</definition>
+        <argsstring></argsstring>
+        <name>isWalkingBack</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/PC_Movement.cs" line="36" column="10" bodyfile="FloorIsLava/Assets/Scripts/PC_Movement.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_c___movement_1af1b1494928b97050a7e3728fe24317fe" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PC_Movement.isStrafingRight</definition>
+        <argsstring></argsstring>
+        <name>isStrafingRight</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/PC_Movement.cs" line="37" column="10" bodyfile="FloorIsLava/Assets/Scripts/PC_Movement.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_c___movement_1acefa24eefb2a5f8c1bd2aa16a8535fac" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PC_Movement.isStrafingLeft</definition>
+        <argsstring></argsstring>
+        <name>isStrafingLeft</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/PC_Movement.cs" line="38" column="10" bodyfile="FloorIsLava/Assets/Scripts/PC_Movement.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_c___movement_1ac84c14c634ede8508af66dae4315b7e0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PC_Movement.isGrounded</definition>
+        <argsstring></argsstring>
+        <name>isGrounded</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/PC_Movement.cs" line="39" column="10" bodyfile="FloorIsLava/Assets/Scripts/PC_Movement.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_p_c___movement_1a5fa6dcf809fe4c35032990a90cc387e9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PC_Movement.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+<para>Detects if the player is grounded using multiple raycasts below the player. If the player is grounded, then depending on input keys being pressed, they will move or jump. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/PC_Movement.cs" line="45" column="10" bodyfile="FloorIsLava/Assets/Scripts/PC_Movement.cs" bodystart="45" bodyend="92"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class for PC movement of player (keyboard) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PC_Movement</label>
+        <link refid="class_p_c___movement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PC_Movement</label>
+        <link refid="class_p_c___movement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="FloorIsLava/Assets/Scripts/PC_Movement.cs" line="6" column="7" bodyfile="FloorIsLava/Assets/Scripts/PC_Movement.cs" bodystart="7" bodyend="93"/>
+    <listofallmembers>
+      <member refid="class_p_c___movement_1ac84c14c634ede8508af66dae4315b7e0" prot="private" virt="non-virtual"><scope>PC_Movement</scope><name>isGrounded</name></member>
+      <member refid="class_p_c___movement_1aac02227825d942a2fcb43f9495ab677b" prot="private" virt="non-virtual"><scope>PC_Movement</scope><name>isJumping</name></member>
+      <member refid="class_p_c___movement_1acefa24eefb2a5f8c1bd2aa16a8535fac" prot="private" virt="non-virtual"><scope>PC_Movement</scope><name>isStrafingLeft</name></member>
+      <member refid="class_p_c___movement_1af1b1494928b97050a7e3728fe24317fe" prot="private" virt="non-virtual"><scope>PC_Movement</scope><name>isStrafingRight</name></member>
+      <member refid="class_p_c___movement_1aa810a5651df017cad38fc83fd11043d3" prot="private" virt="non-virtual"><scope>PC_Movement</scope><name>isWalkingBack</name></member>
+      <member refid="class_p_c___movement_1a4925e830df4f7177e95b877a44630e50" prot="private" virt="non-virtual"><scope>PC_Movement</scope><name>isWalkingFowards</name></member>
+      <member refid="class_p_c___movement_1aa826cf2ae48541b3a5911fb219a53a64" prot="public" virt="non-virtual"><scope>PC_Movement</scope><name>jumpForce</name></member>
+      <member refid="class_p_c___movement_1aefcd88b4ecc3c47dc059d0cfc6dab619" prot="public" virt="non-virtual"><scope>PC_Movement</scope><name>maxVel</name></member>
+      <member refid="class_p_c___movement_1a001bb6ad7ee608a270cb1adfde71ca66" prot="public" virt="non-virtual"><scope>PC_Movement</scope><name>playerBody</name></member>
+      <member refid="class_p_c___movement_1abf8204b782bb180404fbb38fa6301d15" prot="public" virt="non-virtual"><scope>PC_Movement</scope><name>playerTransform</name></member>
+      <member refid="class_p_c___movement_1a5fa6dcf809fe4c35032990a90cc387e9" prot="private" virt="non-virtual"><scope>PC_Movement</scope><name>Update</name></member>
+      <member refid="class_p_c___movement_1a3eace894901d8d851e3d83ac820d6083" prot="public" virt="non-virtual"><scope>PC_Movement</scope><name>walkSpeed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

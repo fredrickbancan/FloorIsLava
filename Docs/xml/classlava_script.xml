@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
+  <compounddef id="classlava_script" kind="class" language="C#" prot="public">
+    <compoundname>lavaScript</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classlava_script_1a86046d5ca45fc1d025ab95ee6d818d11" prot="public" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform lavaScript.lavaTransform</definition>
+        <argsstring></argsstring>
+        <name>lavaTransform</name>
+        <briefdescription>
+<para>Ref to lava plane transform for moving it </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/lavaScript.cs" line="11" column="22" bodyfile="FloorIsLava/Assets/Scripts/lavaScript.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlava_script_1a055c0df9f55aa81a901f6b275b52839c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float lavaScript.startHeight</definition>
+        <argsstring></argsstring>
+        <name>startHeight</name>
+        <initializer>= -10.0F</initializer>
+        <briefdescription>
+<para>height value of lava plane when it starts </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/lavaScript.cs" line="16" column="18" bodyfile="FloorIsLava/Assets/Scripts/lavaScript.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classlava_script_1abca9120810f8c09f476f4ef755346cb1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float lavaScript.moveSpeed</definition>
+        <argsstring></argsstring>
+        <name>moveSpeed</name>
+        <initializer>= 0.01F</initializer>
+        <briefdescription>
+<para>number of units the lava plane moves each update vertically </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/lavaScript.cs" line="21" column="18" bodyfile="FloorIsLava/Assets/Scripts/lavaScript.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlava_script_1a11aaca301871da134a47fdba4a787ef2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lavaScript.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+<para>Sets the lava height to the startHeight value </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/lavaScript.cs" line="26" column="10" bodyfile="FloorIsLava/Assets/Scripts/lavaScript.cs" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classlava_script_1a2ac92810050f16332fd966d340938184" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lavaScript.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+<para>Increases the lava plane height by moveSpeed units each update </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FloorIsLava/Assets/Scripts/lavaScript.cs" line="34" column="10" bodyfile="FloorIsLava/Assets/Scripts/lavaScript.cs" bodystart="34" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class for core logic of lava plane </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>lavaScript</label>
+        <link refid="classlava_script"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>lavaScript</label>
+        <link refid="classlava_script"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="FloorIsLava/Assets/Scripts/lavaScript.cs" line="6" column="7" bodyfile="FloorIsLava/Assets/Scripts/lavaScript.cs" bodystart="7" bodyend="40"/>
+    <listofallmembers>
+      <member refid="classlava_script_1a86046d5ca45fc1d025ab95ee6d818d11" prot="public" virt="non-virtual"><scope>lavaScript</scope><name>lavaTransform</name></member>
+      <member refid="classlava_script_1abca9120810f8c09f476f4ef755346cb1" prot="public" virt="non-virtual"><scope>lavaScript</scope><name>moveSpeed</name></member>
+      <member refid="classlava_script_1a11aaca301871da134a47fdba4a787ef2" prot="private" virt="non-virtual"><scope>lavaScript</scope><name>Start</name></member>
+      <member refid="classlava_script_1a055c0df9f55aa81a901f6b275b52839c" prot="public" virt="non-virtual"><scope>lavaScript</scope><name>startHeight</name></member>
+      <member refid="classlava_script_1a2ac92810050f16332fd966d340938184" prot="private" virt="non-virtual"><scope>lavaScript</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
