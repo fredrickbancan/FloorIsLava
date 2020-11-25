@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['startheight_24',['startHeight',['../classlava_script.html#a055c0df9f55aa81a901f6b275b52839c',1,'lavaScript']]]
+  ['maxlosstextdisplayticks_18',['maxLossTextDisplayTicks',['../class_canvas_script.html#aaa20089f1f93887cc5a5b1b5f42812b8',1,'CanvasScript']]],
+  ['maxrespawnticks_19',['maxRespawnTicks',['../class_player_script.html#a92f4f84ae798cf617031fa24a6b1589d',1,'PlayerScript']]],
+  ['maxvel_20',['maxVel',['../class_p_c___movement.html#aefcd88b4ecc3c47dc059d0cfc6dab619',1,'PC_Movement']]],
+  ['maxwintextdisplayticks_21',['maxWinTextDisplayTicks',['../class_canvas_script.html#a8387725e5b8d845e02eda507f3e3514e',1,'CanvasScript']]],
+  ['movespeed_22',['moveSpeed',['../classlava_script.html#abca9120810f8c09f476f4ef755346cb1',1,'lavaScript']]]
 ];

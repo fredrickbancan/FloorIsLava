@@ -29,6 +29,22 @@ int \mbox{\hyperlink{class_canvas_script_aaa20089f1f93887cc5a5b1b5f42812b8}{max\
 \begin{DoxyCompactList}\small\item\em n of ticks the loss text exists before being disabled \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_canvas_script_a8387725e5b8d845e02eda507f3e3514e}{max\+Win\+Text\+Display\+Ticks}} = 100
 \begin{DoxyCompactList}\small\item\em n of ticks the win text exists before being disabled \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_canvas_script_a5a33664ee164b7eb56d8491b438499ba}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Counts n of ticks that either win/loss text has been displayed for. Once reaching their max n, they are disabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_canvas_script_adfdad6120c1f09070b598858bf4e2eed}{loss\+Text\+Display\+Ticks}} = 0
+\begin{DoxyCompactList}\small\item\em n of ticks that the loss text has been displayed \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_canvas_script_a9737083d48a464ab93bf8e688efcd709}{win\+Text\+Display\+Ticks}} = 0
+\begin{DoxyCompactList}\small\item\em n of ticks that the win text has been displayed \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_canvas_script_ae96103759accaacc3163cb4eee2f6568}{display\+Win\+Text}} = false
+\begin{DoxyCompactList}\small\item\em set to T\+R\+UE when displaying win text \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_canvas_script_afa81268b9406d04d237efb7900a0b624}{display\+Loss\+Text}} = false
+\begin{DoxyCompactList}\small\item\em set to T\+R\+UE when displaying loss text \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -58,7 +74,7 @@ Definition at line 98 of file Canvas\+Script.\+cs.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{99     \{}
-\DoxyCodeLine{100         displayLossText = \textcolor{keyword}{true};}
+\DoxyCodeLine{100         \mbox{\hyperlink{class_canvas_script_afa81268b9406d04d237efb7900a0b624}{displayLossText}} = \textcolor{keyword}{true};}
 \DoxyCodeLine{101     \}}
 
 \end{DoxyCode}
@@ -79,13 +95,91 @@ Definition at line 90 of file Canvas\+Script.\+cs.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{91     \{}
-\DoxyCodeLine{92         displayWinText = \textcolor{keyword}{true};}
+\DoxyCodeLine{92         \mbox{\hyperlink{class_canvas_script_ae96103759accaacc3163cb4eee2f6568}{displayWinText}} = \textcolor{keyword}{true};}
 \DoxyCodeLine{93     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_script_a5a33664ee164b7eb56d8491b438499ba}\label{class_canvas_script_a5a33664ee164b7eb56d8491b438499ba}} 
+\index{CanvasScript@{CanvasScript}!Update@{Update}}
+\index{Update@{Update}!CanvasScript@{CanvasScript}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Canvas\+Script.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Counts n of ticks that either win/loss text has been displayed for. Once reaching their max n, they are disabled. 
+
+
+
+Definition at line 53 of file Canvas\+Script.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54     \{}
+\DoxyCodeLine{55         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_canvas_script_afa81268b9406d04d237efb7900a0b624}{displayLossText}})}
+\DoxyCodeLine{56         \{}
+\DoxyCodeLine{57             \mbox{\hyperlink{class_canvas_script_adfdad6120c1f09070b598858bf4e2eed}{lossTextDisplayTicks}}++;}
+\DoxyCodeLine{58             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_canvas_script_adfdad6120c1f09070b598858bf4e2eed}{lossTextDisplayTicks}} >= \mbox{\hyperlink{class_canvas_script_aaa20089f1f93887cc5a5b1b5f42812b8}{maxLossTextDisplayTicks}})}
+\DoxyCodeLine{59             \{}
+\DoxyCodeLine{60                 \mbox{\hyperlink{class_canvas_script_adfdad6120c1f09070b598858bf4e2eed}{lossTextDisplayTicks}} = 0;}
+\DoxyCodeLine{61                 \mbox{\hyperlink{class_canvas_script_afa81268b9406d04d237efb7900a0b624}{displayLossText}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{62             \}}
+\DoxyCodeLine{63         \}}
+\DoxyCodeLine{64         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{65         \{}
+\DoxyCodeLine{66             \mbox{\hyperlink{class_canvas_script_adfdad6120c1f09070b598858bf4e2eed}{lossTextDisplayTicks}} = 0;}
+\DoxyCodeLine{67         \}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_canvas_script_ae96103759accaacc3163cb4eee2f6568}{displayWinText}})}
+\DoxyCodeLine{70         \{}
+\DoxyCodeLine{71             \mbox{\hyperlink{class_canvas_script_a9737083d48a464ab93bf8e688efcd709}{winTextDisplayTicks}}++;}
+\DoxyCodeLine{72             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_canvas_script_a9737083d48a464ab93bf8e688efcd709}{winTextDisplayTicks}} >= \mbox{\hyperlink{class_canvas_script_a8387725e5b8d845e02eda507f3e3514e}{maxWinTextDisplayTicks}})}
+\DoxyCodeLine{73             \{}
+\DoxyCodeLine{74                 \mbox{\hyperlink{class_canvas_script_adfdad6120c1f09070b598858bf4e2eed}{lossTextDisplayTicks}} = 0;}
+\DoxyCodeLine{75                 \mbox{\hyperlink{class_canvas_script_ae96103759accaacc3163cb4eee2f6568}{displayWinText}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{76             \}}
+\DoxyCodeLine{77         \}}
+\DoxyCodeLine{78         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{79         \{}
+\DoxyCodeLine{80             \mbox{\hyperlink{class_canvas_script_a9737083d48a464ab93bf8e688efcd709}{winTextDisplayTicks}} = 0;}
+\DoxyCodeLine{81         \}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83         \mbox{\hyperlink{class_canvas_script_accc2510263c8ae587337dddd85b52869}{lossText}}.enabled = \mbox{\hyperlink{class_canvas_script_afa81268b9406d04d237efb7900a0b624}{displayLossText}};}
+\DoxyCodeLine{84         \mbox{\hyperlink{class_canvas_script_ad895a27077a6c7a1368e2ee7f6f467f9}{winText}}.enabled = \mbox{\hyperlink{class_canvas_script_ae96103759accaacc3163cb4eee2f6568}{displayWinText}};}
+\DoxyCodeLine{85     \}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_canvas_script_afa81268b9406d04d237efb7900a0b624}\label{class_canvas_script_afa81268b9406d04d237efb7900a0b624}} 
+\index{CanvasScript@{CanvasScript}!displayLossText@{displayLossText}}
+\index{displayLossText@{displayLossText}!CanvasScript@{CanvasScript}}
+\doxysubsubsection{\texorpdfstring{displayLossText}{displayLossText}}
+{\footnotesize\ttfamily bool Canvas\+Script.\+display\+Loss\+Text = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+set to T\+R\+UE when displaying loss text 
+
+
+
+Definition at line 47 of file Canvas\+Script.\+cs.
+
+\mbox{\Hypertarget{class_canvas_script_ae96103759accaacc3163cb4eee2f6568}\label{class_canvas_script_ae96103759accaacc3163cb4eee2f6568}} 
+\index{CanvasScript@{CanvasScript}!displayWinText@{displayWinText}}
+\index{displayWinText@{displayWinText}!CanvasScript@{CanvasScript}}
+\doxysubsubsection{\texorpdfstring{displayWinText}{displayWinText}}
+{\footnotesize\ttfamily bool Canvas\+Script.\+display\+Win\+Text = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+set to T\+R\+UE when displaying win text 
+
+
+
+Definition at line 42 of file Canvas\+Script.\+cs.
+
 \mbox{\Hypertarget{class_canvas_script_accc2510263c8ae587337dddd85b52869}\label{class_canvas_script_accc2510263c8ae587337dddd85b52869}} 
 \index{CanvasScript@{CanvasScript}!lossText@{lossText}}
 \index{lossText@{lossText}!CanvasScript@{CanvasScript}}
@@ -99,6 +193,20 @@ Reference to text which shows on loss
 
 
 Definition at line 17 of file Canvas\+Script.\+cs.
+
+\mbox{\Hypertarget{class_canvas_script_adfdad6120c1f09070b598858bf4e2eed}\label{class_canvas_script_adfdad6120c1f09070b598858bf4e2eed}} 
+\index{CanvasScript@{CanvasScript}!lossTextDisplayTicks@{lossTextDisplayTicks}}
+\index{lossTextDisplayTicks@{lossTextDisplayTicks}!CanvasScript@{CanvasScript}}
+\doxysubsubsection{\texorpdfstring{lossTextDisplayTicks}{lossTextDisplayTicks}}
+{\footnotesize\ttfamily int Canvas\+Script.\+loss\+Text\+Display\+Ticks = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+n of ticks that the loss text has been displayed 
+
+
+
+Definition at line 22 of file Canvas\+Script.\+cs.
 
 \mbox{\Hypertarget{class_canvas_script_aaa20089f1f93887cc5a5b1b5f42812b8}\label{class_canvas_script_aaa20089f1f93887cc5a5b1b5f42812b8}} 
 \index{CanvasScript@{CanvasScript}!maxLossTextDisplayTicks@{maxLossTextDisplayTicks}}
@@ -142,8 +250,22 @@ Reference to text which shows on win
 
 Definition at line 12 of file Canvas\+Script.\+cs.
 
+\mbox{\Hypertarget{class_canvas_script_a9737083d48a464ab93bf8e688efcd709}\label{class_canvas_script_a9737083d48a464ab93bf8e688efcd709}} 
+\index{CanvasScript@{CanvasScript}!winTextDisplayTicks@{winTextDisplayTicks}}
+\index{winTextDisplayTicks@{winTextDisplayTicks}!CanvasScript@{CanvasScript}}
+\doxysubsubsection{\texorpdfstring{winTextDisplayTicks}{winTextDisplayTicks}}
+{\footnotesize\ttfamily int Canvas\+Script.\+win\+Text\+Display\+Ticks = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+n of ticks that the win text has been displayed 
+
+
+
+Definition at line 32 of file Canvas\+Script.\+cs.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Floor\+Is\+Lava/\+Assets/\+Scripts/\mbox{\hyperlink{_canvas_script_8cs}{Canvas\+Script.\+cs}}\end{DoxyCompactItemize}
+Assets/\+Scripts/\mbox{\hyperlink{_canvas_script_8cs}{Canvas\+Script.\+cs}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
-.TH "PC_Movement" 3 "Tue Nov 24 2020" "Version 1.0" "FloorIsLava" \" -*- nroff -*-
+.TH "PC_Movement" 3 "Wed Nov 25 2020" "Version 1.0" "FloorIsLava" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -33,6 +33,36 @@ Inherits MonoBehaviour\&.
 .br
 .RI "editable value to determine the players maximum horizontal velocity "
 .in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "Detects if the player is grounded using multiple raycasts below the player\&. If the player is grounded, then depending on input keys being pressed, they will move or jump\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisJumping\fP = false"
+.br
+.ti -1c
+.RI "bool \fBisWalkingFowards\fP = false"
+.br
+.ti -1c
+.RI "bool \fBisWalkingBack\fP = false"
+.br
+.ti -1c
+.RI "bool \fBisStrafingRight\fP = false"
+.br
+.ti -1c
+.RI "bool \fBisStrafingLeft\fP = false"
+.br
+.ti -1c
+.RI "bool \fBisGrounded\fP = true"
+.br
+.in -1c
 .SH "Detailed Description"
 .PP 
 Class for PC movement of player (keyboard) 
@@ -40,8 +70,90 @@ Class for PC movement of player (keyboard)
 
 .PP
 Definition at line 6 of file PC_Movement\&.cs\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void PC_Movement\&.Update ()\fC [private]\fP"
+
+.PP
+Detects if the player is grounded using multiple raycasts below the player\&. If the player is grounded, then depending on input keys being pressed, they will move or jump\&. 
+.PP
+Definition at line 45 of file PC_Movement\&.cs\&.
+.PP
+.nf
+46     {
+47         //using rays on every bottom corner and edge of the player box to determine if they are standing on the ground\&.
+48         isGrounded = 
+49             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(0\&.5F, -0\&.2F, 0), Vector3\&.down), 0\&.5F) ||
+50             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(-0\&.5F, -0\&.2F, 0), Vector3\&.down), 0\&.5F) ||
+51             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(0\&.0F, -0\&.2F, 0\&.5F), Vector3\&.down), 0\&.5F) ||
+52             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(0\&.0F, -0\&.2F, -0\&.5F), Vector3\&.down), 0\&.5F) ||
+53 
+54             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(0\&.5F, -0\&.2F, 0\&.5F), Vector3\&.down), 0\&.5F) ||
+55             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(-0\&.5F, -0\&.2F, -0\&.5F), Vector3\&.down), 0\&.5F) ||
+56             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(-0\&.5F, -0\&.2F, 0\&.5F), Vector3\&.down), 0\&.5F) ||
+57             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(0\&.5F, -0\&.2F, -0\&.5F), Vector3\&.down), 0\&.5F);
+58         isJumping = Input\&.GetKeyDown(KeyCode\&.Space);
+59         isWalkingFowards = Input\&.GetKey(KeyCode\&.W);
+60         isWalkingBack = Input\&.GetKey(KeyCode\&.S);
+61         isStrafingRight = Input\&.GetKey(KeyCode\&.D);
+62         isStrafingLeft = Input\&.GetKey(KeyCode\&.A);
+63         if(isGrounded)
+64         {
+65             if (isJumping)
+66             {
+67                 playerBody\&.AddForce(Vector3\&.up * jumpForce, ForceMode\&.Impulse);
+68             }
+69             if (isWalkingFowards)
+70             {
+71                 playerBody\&.velocity += playerTransform\&.forward * walkSpeed;
+72             }
+73             if (isWalkingBack)
+74             {
+75                 playerBody\&.velocity -= playerTransform\&.forward * walkSpeed;
+76             }
+77             if (isStrafingRight)
+78             {
+79                 playerBody\&.velocity += playerTransform\&.right * walkSpeed;
+80             }
+81             if (isStrafingLeft)
+82             {
+83                 playerBody\&.velocity -= playerTransform\&.right * walkSpeed;
+84             }
+85         }
+86         
+87 
+88         float prevy = playerBody\&.velocity\&.y;
+89         playerBody\&.velocity = Vector3\&.ClampMagnitude(new Vector3(playerBody\&.velocity\&.x, 0, playerBody\&.velocity\&.z), maxVel);
+90         playerBody\&.velocity = new Vector3(playerBody\&.velocity\&.x, prevy, playerBody\&.velocity\&.z);
+91 
+92     }
+.fi
 .SH "Member Data Documentation"
 .PP 
+.SS "bool PC_Movement\&.isGrounded = true\fC [private]\fP"
+
+.PP
+Definition at line 39 of file PC_Movement\&.cs\&.
+.SS "bool PC_Movement\&.isJumping = false\fC [private]\fP"
+
+.PP
+Definition at line 34 of file PC_Movement\&.cs\&.
+.SS "bool PC_Movement\&.isStrafingLeft = false\fC [private]\fP"
+
+.PP
+Definition at line 38 of file PC_Movement\&.cs\&.
+.SS "bool PC_Movement\&.isStrafingRight = false\fC [private]\fP"
+
+.PP
+Definition at line 37 of file PC_Movement\&.cs\&.
+.SS "bool PC_Movement\&.isWalkingBack = false\fC [private]\fP"
+
+.PP
+Definition at line 36 of file PC_Movement\&.cs\&.
+.SS "bool PC_Movement\&.isWalkingFowards = false\fC [private]\fP"
+
+.PP
+Definition at line 35 of file PC_Movement\&.cs\&.
 .SS "float PC_Movement\&.jumpForce"
 
 .PP

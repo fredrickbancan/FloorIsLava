@@ -16,6 +16,18 @@ Inheritance diagram for P\+C\+\_\+\+Mouse\+Look\+:\begin{figure}[H]
 \item 
 Transform \mbox{\hyperlink{class_p_c___mouse_look_ab9d6717daecfc10e2c96fdc3cb5f8fb8}{player\+Body}}
 \begin{DoxyCompactList}\small\item\em Reference to player transform for rotating \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_p_c___mouse_look_ac6a67b858bac4d5934a1ea8982c1566e}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Calculates mouse movement deltas, rotates the player accordingly. For this game, only horizontal rotations are desired. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_p_c___mouse_look_affa930b038b6ae57fa68e429b636054b}{prev\+MouseX}} = 0
+\begin{DoxyCompactList}\small\item\em used for calculating mouse deltas \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_p_c___mouse_look_a1f73cb059faa099b88a752b5fcd31985}{y\+Rot}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em used for calculating mouse deltas \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -25,6 +37,39 @@ Class for controlling camera on PC (mouse input)
 
 Definition at line 6 of file P\+C\+\_\+\+Mouse\+Look.\+cs.
 
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_c___mouse_look_ac6a67b858bac4d5934a1ea8982c1566e}\label{class_p_c___mouse_look_ac6a67b858bac4d5934a1ea8982c1566e}} 
+\index{PC\_MouseLook@{PC\_MouseLook}!Update@{Update}}
+\index{Update@{Update}!PC\_MouseLook@{PC\_MouseLook}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void P\+C\+\_\+\+Mouse\+Look.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculates mouse movement deltas, rotates the player accordingly. For this game, only horizontal rotations are desired. 
+
+
+
+Definition at line 32 of file P\+C\+\_\+\+Mouse\+Look.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34         \textcolor{keywordtype}{float} mouseX = Input.GetAxis(\textcolor{stringliteral}{"{}Mouse X"{}});}
+\DoxyCodeLine{35        \textcolor{comment}{// float mouseY = Input.GetAxis("{}Mouse Y"{});}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         \textcolor{keywordtype}{float} deltaMouseX = mouseX -\/ \mbox{\hyperlink{class_p_c___mouse_look_affa930b038b6ae57fa68e429b636054b}{prevMouseX}};}
+\DoxyCodeLine{38       \textcolor{comment}{//  float deltaMouseY = mouseY -\/ prevMouseY;}}
+\DoxyCodeLine{39         \mbox{\hyperlink{class_p_c___mouse_look_a1f73cb059faa099b88a752b5fcd31985}{yRot}} += deltaMouseX;}
+\DoxyCodeLine{40         \mbox{\hyperlink{class_p_c___mouse_look_ab9d6717daecfc10e2c96fdc3cb5f8fb8}{playerBody}}.Rotate(Vector3.up * \mbox{\hyperlink{class_p_c___mouse_look_a1f73cb059faa099b88a752b5fcd31985}{yRot}});}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \mbox{\hyperlink{class_p_c___mouse_look_affa930b038b6ae57fa68e429b636054b}{prevMouseX}} = mouseX;}
+\DoxyCodeLine{43       \textcolor{comment}{//  prevMouseY = mouseY;}}
+\DoxyCodeLine{44     \}}
+
+\end{DoxyCode}
 
 
 \doxysubsection{Member Data Documentation}
@@ -42,8 +87,36 @@ Reference to player transform for rotating
 
 Definition at line 26 of file P\+C\+\_\+\+Mouse\+Look.\+cs.
 
+\mbox{\Hypertarget{class_p_c___mouse_look_affa930b038b6ae57fa68e429b636054b}\label{class_p_c___mouse_look_affa930b038b6ae57fa68e429b636054b}} 
+\index{PC\_MouseLook@{PC\_MouseLook}!prevMouseX@{prevMouseX}}
+\index{prevMouseX@{prevMouseX}!PC\_MouseLook@{PC\_MouseLook}}
+\doxysubsubsection{\texorpdfstring{prevMouseX}{prevMouseX}}
+{\footnotesize\ttfamily float P\+C\+\_\+\+Mouse\+Look.\+prev\+MouseX = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+used for calculating mouse deltas 
+
+
+
+Definition at line 11 of file P\+C\+\_\+\+Mouse\+Look.\+cs.
+
+\mbox{\Hypertarget{class_p_c___mouse_look_a1f73cb059faa099b88a752b5fcd31985}\label{class_p_c___mouse_look_a1f73cb059faa099b88a752b5fcd31985}} 
+\index{PC\_MouseLook@{PC\_MouseLook}!yRot@{yRot}}
+\index{yRot@{yRot}!PC\_MouseLook@{PC\_MouseLook}}
+\doxysubsubsection{\texorpdfstring{yRot}{yRot}}
+{\footnotesize\ttfamily float P\+C\+\_\+\+Mouse\+Look.\+y\+Rot = 0.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+used for calculating mouse deltas 
+
+used to control rotation of the player
+
+Definition at line 21 of file P\+C\+\_\+\+Mouse\+Look.\+cs.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Floor\+Is\+Lava/\+Assets/\+Scripts/\mbox{\hyperlink{_p_c___mouse_look_8cs}{P\+C\+\_\+\+Mouse\+Look.\+cs}}\end{DoxyCompactItemize}
+Assets/\+Scripts/\mbox{\hyperlink{_p_c___mouse_look_8cs}{P\+C\+\_\+\+Mouse\+Look.\+cs}}\end{DoxyCompactItemize}

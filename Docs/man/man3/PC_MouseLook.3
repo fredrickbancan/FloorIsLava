@@ -1,4 +1,4 @@
-.TH "PC_MouseLook" 3 "Tue Nov 24 2020" "Version 1.0" "FloorIsLava" \" -*- nroff -*-
+.TH "PC_MouseLook" 3 "Wed Nov 25 2020" "Version 1.0" "FloorIsLava" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,6 +17,26 @@ Inherits MonoBehaviour\&.
 .br
 .RI "Reference to player transform for rotating "
 .in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "Calculates mouse movement deltas, rotates the player accordingly\&. For this game, only horizontal rotations are desired\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBprevMouseX\fP = 0"
+.br
+.RI "used for calculating mouse deltas "
+.ti -1c
+.RI "float \fByRot\fP = 0\&.0f"
+.br
+.RI "used for calculating mouse deltas "
+.in -1c
 .SH "Detailed Description"
 .PP 
 Class for controlling camera on PC (mouse input) 
@@ -24,6 +44,29 @@ Class for controlling camera on PC (mouse input)
 
 .PP
 Definition at line 6 of file PC_MouseLook\&.cs\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void PC_MouseLook\&.Update ()\fC [private]\fP"
+
+.PP
+Calculates mouse movement deltas, rotates the player accordingly\&. For this game, only horizontal rotations are desired\&. 
+.PP
+Definition at line 32 of file PC_MouseLook\&.cs\&.
+.PP
+.nf
+33     {
+34         float mouseX = Input\&.GetAxis("Mouse X");
+35        // float mouseY = Input\&.GetAxis("Mouse Y");
+36 
+37         float deltaMouseX = mouseX - prevMouseX;
+38       //  float deltaMouseY = mouseY - prevMouseY;
+39         yRot += deltaMouseX;
+40         playerBody\&.Rotate(Vector3\&.up * yRot);
+41 
+42         prevMouseX = mouseX;
+43       //  prevMouseY = mouseY;
+44     }
+.fi
 .SH "Member Data Documentation"
 .PP 
 .SS "Transform PC_MouseLook\&.playerBody"
@@ -32,6 +75,18 @@ Definition at line 6 of file PC_MouseLook\&.cs\&.
 Reference to player transform for rotating 
 .PP
 Definition at line 26 of file PC_MouseLook\&.cs\&.
+.SS "float PC_MouseLook\&.prevMouseX = 0\fC [private]\fP"
+
+.PP
+used for calculating mouse deltas 
+.PP
+Definition at line 11 of file PC_MouseLook\&.cs\&.
+.SS "float PC_MouseLook\&.yRot = 0\&.0f\fC [private]\fP"
+
+.PP
+used for calculating mouse deltas used to control rotation of the player
+.PP
+Definition at line 21 of file PC_MouseLook\&.cs\&.
 
 .SH "Author"
 .PP 

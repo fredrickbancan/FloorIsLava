@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['startheight_51',['startHeight',['../classlava_script.html#a055c0df9f55aa81a901f6b275b52839c',1,'lavaScript']]]
+  ['lavatransform_70',['lavaTransform',['../classlava_script.html#a86046d5ca45fc1d025ab95ee6d818d11',1,'lavaScript']]],
+  ['losstext_71',['lossText',['../class_canvas_script.html#accc2510263c8ae587337dddd85b52869',1,'CanvasScript']]],
+  ['losstextdisplayticks_72',['lossTextDisplayTicks',['../class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed',1,'CanvasScript']]]
 ];

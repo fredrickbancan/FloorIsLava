@@ -1,4 +1,4 @@
-.TH "lavaScript" 3 "Tue Nov 24 2020" "Version 1.0" "FloorIsLava" \" -*- nroff -*-
+.TH "lavaScript" 3 "Wed Nov 25 2020" "Version 1.0" "FloorIsLava" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,6 +25,18 @@ Inherits MonoBehaviour\&.
 .br
 .RI "number of units the lava plane moves each update vertically "
 .in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBStart\fP ()"
+.br
+.RI "Sets the lava height to the startHeight value "
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "Increases the lava plane height by moveSpeed units each update "
+.in -1c
 .SH "Detailed Description"
 .PP 
 Class for core logic of lava plane 
@@ -32,6 +44,34 @@ Class for core logic of lava plane
 
 .PP
 Definition at line 6 of file lavaScript\&.cs\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void lavaScript\&.Start ()\fC [private]\fP"
+
+.PP
+Sets the lava height to the startHeight value 
+.PP
+Definition at line 26 of file lavaScript\&.cs\&.
+.PP
+.nf
+27     {
+28         lavaTransform\&.position = new Vector3(0, startHeight, 0);
+29     }
+.fi
+.SS "void lavaScript\&.Update ()\fC [private]\fP"
+
+.PP
+Increases the lava plane height by moveSpeed units each update 
+.PP
+Definition at line 34 of file lavaScript\&.cs\&.
+.PP
+.nf
+35     {
+36         Vector3 h = lavaTransform\&.position;
+37         h\&.y += moveSpeed;
+38         lavaTransform\&.position = h;
+39     }
+.fi
 .SH "Member Data Documentation"
 .PP 
 .SS "Transform lavaScript\&.lavaTransform"

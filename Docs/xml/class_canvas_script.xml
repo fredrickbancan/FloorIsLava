@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/CanvasScript.cs" line="12" column="17" bodyfile="FloorIsLava/Assets/Scripts/CanvasScript.cs" bodystart="12" bodyend="-1"/>
+        <location file="Assets/Scripts/CanvasScript.cs" line="12" column="17" bodyfile="Assets/Scripts/CanvasScript.cs" bodystart="12" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_canvas_script_1accc2510263c8ae587337dddd85b52869" prot="public" static="no" mutable="no">
         <type>Text</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/CanvasScript.cs" line="17" column="17" bodyfile="FloorIsLava/Assets/Scripts/CanvasScript.cs" bodystart="17" bodyend="-1"/>
+        <location file="Assets/Scripts/CanvasScript.cs" line="17" column="17" bodyfile="Assets/Scripts/CanvasScript.cs" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_canvas_script_1aaa20089f1f93887cc5a5b1b5f42812b8" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/CanvasScript.cs" line="27" column="16" bodyfile="FloorIsLava/Assets/Scripts/CanvasScript.cs" bodystart="27" bodyend="-1"/>
+        <location file="Assets/Scripts/CanvasScript.cs" line="27" column="16" bodyfile="Assets/Scripts/CanvasScript.cs" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_canvas_script_1a8387725e5b8d845e02eda507f3e3514e" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/CanvasScript.cs" line="37" column="16" bodyfile="FloorIsLava/Assets/Scripts/CanvasScript.cs" bodystart="37" bodyend="-1"/>
+        <location file="Assets/Scripts/CanvasScript.cs" line="37" column="16" bodyfile="Assets/Scripts/CanvasScript.cs" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/CanvasScript.cs" line="22" column="17" bodyfile="FloorIsLava/Assets/Scripts/CanvasScript.cs" bodystart="22" bodyend="-1"/>
+        <location file="Assets/Scripts/CanvasScript.cs" line="22" column="17" bodyfile="Assets/Scripts/CanvasScript.cs" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_canvas_script_1a9737083d48a464ab93bf8e688efcd709" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/CanvasScript.cs" line="32" column="17" bodyfile="FloorIsLava/Assets/Scripts/CanvasScript.cs" bodystart="32" bodyend="-1"/>
+        <location file="Assets/Scripts/CanvasScript.cs" line="32" column="17" bodyfile="Assets/Scripts/CanvasScript.cs" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_canvas_script_1ae96103759accaacc3163cb4eee2f6568" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -107,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/CanvasScript.cs" line="42" column="18" bodyfile="FloorIsLava/Assets/Scripts/CanvasScript.cs" bodystart="42" bodyend="-1"/>
+        <location file="Assets/Scripts/CanvasScript.cs" line="42" column="18" bodyfile="Assets/Scripts/CanvasScript.cs" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_canvas_script_1afa81268b9406d04d237efb7900a0b624" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/CanvasScript.cs" line="47" column="18" bodyfile="FloorIsLava/Assets/Scripts/CanvasScript.cs" bodystart="47" bodyend="-1"/>
+        <location file="Assets/Scripts/CanvasScript.cs" line="47" column="18" bodyfile="Assets/Scripts/CanvasScript.cs" bodystart="47" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -138,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/CanvasScript.cs" line="53" column="10" bodyfile="FloorIsLava/Assets/Scripts/CanvasScript.cs" bodystart="53" bodyend="85"/>
+        <location file="Assets/Scripts/CanvasScript.cs" line="53" column="10" bodyfile="Assets/Scripts/CanvasScript.cs" bodystart="53" bodyend="85"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/CanvasScript.cs" line="90" column="17" bodyfile="FloorIsLava/Assets/Scripts/CanvasScript.cs" bodystart="90" bodyend="93"/>
+        <location file="Assets/Scripts/CanvasScript.cs" line="90" column="17" bodyfile="Assets/Scripts/CanvasScript.cs" bodystart="90" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="class_canvas_script_1ad3806a782fa0e9026e3167422c64a735" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/CanvasScript.cs" line="98" column="17" bodyfile="FloorIsLava/Assets/Scripts/CanvasScript.cs" bodystart="98" bodyend="101"/>
+        <location file="Assets/Scripts/CanvasScript.cs" line="98" column="17" bodyfile="Assets/Scripts/CanvasScript.cs" bodystart="98" bodyend="101"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -198,7 +198,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="FloorIsLava/Assets/Scripts/CanvasScript.cs" line="7" column="7" bodyfile="FloorIsLava/Assets/Scripts/CanvasScript.cs" bodystart="8" bodyend="103"/>
+    <location file="Assets/Scripts/CanvasScript.cs" line="7" column="7" bodyfile="Assets/Scripts/CanvasScript.cs" bodystart="8" bodyend="103"/>
     <listofallmembers>
       <member refid="class_canvas_script_1afa81268b9406d04d237efb7900a0b624" prot="private" virt="non-virtual"><scope>CanvasScript</scope><name>displayLossText</name></member>
       <member refid="class_canvas_script_1ae96103759accaacc3163cb4eee2f6568" prot="private" virt="non-virtual"><scope>CanvasScript</scope><name>displayWinText</name></member>

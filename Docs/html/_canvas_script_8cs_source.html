@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FloorIsLava: FloorIsLava/Assets/Scripts/CanvasScript.cs Source File</title>
+<title>FloorIsLava: Assets/Scripts/CanvasScript.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_650d003c1b6bca0b1027be23060b5750.html">FloorIsLava</a></li><li class="navelem"><a class="el" href="dir_b4a201941fc250eca15b0c5215dcd444.html">Assets</a></li><li class="navelem"><a class="el" href="dir_12a1ab564983e13a7d0b24c0a20ea472.html">Scripts</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_f13b41af88cf68434578284aaf699e39.html">Scripts</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -79,60 +79,60 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_canvas_script.html#accc2510263c8ae587337dddd85b52869">   17</a></span>&#160;    <span class="keyword">public</span> Text <a class="code" href="class_canvas_script.html#accc2510263c8ae587337dddd85b52869">lossText</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> lossTextDisplayTicks = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">   22</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">lossTextDisplayTicks</a> = 0;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_canvas_script.html#aaa20089f1f93887cc5a5b1b5f42812b8">   27</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_canvas_script.html#aaa20089f1f93887cc5a5b1b5f42812b8">maxLossTextDisplayTicks</a> = 100;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> winTextDisplayTicks = 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_canvas_script.html#a9737083d48a464ab93bf8e688efcd709">   32</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="class_canvas_script.html#a9737083d48a464ab93bf8e688efcd709">winTextDisplayTicks</a> = 0;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_canvas_script.html#a8387725e5b8d845e02eda507f3e3514e">   37</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_canvas_script.html#a8387725e5b8d845e02eda507f3e3514e">maxWinTextDisplayTicks</a> = 100;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">bool</span> displayWinText = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568">   42</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code" href="class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568">displayWinText</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">bool</span> displayLossText = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_canvas_script.html#afa81268b9406d04d237efb7900a0b624">   47</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code" href="class_canvas_script.html#afa81268b9406d04d237efb7900a0b624">displayLossText</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> Update()</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_canvas_script.html#a5a33664ee164b7eb56d8491b438499ba">   53</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_canvas_script.html#a5a33664ee164b7eb56d8491b438499ba">Update</a>()</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span> (displayLossText)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_canvas_script.html#afa81268b9406d04d237efb7900a0b624">displayLossText</a>)</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            lossTextDisplayTicks++;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">if</span> (lossTextDisplayTicks &gt;= <a class="code" href="class_canvas_script.html#aaa20089f1f93887cc5a5b1b5f42812b8">maxLossTextDisplayTicks</a>)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">lossTextDisplayTicks</a>++;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">lossTextDisplayTicks</a> &gt;= <a class="code" href="class_canvas_script.html#aaa20089f1f93887cc5a5b1b5f42812b8">maxLossTextDisplayTicks</a>)</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                lossTextDisplayTicks = 0;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                displayLossText = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <a class="code" href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">lossTextDisplayTicks</a> = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <a class="code" href="class_canvas_script.html#afa81268b9406d04d237efb7900a0b624">displayLossText</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            lossTextDisplayTicks = 0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">lossTextDisplayTicks</a> = 0;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> (displayWinText)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568">displayWinText</a>)</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            winTextDisplayTicks++;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span> (winTextDisplayTicks &gt;= <a class="code" href="class_canvas_script.html#a8387725e5b8d845e02eda507f3e3514e">maxWinTextDisplayTicks</a>)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <a class="code" href="class_canvas_script.html#a9737083d48a464ab93bf8e688efcd709">winTextDisplayTicks</a>++;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_canvas_script.html#a9737083d48a464ab93bf8e688efcd709">winTextDisplayTicks</a> &gt;= <a class="code" href="class_canvas_script.html#a8387725e5b8d845e02eda507f3e3514e">maxWinTextDisplayTicks</a>)</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                lossTextDisplayTicks = 0;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                displayWinText = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <a class="code" href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">lossTextDisplayTicks</a> = 0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <a class="code" href="class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568">displayWinText</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            winTextDisplayTicks = 0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <a class="code" href="class_canvas_script.html#a9737083d48a464ab93bf8e688efcd709">winTextDisplayTicks</a> = 0;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="class_canvas_script.html#accc2510263c8ae587337dddd85b52869">lossText</a>.enabled = displayLossText;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="class_canvas_script.html#ad895a27077a6c7a1368e2ee7f6f467f9">winText</a>.enabled = displayWinText;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="class_canvas_script.html#accc2510263c8ae587337dddd85b52869">lossText</a>.enabled = <a class="code" href="class_canvas_script.html#afa81268b9406d04d237efb7900a0b624">displayLossText</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="class_canvas_script.html#ad895a27077a6c7a1368e2ee7f6f467f9">winText</a>.enabled = <a class="code" href="class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568">displayWinText</a>;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_canvas_script.html#ae339faa23c9205694bff5f2a9f9ce7a4">   90</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_canvas_script.html#ae339faa23c9205694bff5f2a9f9ce7a4">onWin</a>()</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        displayWinText = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568">displayWinText</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_canvas_script.html#ad3806a782fa0e9026e3167422c64a735">   98</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_canvas_script.html#ad3806a782fa0e9026e3167422c64a735">onLoss</a>()</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        displayLossText = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="class_canvas_script.html#afa81268b9406d04d237efb7900a0b624">displayLossText</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
@@ -140,7 +140,12 @@ $(function() {
 <div class="ttc" id="aclass_canvas_script_html_ad895a27077a6c7a1368e2ee7f6f467f9"><div class="ttname"><a href="class_canvas_script.html#ad895a27077a6c7a1368e2ee7f6f467f9">CanvasScript.winText</a></div><div class="ttdeci">Text winText</div><div class="ttdoc">Reference to text which shows on win</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00012">CanvasScript.cs:12</a></div></div>
 <div class="ttc" id="aclass_canvas_script_html_aaa20089f1f93887cc5a5b1b5f42812b8"><div class="ttname"><a href="class_canvas_script.html#aaa20089f1f93887cc5a5b1b5f42812b8">CanvasScript.maxLossTextDisplayTicks</a></div><div class="ttdeci">int maxLossTextDisplayTicks</div><div class="ttdoc">n of ticks the loss text exists before being disabled</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00027">CanvasScript.cs:27</a></div></div>
 <div class="ttc" id="aclass_canvas_script_html_ad3806a782fa0e9026e3167422c64a735"><div class="ttname"><a href="class_canvas_script.html#ad3806a782fa0e9026e3167422c64a735">CanvasScript.onLoss</a></div><div class="ttdeci">void onLoss()</div><div class="ttdoc">Called when the player has lost, sets displayLossText to TRUE</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00098">CanvasScript.cs:98</a></div></div>
+<div class="ttc" id="aclass_canvas_script_html_a5a33664ee164b7eb56d8491b438499ba"><div class="ttname"><a href="class_canvas_script.html#a5a33664ee164b7eb56d8491b438499ba">CanvasScript.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">Counts n of ticks that either win/loss text has been displayed for. Once reaching their max n,...</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00053">CanvasScript.cs:53</a></div></div>
+<div class="ttc" id="aclass_canvas_script_html_adfdad6120c1f09070b598858bf4e2eed"><div class="ttname"><a href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">CanvasScript.lossTextDisplayTicks</a></div><div class="ttdeci">int lossTextDisplayTicks</div><div class="ttdoc">n of ticks that the loss text has been displayed</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00022">CanvasScript.cs:22</a></div></div>
+<div class="ttc" id="aclass_canvas_script_html_ae96103759accaacc3163cb4eee2f6568"><div class="ttname"><a href="class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568">CanvasScript.displayWinText</a></div><div class="ttdeci">bool displayWinText</div><div class="ttdoc">set to TRUE when displaying win text</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00042">CanvasScript.cs:42</a></div></div>
+<div class="ttc" id="aclass_canvas_script_html_a9737083d48a464ab93bf8e688efcd709"><div class="ttname"><a href="class_canvas_script.html#a9737083d48a464ab93bf8e688efcd709">CanvasScript.winTextDisplayTicks</a></div><div class="ttdeci">int winTextDisplayTicks</div><div class="ttdoc">n of ticks that the win text has been displayed</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00032">CanvasScript.cs:32</a></div></div>
 <div class="ttc" id="aclass_canvas_script_html"><div class="ttname"><a href="class_canvas_script.html">CanvasScript</a></div><div class="ttdoc">Class for core logic of main canvas (hud)</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00007">CanvasScript.cs:8</a></div></div>
+<div class="ttc" id="aclass_canvas_script_html_afa81268b9406d04d237efb7900a0b624"><div class="ttname"><a href="class_canvas_script.html#afa81268b9406d04d237efb7900a0b624">CanvasScript.displayLossText</a></div><div class="ttdeci">bool displayLossText</div><div class="ttdoc">set to TRUE when displaying loss text</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00047">CanvasScript.cs:47</a></div></div>
 <div class="ttc" id="aclass_canvas_script_html_ae339faa23c9205694bff5f2a9f9ce7a4"><div class="ttname"><a href="class_canvas_script.html#ae339faa23c9205694bff5f2a9f9ce7a4">CanvasScript.onWin</a></div><div class="ttdeci">void onWin()</div><div class="ttdoc">Called when the player has won, sets displayWinText to TRUE</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00090">CanvasScript.cs:90</a></div></div>
 <div class="ttc" id="aclass_canvas_script_html_a8387725e5b8d845e02eda507f3e3514e"><div class="ttname"><a href="class_canvas_script.html#a8387725e5b8d845e02eda507f3e3514e">CanvasScript.maxWinTextDisplayTicks</a></div><div class="ttdeci">int maxWinTextDisplayTicks</div><div class="ttdoc">n of ticks the win text exists before being disabled</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00037">CanvasScript.cs:37</a></div></div>
 <div class="ttc" id="aclass_canvas_script_html_accc2510263c8ae587337dddd85b52869"><div class="ttname"><a href="class_canvas_script.html#accc2510263c8ae587337dddd85b52869">CanvasScript.lossText</a></div><div class="ttdeci">Text lossText</div><div class="ttdoc">Reference to text which shows on loss</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00017">CanvasScript.cs:17</a></div></div>

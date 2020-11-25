@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/lavaScript.cs" line="11" column="22" bodyfile="FloorIsLava/Assets/Scripts/lavaScript.cs" bodystart="11" bodyend="-1"/>
+        <location file="Assets/Scripts/lavaScript.cs" line="11" column="22" bodyfile="Assets/Scripts/lavaScript.cs" bodystart="11" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classlava_script_1a055c0df9f55aa81a901f6b275b52839c" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/lavaScript.cs" line="16" column="18" bodyfile="FloorIsLava/Assets/Scripts/lavaScript.cs" bodystart="16" bodyend="-1"/>
+        <location file="Assets/Scripts/lavaScript.cs" line="16" column="18" bodyfile="Assets/Scripts/lavaScript.cs" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classlava_script_1abca9120810f8c09f476f4ef755346cb1" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/lavaScript.cs" line="21" column="18" bodyfile="FloorIsLava/Assets/Scripts/lavaScript.cs" bodystart="21" bodyend="-1"/>
+        <location file="Assets/Scripts/lavaScript.cs" line="21" column="18" bodyfile="Assets/Scripts/lavaScript.cs" bodystart="21" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/lavaScript.cs" line="26" column="10" bodyfile="FloorIsLava/Assets/Scripts/lavaScript.cs" bodystart="26" bodyend="29"/>
+        <location file="Assets/Scripts/lavaScript.cs" line="26" column="10" bodyfile="Assets/Scripts/lavaScript.cs" bodystart="26" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="classlava_script_1a2ac92810050f16332fd966d340938184" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/lavaScript.cs" line="34" column="10" bodyfile="FloorIsLava/Assets/Scripts/lavaScript.cs" bodystart="34" bodyend="39"/>
+        <location file="Assets/Scripts/lavaScript.cs" line="34" column="10" bodyfile="Assets/Scripts/lavaScript.cs" bodystart="34" bodyend="39"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -106,7 +106,7 @@
         <label>MonoBehaviour</label>
       </node>
     </collaborationgraph>
-    <location file="FloorIsLava/Assets/Scripts/lavaScript.cs" line="6" column="7" bodyfile="FloorIsLava/Assets/Scripts/lavaScript.cs" bodystart="7" bodyend="40"/>
+    <location file="Assets/Scripts/lavaScript.cs" line="6" column="7" bodyfile="Assets/Scripts/lavaScript.cs" bodystart="7" bodyend="40"/>
     <listofallmembers>
       <member refid="classlava_script_1a86046d5ca45fc1d025ab95ee6d818d11" prot="public" virt="non-virtual"><scope>lavaScript</scope><name>lavaTransform</name></member>
       <member refid="classlava_script_1abca9120810f8c09f476f4ef755346cb1" prot="public" virt="non-virtual"><scope>lavaScript</scope><name>moveSpeed</name></member>

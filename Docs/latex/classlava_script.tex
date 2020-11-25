@@ -20,6 +20,13 @@ float \mbox{\hyperlink{classlava_script_a055c0df9f55aa81a901f6b275b52839c}{start
 \begin{DoxyCompactList}\small\item\em height value of lava plane when it starts \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classlava_script_abca9120810f8c09f476f4ef755346cb1}{move\+Speed}} = 0.\+01F
 \begin{DoxyCompactList}\small\item\em number of units the lava plane moves each update vertically \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlava_script_a11aaca301871da134a47fdba4a787ef2}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Sets the lava height to the start\+Height value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlava_script_a2ac92810050f16332fd966d340938184}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Increases the lava plane height by move\+Speed units each update \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -29,6 +36,53 @@ Class for core logic of lava plane
 
 Definition at line 6 of file lava\+Script.\+cs.
 
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlava_script_a11aaca301871da134a47fdba4a787ef2}\label{classlava_script_a11aaca301871da134a47fdba4a787ef2}} 
+\index{lavaScript@{lavaScript}!Start@{Start}}
+\index{Start@{Start}!lavaScript@{lavaScript}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void lava\+Script.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets the lava height to the start\+Height value 
+
+
+
+Definition at line 26 of file lava\+Script.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         \mbox{\hyperlink{classlava_script_a86046d5ca45fc1d025ab95ee6d818d11}{lavaTransform}}.position = \textcolor{keyword}{new} Vector3(0, \mbox{\hyperlink{classlava_script_a055c0df9f55aa81a901f6b275b52839c}{startHeight}}, 0);}
+\DoxyCodeLine{29     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classlava_script_a2ac92810050f16332fd966d340938184}\label{classlava_script_a2ac92810050f16332fd966d340938184}} 
+\index{lavaScript@{lavaScript}!Update@{Update}}
+\index{Update@{Update}!lavaScript@{lavaScript}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void lava\+Script.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Increases the lava plane height by move\+Speed units each update 
+
+
+
+Definition at line 34 of file lava\+Script.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35     \{}
+\DoxyCodeLine{36         Vector3 h = \mbox{\hyperlink{classlava_script_a86046d5ca45fc1d025ab95ee6d818d11}{lavaTransform}}.position;}
+\DoxyCodeLine{37         h.y += \mbox{\hyperlink{classlava_script_abca9120810f8c09f476f4ef755346cb1}{moveSpeed}};}
+\DoxyCodeLine{38         \mbox{\hyperlink{classlava_script_a86046d5ca45fc1d025ab95ee6d818d11}{lavaTransform}}.position = h;}
+\DoxyCodeLine{39     \}}
+
+\end{DoxyCode}
 
 
 \doxysubsection{Member Data Documentation}
@@ -78,4 +132,4 @@ Definition at line 16 of file lava\+Script.\+cs.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Floor\+Is\+Lava/\+Assets/\+Scripts/\mbox{\hyperlink{lava_script_8cs}{lava\+Script.\+cs}}\end{DoxyCompactItemize}
+Assets/\+Scripts/\mbox{\hyperlink{lava_script_8cs}{lava\+Script.\+cs}}\end{DoxyCompactItemize}

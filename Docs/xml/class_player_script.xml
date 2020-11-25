@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/PlayerScript.cs" line="12" column="25" bodyfile="FloorIsLava/Assets/Scripts/PlayerScript.cs" bodystart="12" bodyend="-1"/>
+        <location file="Assets/Scripts/PlayerScript.cs" line="12" column="25" bodyfile="Assets/Scripts/PlayerScript.cs" bodystart="12" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_player_script_1a50797cd94984e84d427d6be998907965" prot="public" static="no" mutable="no">
         <type>GameObject</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/PlayerScript.cs" line="17" column="23" bodyfile="FloorIsLava/Assets/Scripts/PlayerScript.cs" bodystart="17" bodyend="-1"/>
+        <location file="Assets/Scripts/PlayerScript.cs" line="17" column="23" bodyfile="Assets/Scripts/PlayerScript.cs" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_player_script_1a92f4f84ae798cf617031fa24a6b1589d" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/PlayerScript.cs" line="27" column="16" bodyfile="FloorIsLava/Assets/Scripts/PlayerScript.cs" bodystart="27" bodyend="-1"/>
+        <location file="Assets/Scripts/PlayerScript.cs" line="27" column="16" bodyfile="Assets/Scripts/PlayerScript.cs" bodystart="27" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/PlayerScript.cs" line="22" column="17" bodyfile="FloorIsLava/Assets/Scripts/PlayerScript.cs" bodystart="22" bodyend="-1"/>
+        <location file="Assets/Scripts/PlayerScript.cs" line="22" column="17" bodyfile="Assets/Scripts/PlayerScript.cs" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_player_script_1a9d4aceaf9bfa5b4dfdd3515fe8e6afde" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/PlayerScript.cs" line="32" column="18" bodyfile="FloorIsLava/Assets/Scripts/PlayerScript.cs" bodystart="32" bodyend="-1"/>
+        <location file="Assets/Scripts/PlayerScript.cs" line="32" column="18" bodyfile="Assets/Scripts/PlayerScript.cs" bodystart="32" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/PlayerScript.cs" line="38" column="10" bodyfile="FloorIsLava/Assets/Scripts/PlayerScript.cs" bodystart="38" bodyend="50"/>
+        <location file="Assets/Scripts/PlayerScript.cs" line="38" column="10" bodyfile="Assets/Scripts/PlayerScript.cs" bodystart="38" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="class_player_script_1a7f13d1a39a3a90c097c07a7a37cd103c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="FloorIsLava/Assets/Scripts/PlayerScript.cs" line="58" column="10" bodyfile="FloorIsLava/Assets/Scripts/PlayerScript.cs" bodystart="58" bodyend="72"/>
+        <location file="Assets/Scripts/PlayerScript.cs" line="58" column="10" bodyfile="Assets/Scripts/PlayerScript.cs" bodystart="58" bodyend="72"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -160,7 +160,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="FloorIsLava/Assets/Scripts/PlayerScript.cs" line="7" column="7" bodyfile="FloorIsLava/Assets/Scripts/PlayerScript.cs" bodystart="8" bodyend="73"/>
+    <location file="Assets/Scripts/PlayerScript.cs" line="7" column="7" bodyfile="Assets/Scripts/PlayerScript.cs" bodystart="8" bodyend="73"/>
     <listofallmembers>
       <member refid="class_player_script_1adc4f3dcd2e4f0b801ff6d13e95e3e4d3" prot="public" virt="non-virtual"><scope>PlayerScript</scope><name>cs</name></member>
       <member refid="class_player_script_1a9d4aceaf9bfa5b4dfdd3515fe8e6afde" prot="private" virt="non-virtual"><scope>PlayerScript</scope><name>hasWonOrLost</name></member>

@@ -64,6 +64,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_player_script-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PlayerScript Class Reference</div>  </div>
@@ -90,12 +92,122 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a92f4f84ae798cf617031fa24a6b1589d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_script.html#a92f4f84ae798cf617031fa24a6b1589d">maxRespawnTicks</a> = 500</td></tr>
 <tr class="memdesc:a92f4f84ae798cf617031fa24a6b1589d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of updates that need to pass after win/loss before game restarts  <a href="class_player_script.html#a92f4f84ae798cf617031fa24a6b1589d">More...</a><br /></td></tr>
 <tr class="separator:a92f4f84ae798cf617031fa24a6b1589d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a9464a6aa07d259841f54bc24a9522f7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_script.html#a9464a6aa07d259841f54bc24a9522f7c">Update</a> ()</td></tr>
+<tr class="memdesc:a9464a6aa07d259841f54bc24a9522f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function increases ticksSinceWinLoss var if hasWonOrLost is equal to TRUE. Once ticksSinceWinLoss is equal or greater than maxRespawnTicks, the game is unpaused and restarted.  <a href="class_player_script.html#a9464a6aa07d259841f54bc24a9522f7c">More...</a><br /></td></tr>
+<tr class="separator:a9464a6aa07d259841f54bc24a9522f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f13d1a39a3a90c097c07a7a37cd103c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_script.html#a7f13d1a39a3a90c097c07a7a37cd103c">OnTriggerEnter</a> (Collider other)</td></tr>
+<tr class="memdesc:a7f13d1a39a3a90c097c07a7a37cd103c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if player has touched either the lava plane or the finish trigger. Depending which, will pause the game and call cs.onWin()/cs.onLoss(). Sets hasWonOrLost to TRUE and sets Time.timeScale to 0 to effectively pause game untill respawn.  <a href="class_player_script.html#a7f13d1a39a3a90c097c07a7a37cd103c">More...</a><br /></td></tr>
+<tr class="separator:a7f13d1a39a3a90c097c07a7a37cd103c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a90ea767adedc4185b76a5c25ddff0f6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_script.html#a90ea767adedc4185b76a5c25ddff0f6e">ticksSinceWinLoss</a> = 0</td></tr>
+<tr class="memdesc:a90ea767adedc4185b76a5c25ddff0f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of updates that have passed since a win/loss event  <a href="class_player_script.html#a90ea767adedc4185b76a5c25ddff0f6e">More...</a><br /></td></tr>
+<tr class="separator:a90ea767adedc4185b76a5c25ddff0f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d4aceaf9bfa5b4dfdd3515fe8e6afde"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_script.html#a9d4aceaf9bfa5b4dfdd3515fe8e6afde">hasWonOrLost</a> = false</td></tr>
+<tr class="memdesc:a9d4aceaf9bfa5b4dfdd3515fe8e6afde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean for if the player has won or lost.  <a href="class_player_script.html#a9d4aceaf9bfa5b4dfdd3515fe8e6afde">More...</a><br /></td></tr>
+<tr class="separator:a9d4aceaf9bfa5b4dfdd3515fe8e6afde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Script for controlling core player logic </p>
 
 <p class="definition">Definition at line <a class="el" href="_player_script_8cs_source.html#l00007">7</a> of file <a class="el" href="_player_script_8cs_source.html">PlayerScript.cs</a>.</p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7f13d1a39a3a90c097c07a7a37cd103c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f13d1a39a3a90c097c07a7a37cd103c">&#9670;&nbsp;</a></span>OnTriggerEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerScript.OnTriggerEnter </td>
+          <td>(</td>
+          <td class="paramtype">Collider&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if player has touched either the lava plane or the finish trigger. Depending which, will pause the game and call cs.onWin()/cs.onLoss(). Sets hasWonOrLost to TRUE and sets Time.timeScale to 0 to effectively pause game untill respawn. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Object collided with</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_player_script_8cs_source.html#l00058">58</a> of file <a class="el" href="_player_script_8cs_source.html">PlayerScript.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span> (other.tag == <span class="stringliteral">&quot;Finish&quot;</span>)<span class="comment">//end touch</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <a class="code" href="class_player_script.html#adc4f3dcd2e4f0b801ff6d13e95e3e4d3">cs</a>.<a class="code" href="class_canvas_script.html#ae339faa23c9205694bff5f2a9f9ce7a4">onWin</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="class_player_script.html#a9d4aceaf9bfa5b4dfdd3515fe8e6afde">hasWonOrLost</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            Time.timeScale = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (other.tag == <span class="stringliteral">&quot;Respawn&quot;</span>)<span class="comment">//lava touch</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <a class="code" href="class_player_script.html#adc4f3dcd2e4f0b801ff6d13e95e3e4d3">cs</a>.<a class="code" href="class_canvas_script.html#ad3806a782fa0e9026e3167422c64a735">onLoss</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <a class="code" href="class_player_script.html#a9d4aceaf9bfa5b4dfdd3515fe8e6afde">hasWonOrLost</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            Time.timeScale = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9464a6aa07d259841f54bc24a9522f7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9464a6aa07d259841f54bc24a9522f7c">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerScript.Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function increases ticksSinceWinLoss var if hasWonOrLost is equal to TRUE. Once ticksSinceWinLoss is equal or greater than maxRespawnTicks, the game is unpaused and restarted. </p>
+
+<p class="definition">Definition at line <a class="el" href="_player_script_8cs_source.html#l00038">38</a> of file <a class="el" href="_player_script_8cs_source.html">PlayerScript.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="class_player_script.html#a9d4aceaf9bfa5b4dfdd3515fe8e6afde">hasWonOrLost</a>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <a class="code" href="class_player_script.html#a90ea767adedc4185b76a5c25ddff0f6e">ticksSinceWinLoss</a>++;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="class_player_script.html#a90ea767adedc4185b76a5c25ddff0f6e">ticksSinceWinLoss</a> &gt;= <a class="code" href="class_player_script.html#a92f4f84ae798cf617031fa24a6b1589d">maxRespawnTicks</a>)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <a class="code" href="class_player_script.html#a90ea767adedc4185b76a5c25ddff0f6e">ticksSinceWinLoss</a> = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                Time.timeScale = 1;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                SceneManager.LoadScene(SceneManager.GetActiveScene().name);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="adc4f3dcd2e4f0b801ff6d13e95e3e4d3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc4f3dcd2e4f0b801ff6d13e95e3e4d3">&#9670;&nbsp;</a></span>cs</h2>
 
@@ -111,6 +223,32 @@ Public Attributes</h2></td></tr>
 <p>Canvas reference for UI events </p>
 
 <p class="definition">Definition at line <a class="el" href="_player_script_8cs_source.html#l00012">12</a> of file <a class="el" href="_player_script_8cs_source.html">PlayerScript.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9d4aceaf9bfa5b4dfdd3515fe8e6afde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d4aceaf9bfa5b4dfdd3515fe8e6afde">&#9670;&nbsp;</a></span>hasWonOrLost</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerScript.hasWonOrLost = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Boolean for if the player has won or lost. </p>
+
+<p class="definition">Definition at line <a class="el" href="_player_script_8cs_source.html#l00032">32</a> of file <a class="el" href="_player_script_8cs_source.html">PlayerScript.cs</a>.</p>
 
 </div>
 </div>
@@ -150,10 +288,42 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a90ea767adedc4185b76a5c25ddff0f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90ea767adedc4185b76a5c25ddff0f6e">&#9670;&nbsp;</a></span>ticksSinceWinLoss</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PlayerScript.ticksSinceWinLoss = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of updates that have passed since a win/loss event </p>
+
+<p class="definition">Definition at line <a class="el" href="_player_script_8cs_source.html#l00022">22</a> of file <a class="el" href="_player_script_8cs_source.html">PlayerScript.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>FloorIsLava/Assets/Scripts/<a class="el" href="_player_script_8cs_source.html">PlayerScript.cs</a></li>
+<li>Assets/Scripts/<a class="el" href="_player_script_8cs_source.html">PlayerScript.cs</a></li>
 </ul>
 </div><!-- contents -->
+<div class="ttc" id="aclass_player_script_html_a9d4aceaf9bfa5b4dfdd3515fe8e6afde"><div class="ttname"><a href="class_player_script.html#a9d4aceaf9bfa5b4dfdd3515fe8e6afde">PlayerScript.hasWonOrLost</a></div><div class="ttdeci">bool hasWonOrLost</div><div class="ttdoc">Boolean for if the player has won or lost.</div><div class="ttdef"><b>Definition:</b> <a href="_player_script_8cs_source.html#l00032">PlayerScript.cs:32</a></div></div>
+<div class="ttc" id="aclass_canvas_script_html_ad3806a782fa0e9026e3167422c64a735"><div class="ttname"><a href="class_canvas_script.html#ad3806a782fa0e9026e3167422c64a735">CanvasScript.onLoss</a></div><div class="ttdeci">void onLoss()</div><div class="ttdoc">Called when the player has lost, sets displayLossText to TRUE</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00098">CanvasScript.cs:98</a></div></div>
+<div class="ttc" id="aclass_player_script_html_adc4f3dcd2e4f0b801ff6d13e95e3e4d3"><div class="ttname"><a href="class_player_script.html#adc4f3dcd2e4f0b801ff6d13e95e3e4d3">PlayerScript.cs</a></div><div class="ttdeci">CanvasScript cs</div><div class="ttdoc">Canvas reference for UI events</div><div class="ttdef"><b>Definition:</b> <a href="_player_script_8cs_source.html#l00012">PlayerScript.cs:12</a></div></div>
+<div class="ttc" id="aclass_player_script_html_a90ea767adedc4185b76a5c25ddff0f6e"><div class="ttname"><a href="class_player_script.html#a90ea767adedc4185b76a5c25ddff0f6e">PlayerScript.ticksSinceWinLoss</a></div><div class="ttdeci">int ticksSinceWinLoss</div><div class="ttdoc">Number of updates that have passed since a win/loss event</div><div class="ttdef"><b>Definition:</b> <a href="_player_script_8cs_source.html#l00022">PlayerScript.cs:22</a></div></div>
+<div class="ttc" id="aclass_player_script_html_a92f4f84ae798cf617031fa24a6b1589d"><div class="ttname"><a href="class_player_script.html#a92f4f84ae798cf617031fa24a6b1589d">PlayerScript.maxRespawnTicks</a></div><div class="ttdeci">int maxRespawnTicks</div><div class="ttdoc">Number of updates that need to pass after win/loss before game restarts</div><div class="ttdef"><b>Definition:</b> <a href="_player_script_8cs_source.html#l00027">PlayerScript.cs:27</a></div></div>
+<div class="ttc" id="aclass_canvas_script_html_ae339faa23c9205694bff5f2a9f9ce7a4"><div class="ttname"><a href="class_canvas_script.html#ae339faa23c9205694bff5f2a9f9ce7a4">CanvasScript.onWin</a></div><div class="ttdeci">void onWin()</div><div class="ttdoc">Called when the player has won, sets displayWinText to TRUE</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00090">CanvasScript.cs:90</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

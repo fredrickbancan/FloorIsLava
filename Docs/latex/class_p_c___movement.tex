@@ -24,6 +24,26 @@ float \mbox{\hyperlink{class_p_c___movement_a3eace894901d8d851e3d83ac820d6083}{w
 \begin{DoxyCompactList}\small\item\em editable value to determine the speed of player movement \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_p_c___movement_aefcd88b4ecc3c47dc059d0cfc6dab619}{max\+Vel}}
 \begin{DoxyCompactList}\small\item\em editable value to determine the players maximum horizontal velocity \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_p_c___movement_a5fa6dcf809fe4c35032990a90cc387e9}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Detects if the player is grounded using multiple raycasts below the player. If the player is grounded, then depending on input keys being pressed, they will move or jump. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_p_c___movement_aac02227825d942a2fcb43f9495ab677b}{is\+Jumping}} = false
+\item 
+bool \mbox{\hyperlink{class_p_c___movement_a4925e830df4f7177e95b877a44630e50}{is\+Walking\+Fowards}} = false
+\item 
+bool \mbox{\hyperlink{class_p_c___movement_aa810a5651df017cad38fc83fd11043d3}{is\+Walking\+Back}} = false
+\item 
+bool \mbox{\hyperlink{class_p_c___movement_af1b1494928b97050a7e3728fe24317fe}{is\+Strafing\+Right}} = false
+\item 
+bool \mbox{\hyperlink{class_p_c___movement_acefa24eefb2a5f8c1bd2aa16a8535fac}{is\+Strafing\+Left}} = false
+\item 
+bool \mbox{\hyperlink{class_p_c___movement_ac84c14c634ede8508af66dae4315b7e0}{is\+Grounded}} = true
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -35,7 +55,135 @@ Definition at line 6 of file P\+C\+\_\+\+Movement.\+cs.
 
 
 
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_c___movement_a5fa6dcf809fe4c35032990a90cc387e9}\label{class_p_c___movement_a5fa6dcf809fe4c35032990a90cc387e9}} 
+\index{PC\_Movement@{PC\_Movement}!Update@{Update}}
+\index{Update@{Update}!PC\_Movement@{PC\_Movement}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void P\+C\+\_\+\+Movement.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Detects if the player is grounded using multiple raycasts below the player. If the player is grounded, then depending on input keys being pressed, they will move or jump. 
+
+
+
+Definition at line 45 of file P\+C\+\_\+\+Movement.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46     \{}
+\DoxyCodeLine{47         \textcolor{comment}{//using rays on every bottom corner and edge of the player box to determine if they are standing on the ground.}}
+\DoxyCodeLine{48         \mbox{\hyperlink{class_p_c___movement_ac84c14c634ede8508af66dae4315b7e0}{isGrounded}} = }
+\DoxyCodeLine{49             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_p_c___movement_abf8204b782bb180404fbb38fa6301d15}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(0.5F, -\/0.2F, 0), Vector3.down), 0.5F) ||}
+\DoxyCodeLine{50             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_p_c___movement_abf8204b782bb180404fbb38fa6301d15}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(-\/0.5F, -\/0.2F, 0), Vector3.down), 0.5F) ||}
+\DoxyCodeLine{51             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_p_c___movement_abf8204b782bb180404fbb38fa6301d15}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(0.0F, -\/0.2F, 0.5F), Vector3.down), 0.5F) ||}
+\DoxyCodeLine{52             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_p_c___movement_abf8204b782bb180404fbb38fa6301d15}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(0.0F, -\/0.2F, -\/0.5F), Vector3.down), 0.5F) ||}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_p_c___movement_abf8204b782bb180404fbb38fa6301d15}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(0.5F, -\/0.2F, 0.5F), Vector3.down), 0.5F) ||}
+\DoxyCodeLine{55             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_p_c___movement_abf8204b782bb180404fbb38fa6301d15}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(-\/0.5F, -\/0.2F, -\/0.5F), Vector3.down), 0.5F) ||}
+\DoxyCodeLine{56             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_p_c___movement_abf8204b782bb180404fbb38fa6301d15}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(-\/0.5F, -\/0.2F, 0.5F), Vector3.down), 0.5F) ||}
+\DoxyCodeLine{57             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_p_c___movement_abf8204b782bb180404fbb38fa6301d15}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(0.5F, -\/0.2F, -\/0.5F), Vector3.down), 0.5F);}
+\DoxyCodeLine{58         \mbox{\hyperlink{class_p_c___movement_aac02227825d942a2fcb43f9495ab677b}{isJumping}} = Input.GetKeyDown(KeyCode.Space);}
+\DoxyCodeLine{59         \mbox{\hyperlink{class_p_c___movement_a4925e830df4f7177e95b877a44630e50}{isWalkingFowards}} = Input.GetKey(KeyCode.W);}
+\DoxyCodeLine{60         \mbox{\hyperlink{class_p_c___movement_aa810a5651df017cad38fc83fd11043d3}{isWalkingBack}} = Input.GetKey(KeyCode.S);}
+\DoxyCodeLine{61         \mbox{\hyperlink{class_p_c___movement_af1b1494928b97050a7e3728fe24317fe}{isStrafingRight}} = Input.GetKey(KeyCode.D);}
+\DoxyCodeLine{62         \mbox{\hyperlink{class_p_c___movement_acefa24eefb2a5f8c1bd2aa16a8535fac}{isStrafingLeft}} = Input.GetKey(KeyCode.A);}
+\DoxyCodeLine{63         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_p_c___movement_ac84c14c634ede8508af66dae4315b7e0}{isGrounded}})}
+\DoxyCodeLine{64         \{}
+\DoxyCodeLine{65             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_c___movement_aac02227825d942a2fcb43f9495ab677b}{isJumping}})}
+\DoxyCodeLine{66             \{}
+\DoxyCodeLine{67                 \mbox{\hyperlink{class_p_c___movement_a001bb6ad7ee608a270cb1adfde71ca66}{playerBody}}.AddForce(Vector3.up * \mbox{\hyperlink{class_p_c___movement_aa826cf2ae48541b3a5911fb219a53a64}{jumpForce}}, ForceMode.Impulse);}
+\DoxyCodeLine{68             \}}
+\DoxyCodeLine{69             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_c___movement_a4925e830df4f7177e95b877a44630e50}{isWalkingFowards}})}
+\DoxyCodeLine{70             \{}
+\DoxyCodeLine{71                 \mbox{\hyperlink{class_p_c___movement_a001bb6ad7ee608a270cb1adfde71ca66}{playerBody}}.velocity += \mbox{\hyperlink{class_p_c___movement_abf8204b782bb180404fbb38fa6301d15}{playerTransform}}.forward * \mbox{\hyperlink{class_p_c___movement_a3eace894901d8d851e3d83ac820d6083}{walkSpeed}};}
+\DoxyCodeLine{72             \}}
+\DoxyCodeLine{73             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_c___movement_aa810a5651df017cad38fc83fd11043d3}{isWalkingBack}})}
+\DoxyCodeLine{74             \{}
+\DoxyCodeLine{75                 \mbox{\hyperlink{class_p_c___movement_a001bb6ad7ee608a270cb1adfde71ca66}{playerBody}}.velocity -\/= \mbox{\hyperlink{class_p_c___movement_abf8204b782bb180404fbb38fa6301d15}{playerTransform}}.forward * \mbox{\hyperlink{class_p_c___movement_a3eace894901d8d851e3d83ac820d6083}{walkSpeed}};}
+\DoxyCodeLine{76             \}}
+\DoxyCodeLine{77             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_c___movement_af1b1494928b97050a7e3728fe24317fe}{isStrafingRight}})}
+\DoxyCodeLine{78             \{}
+\DoxyCodeLine{79                 \mbox{\hyperlink{class_p_c___movement_a001bb6ad7ee608a270cb1adfde71ca66}{playerBody}}.velocity += \mbox{\hyperlink{class_p_c___movement_abf8204b782bb180404fbb38fa6301d15}{playerTransform}}.right * \mbox{\hyperlink{class_p_c___movement_a3eace894901d8d851e3d83ac820d6083}{walkSpeed}};}
+\DoxyCodeLine{80             \}}
+\DoxyCodeLine{81             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_p_c___movement_acefa24eefb2a5f8c1bd2aa16a8535fac}{isStrafingLeft}})}
+\DoxyCodeLine{82             \{}
+\DoxyCodeLine{83                 \mbox{\hyperlink{class_p_c___movement_a001bb6ad7ee608a270cb1adfde71ca66}{playerBody}}.velocity -\/= \mbox{\hyperlink{class_p_c___movement_abf8204b782bb180404fbb38fa6301d15}{playerTransform}}.right * \mbox{\hyperlink{class_p_c___movement_a3eace894901d8d851e3d83ac820d6083}{walkSpeed}};}
+\DoxyCodeLine{84             \}}
+\DoxyCodeLine{85         \}}
+\DoxyCodeLine{86         }
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88         \textcolor{keywordtype}{float} prevy = \mbox{\hyperlink{class_p_c___movement_a001bb6ad7ee608a270cb1adfde71ca66}{playerBody}}.velocity.y;}
+\DoxyCodeLine{89         \mbox{\hyperlink{class_p_c___movement_a001bb6ad7ee608a270cb1adfde71ca66}{playerBody}}.velocity = Vector3.ClampMagnitude(\textcolor{keyword}{new} Vector3(\mbox{\hyperlink{class_p_c___movement_a001bb6ad7ee608a270cb1adfde71ca66}{playerBody}}.velocity.x, 0, \mbox{\hyperlink{class_p_c___movement_a001bb6ad7ee608a270cb1adfde71ca66}{playerBody}}.velocity.z), \mbox{\hyperlink{class_p_c___movement_aefcd88b4ecc3c47dc059d0cfc6dab619}{maxVel}});}
+\DoxyCodeLine{90         \mbox{\hyperlink{class_p_c___movement_a001bb6ad7ee608a270cb1adfde71ca66}{playerBody}}.velocity = \textcolor{keyword}{new} Vector3(\mbox{\hyperlink{class_p_c___movement_a001bb6ad7ee608a270cb1adfde71ca66}{playerBody}}.velocity.x, prevy, \mbox{\hyperlink{class_p_c___movement_a001bb6ad7ee608a270cb1adfde71ca66}{playerBody}}.velocity.z);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \}}
+
+\end{DoxyCode}
+
+
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_p_c___movement_ac84c14c634ede8508af66dae4315b7e0}\label{class_p_c___movement_ac84c14c634ede8508af66dae4315b7e0}} 
+\index{PC\_Movement@{PC\_Movement}!isGrounded@{isGrounded}}
+\index{isGrounded@{isGrounded}!PC\_Movement@{PC\_Movement}}
+\doxysubsubsection{\texorpdfstring{isGrounded}{isGrounded}}
+{\footnotesize\ttfamily bool P\+C\+\_\+\+Movement.\+is\+Grounded = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 39 of file P\+C\+\_\+\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_p_c___movement_aac02227825d942a2fcb43f9495ab677b}\label{class_p_c___movement_aac02227825d942a2fcb43f9495ab677b}} 
+\index{PC\_Movement@{PC\_Movement}!isJumping@{isJumping}}
+\index{isJumping@{isJumping}!PC\_Movement@{PC\_Movement}}
+\doxysubsubsection{\texorpdfstring{isJumping}{isJumping}}
+{\footnotesize\ttfamily bool P\+C\+\_\+\+Movement.\+is\+Jumping = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 34 of file P\+C\+\_\+\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_p_c___movement_acefa24eefb2a5f8c1bd2aa16a8535fac}\label{class_p_c___movement_acefa24eefb2a5f8c1bd2aa16a8535fac}} 
+\index{PC\_Movement@{PC\_Movement}!isStrafingLeft@{isStrafingLeft}}
+\index{isStrafingLeft@{isStrafingLeft}!PC\_Movement@{PC\_Movement}}
+\doxysubsubsection{\texorpdfstring{isStrafingLeft}{isStrafingLeft}}
+{\footnotesize\ttfamily bool P\+C\+\_\+\+Movement.\+is\+Strafing\+Left = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 38 of file P\+C\+\_\+\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_p_c___movement_af1b1494928b97050a7e3728fe24317fe}\label{class_p_c___movement_af1b1494928b97050a7e3728fe24317fe}} 
+\index{PC\_Movement@{PC\_Movement}!isStrafingRight@{isStrafingRight}}
+\index{isStrafingRight@{isStrafingRight}!PC\_Movement@{PC\_Movement}}
+\doxysubsubsection{\texorpdfstring{isStrafingRight}{isStrafingRight}}
+{\footnotesize\ttfamily bool P\+C\+\_\+\+Movement.\+is\+Strafing\+Right = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 37 of file P\+C\+\_\+\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_p_c___movement_aa810a5651df017cad38fc83fd11043d3}\label{class_p_c___movement_aa810a5651df017cad38fc83fd11043d3}} 
+\index{PC\_Movement@{PC\_Movement}!isWalkingBack@{isWalkingBack}}
+\index{isWalkingBack@{isWalkingBack}!PC\_Movement@{PC\_Movement}}
+\doxysubsubsection{\texorpdfstring{isWalkingBack}{isWalkingBack}}
+{\footnotesize\ttfamily bool P\+C\+\_\+\+Movement.\+is\+Walking\+Back = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 36 of file P\+C\+\_\+\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_p_c___movement_a4925e830df4f7177e95b877a44630e50}\label{class_p_c___movement_a4925e830df4f7177e95b877a44630e50}} 
+\index{PC\_Movement@{PC\_Movement}!isWalkingFowards@{isWalkingFowards}}
+\index{isWalkingFowards@{isWalkingFowards}!PC\_Movement@{PC\_Movement}}
+\doxysubsubsection{\texorpdfstring{isWalkingFowards}{isWalkingFowards}}
+{\footnotesize\ttfamily bool P\+C\+\_\+\+Movement.\+is\+Walking\+Fowards = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 35 of file P\+C\+\_\+\+Movement.\+cs.
+
 \mbox{\Hypertarget{class_p_c___movement_aa826cf2ae48541b3a5911fb219a53a64}\label{class_p_c___movement_aa826cf2ae48541b3a5911fb219a53a64}} 
 \index{PC\_Movement@{PC\_Movement}!jumpForce@{jumpForce}}
 \index{jumpForce@{jumpForce}!PC\_Movement@{PC\_Movement}}
@@ -110,4 +258,4 @@ Definition at line 26 of file P\+C\+\_\+\+Movement.\+cs.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Floor\+Is\+Lava/\+Assets/\+Scripts/\mbox{\hyperlink{_p_c___movement_8cs}{P\+C\+\_\+\+Movement.\+cs}}\end{DoxyCompactItemize}
+Assets/\+Scripts/\mbox{\hyperlink{_p_c___movement_8cs}{P\+C\+\_\+\+Movement.\+cs}}\end{DoxyCompactItemize}

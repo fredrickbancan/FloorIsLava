@@ -65,6 +65,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_canvas_script-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CanvasScript Class Reference</div>  </div>
@@ -103,6 +105,27 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8387725e5b8d845e02eda507f3e3514e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_script.html#a8387725e5b8d845e02eda507f3e3514e">maxWinTextDisplayTicks</a> = 100</td></tr>
 <tr class="memdesc:a8387725e5b8d845e02eda507f3e3514e"><td class="mdescLeft">&#160;</td><td class="mdescRight">n of ticks the win text exists before being disabled  <a href="class_canvas_script.html#a8387725e5b8d845e02eda507f3e3514e">More...</a><br /></td></tr>
 <tr class="separator:a8387725e5b8d845e02eda507f3e3514e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a5a33664ee164b7eb56d8491b438499ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_script.html#a5a33664ee164b7eb56d8491b438499ba">Update</a> ()</td></tr>
+<tr class="memdesc:a5a33664ee164b7eb56d8491b438499ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts n of ticks that either win/loss text has been displayed for. Once reaching their max n, they are disabled.  <a href="class_canvas_script.html#a5a33664ee164b7eb56d8491b438499ba">More...</a><br /></td></tr>
+<tr class="separator:a5a33664ee164b7eb56d8491b438499ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:adfdad6120c1f09070b598858bf4e2eed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">lossTextDisplayTicks</a> = 0</td></tr>
+<tr class="memdesc:adfdad6120c1f09070b598858bf4e2eed"><td class="mdescLeft">&#160;</td><td class="mdescRight">n of ticks that the loss text has been displayed  <a href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">More...</a><br /></td></tr>
+<tr class="separator:adfdad6120c1f09070b598858bf4e2eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9737083d48a464ab93bf8e688efcd709"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_script.html#a9737083d48a464ab93bf8e688efcd709">winTextDisplayTicks</a> = 0</td></tr>
+<tr class="memdesc:a9737083d48a464ab93bf8e688efcd709"><td class="mdescLeft">&#160;</td><td class="mdescRight">n of ticks that the win text has been displayed  <a href="class_canvas_script.html#a9737083d48a464ab93bf8e688efcd709">More...</a><br /></td></tr>
+<tr class="separator:a9737083d48a464ab93bf8e688efcd709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96103759accaacc3163cb4eee2f6568"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568">displayWinText</a> = false</td></tr>
+<tr class="memdesc:ae96103759accaacc3163cb4eee2f6568"><td class="mdescLeft">&#160;</td><td class="mdescRight">set to TRUE when displaying win text  <a href="class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568">More...</a><br /></td></tr>
+<tr class="separator:ae96103759accaacc3163cb4eee2f6568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa81268b9406d04d237efb7900a0b624"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_script.html#afa81268b9406d04d237efb7900a0b624">displayLossText</a> = false</td></tr>
+<tr class="memdesc:afa81268b9406d04d237efb7900a0b624"><td class="mdescLeft">&#160;</td><td class="mdescRight">set to TRUE when displaying loss text  <a href="class_canvas_script.html#afa81268b9406d04d237efb7900a0b624">More...</a><br /></td></tr>
+<tr class="separator:afa81268b9406d04d237efb7900a0b624"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for core logic of main canvas (hud) </p>
@@ -128,7 +151,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_canvas_script_8cs_source.html#l00098">98</a> of file <a class="el" href="_canvas_script_8cs_source.html">CanvasScript.cs</a>.</p>
 <div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        displayLossText = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="class_canvas_script.html#afa81268b9406d04d237efb7900a0b624">displayLossText</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
@@ -152,12 +175,125 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_canvas_script_8cs_source.html#l00090">90</a> of file <a class="el" href="_canvas_script_8cs_source.html">CanvasScript.cs</a>.</p>
 <div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        displayWinText = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568">displayWinText</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a5a33664ee164b7eb56d8491b438499ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a33664ee164b7eb56d8491b438499ba">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CanvasScript.Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Counts n of ticks that either win/loss text has been displayed for. Once reaching their max n, they are disabled. </p>
+
+<p class="definition">Definition at line <a class="el" href="_canvas_script_8cs_source.html#l00053">53</a> of file <a class="el" href="_canvas_script_8cs_source.html">CanvasScript.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_canvas_script.html#afa81268b9406d04d237efb7900a0b624">displayLossText</a>)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">lossTextDisplayTicks</a>++;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">lossTextDisplayTicks</a> &gt;= <a class="code" href="class_canvas_script.html#aaa20089f1f93887cc5a5b1b5f42812b8">maxLossTextDisplayTicks</a>)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <a class="code" href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">lossTextDisplayTicks</a> = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <a class="code" href="class_canvas_script.html#afa81268b9406d04d237efb7900a0b624">displayLossText</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">lossTextDisplayTicks</a> = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568">displayWinText</a>)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <a class="code" href="class_canvas_script.html#a9737083d48a464ab93bf8e688efcd709">winTextDisplayTicks</a>++;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_canvas_script.html#a9737083d48a464ab93bf8e688efcd709">winTextDisplayTicks</a> &gt;= <a class="code" href="class_canvas_script.html#a8387725e5b8d845e02eda507f3e3514e">maxWinTextDisplayTicks</a>)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <a class="code" href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">lossTextDisplayTicks</a> = 0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <a class="code" href="class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568">displayWinText</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <a class="code" href="class_canvas_script.html#a9737083d48a464ab93bf8e688efcd709">winTextDisplayTicks</a> = 0;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="class_canvas_script.html#accc2510263c8ae587337dddd85b52869">lossText</a>.enabled = <a class="code" href="class_canvas_script.html#afa81268b9406d04d237efb7900a0b624">displayLossText</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="class_canvas_script.html#ad895a27077a6c7a1368e2ee7f6f467f9">winText</a>.enabled = <a class="code" href="class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568">displayWinText</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="afa81268b9406d04d237efb7900a0b624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa81268b9406d04d237efb7900a0b624">&#9670;&nbsp;</a></span>displayLossText</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CanvasScript.displayLossText = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set to TRUE when displaying loss text </p>
+
+<p class="definition">Definition at line <a class="el" href="_canvas_script_8cs_source.html#l00047">47</a> of file <a class="el" href="_canvas_script_8cs_source.html">CanvasScript.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae96103759accaacc3163cb4eee2f6568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae96103759accaacc3163cb4eee2f6568">&#9670;&nbsp;</a></span>displayWinText</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CanvasScript.displayWinText = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set to TRUE when displaying win text </p>
+
+<p class="definition">Definition at line <a class="el" href="_canvas_script_8cs_source.html#l00042">42</a> of file <a class="el" href="_canvas_script_8cs_source.html">CanvasScript.cs</a>.</p>
+
+</div>
+</div>
 <a id="accc2510263c8ae587337dddd85b52869"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#accc2510263c8ae587337dddd85b52869">&#9670;&nbsp;</a></span>lossText</h2>
 
@@ -173,6 +309,32 @@ Public Attributes</h2></td></tr>
 <p>Reference to text which shows on loss </p>
 
 <p class="definition">Definition at line <a class="el" href="_canvas_script_8cs_source.html#l00017">17</a> of file <a class="el" href="_canvas_script_8cs_source.html">CanvasScript.cs</a>.</p>
+
+</div>
+</div>
+<a id="adfdad6120c1f09070b598858bf4e2eed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfdad6120c1f09070b598858bf4e2eed">&#9670;&nbsp;</a></span>lossTextDisplayTicks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CanvasScript.lossTextDisplayTicks = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>n of ticks that the loss text has been displayed </p>
+
+<p class="definition">Definition at line <a class="el" href="_canvas_script_8cs_source.html#l00022">22</a> of file <a class="el" href="_canvas_script_8cs_source.html">CanvasScript.cs</a>.</p>
 
 </div>
 </div>
@@ -230,10 +392,44 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a9737083d48a464ab93bf8e688efcd709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9737083d48a464ab93bf8e688efcd709">&#9670;&nbsp;</a></span>winTextDisplayTicks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CanvasScript.winTextDisplayTicks = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>n of ticks that the win text has been displayed </p>
+
+<p class="definition">Definition at line <a class="el" href="_canvas_script_8cs_source.html#l00032">32</a> of file <a class="el" href="_canvas_script_8cs_source.html">CanvasScript.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>FloorIsLava/Assets/Scripts/<a class="el" href="_canvas_script_8cs_source.html">CanvasScript.cs</a></li>
+<li>Assets/Scripts/<a class="el" href="_canvas_script_8cs_source.html">CanvasScript.cs</a></li>
 </ul>
 </div><!-- contents -->
+<div class="ttc" id="aclass_canvas_script_html_ad895a27077a6c7a1368e2ee7f6f467f9"><div class="ttname"><a href="class_canvas_script.html#ad895a27077a6c7a1368e2ee7f6f467f9">CanvasScript.winText</a></div><div class="ttdeci">Text winText</div><div class="ttdoc">Reference to text which shows on win</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00012">CanvasScript.cs:12</a></div></div>
+<div class="ttc" id="aclass_canvas_script_html_aaa20089f1f93887cc5a5b1b5f42812b8"><div class="ttname"><a href="class_canvas_script.html#aaa20089f1f93887cc5a5b1b5f42812b8">CanvasScript.maxLossTextDisplayTicks</a></div><div class="ttdeci">int maxLossTextDisplayTicks</div><div class="ttdoc">n of ticks the loss text exists before being disabled</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00027">CanvasScript.cs:27</a></div></div>
+<div class="ttc" id="aclass_canvas_script_html_adfdad6120c1f09070b598858bf4e2eed"><div class="ttname"><a href="class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed">CanvasScript.lossTextDisplayTicks</a></div><div class="ttdeci">int lossTextDisplayTicks</div><div class="ttdoc">n of ticks that the loss text has been displayed</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00022">CanvasScript.cs:22</a></div></div>
+<div class="ttc" id="aclass_canvas_script_html_ae96103759accaacc3163cb4eee2f6568"><div class="ttname"><a href="class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568">CanvasScript.displayWinText</a></div><div class="ttdeci">bool displayWinText</div><div class="ttdoc">set to TRUE when displaying win text</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00042">CanvasScript.cs:42</a></div></div>
+<div class="ttc" id="aclass_canvas_script_html_a9737083d48a464ab93bf8e688efcd709"><div class="ttname"><a href="class_canvas_script.html#a9737083d48a464ab93bf8e688efcd709">CanvasScript.winTextDisplayTicks</a></div><div class="ttdeci">int winTextDisplayTicks</div><div class="ttdoc">n of ticks that the win text has been displayed</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00032">CanvasScript.cs:32</a></div></div>
+<div class="ttc" id="aclass_canvas_script_html_afa81268b9406d04d237efb7900a0b624"><div class="ttname"><a href="class_canvas_script.html#afa81268b9406d04d237efb7900a0b624">CanvasScript.displayLossText</a></div><div class="ttdeci">bool displayLossText</div><div class="ttdoc">set to TRUE when displaying loss text</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00047">CanvasScript.cs:47</a></div></div>
+<div class="ttc" id="aclass_canvas_script_html_a8387725e5b8d845e02eda507f3e3514e"><div class="ttname"><a href="class_canvas_script.html#a8387725e5b8d845e02eda507f3e3514e">CanvasScript.maxWinTextDisplayTicks</a></div><div class="ttdeci">int maxWinTextDisplayTicks</div><div class="ttdoc">n of ticks the win text exists before being disabled</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00037">CanvasScript.cs:37</a></div></div>
+<div class="ttc" id="aclass_canvas_script_html_accc2510263c8ae587337dddd85b52869"><div class="ttname"><a href="class_canvas_script.html#accc2510263c8ae587337dddd85b52869">CanvasScript.lossText</a></div><div class="ttdeci">Text lossText</div><div class="ttdoc">Reference to text which shows on loss</div><div class="ttdef"><b>Definition:</b> <a href="_canvas_script_8cs_source.html#l00017">CanvasScript.cs:17</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

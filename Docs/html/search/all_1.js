@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['jumpforce_3',['jumpForce',['../class_p_c___movement.html#aa826cf2ae48541b3a5911fb219a53a64',1,'PC_Movement']]]
+  ['displaylosstext_3',['displayLossText',['../class_canvas_script.html#afa81268b9406d04d237efb7900a0b624',1,'CanvasScript']]],
+  ['displaywintext_4',['displayWinText',['../class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568',1,'CanvasScript']]]
 ];

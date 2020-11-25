@@ -65,10 +65,8 @@
   </compound>
   <compound refid="_player_script_8cs" kind="file"><name>PlayerScript.cs</name>
   </compound>
-  <compound refid="dir_b4a201941fc250eca15b0c5215dcd444" kind="dir"><name>FloorIsLava/Assets</name>
+  <compound refid="dir_84bbf7b3c7f28a5a18725745e1505219" kind="dir"><name>Assets</name>
   </compound>
-  <compound refid="dir_650d003c1b6bca0b1027be23060b5750" kind="dir"><name>FloorIsLava</name>
-  </compound>
-  <compound refid="dir_12a1ab564983e13a7d0b24c0a20ea472" kind="dir"><name>FloorIsLava/Assets/Scripts</name>
+  <compound refid="dir_f13b41af88cf68434578284aaf699e39" kind="dir"><name>Assets/Scripts</name>
   </compound>
 </doxygenindex>

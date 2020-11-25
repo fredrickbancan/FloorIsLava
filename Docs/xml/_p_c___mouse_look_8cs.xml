@@ -12,29 +12,29 @@
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6" refid="class_p_c___mouse_look" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_p_c___mouse_look" kindref="compound">PC_MouseLook</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>prevMouseX<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="11" refid="class_p_c___mouse_look_1affa930b038b6ae57fa68e429b636054b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_p_c___mouse_look_1affa930b038b6ae57fa68e429b636054b" kindref="member">prevMouseX</ref><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>private<sp/>float<sp/>prevMouseY<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>yRot<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="21" refid="class_p_c___mouse_look_1a1f73cb059faa099b88a752b5fcd31985" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_p_c___mouse_look_1a1f73cb059faa099b88a752b5fcd31985" kindref="member">yRot</ref><sp/>=<sp/>0.0f;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26" refid="class_p_c___mouse_look_1ab9d6717daecfc10e2c96fdc3cb5f8fb8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Transform<sp/><ref refid="class_p_c___mouse_look_1ab9d6717daecfc10e2c96fdc3cb5f8fb8" kindref="member">playerBody</ref>;</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Update()</highlight></codeline>
+<codeline lineno="32" refid="class_p_c___mouse_look_1ac6a67b858bac4d5934a1ea8982c1566e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_p_c___mouse_look_1ac6a67b858bac4d5934a1ea8982c1566e" kindref="member">Update</ref>()</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mouseX<sp/>=<sp/>Input.GetAxis(</highlight><highlight class="stringliteral">&quot;Mouse<sp/>X&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>float<sp/>mouseY<sp/>=<sp/>Input.GetAxis(&quot;Mouse<sp/>Y&quot;);</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaMouseX<sp/>=<sp/>mouseX<sp/>-<sp/>prevMouseX;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaMouseX<sp/>=<sp/>mouseX<sp/>-<sp/><ref refid="class_p_c___mouse_look_1affa930b038b6ae57fa68e429b636054b" kindref="member">prevMouseX</ref>;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>float<sp/>deltaMouseY<sp/>=<sp/>mouseY<sp/>-<sp/>prevMouseY;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yRot<sp/>+=<sp/>deltaMouseX;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_c___mouse_look_1ab9d6717daecfc10e2c96fdc3cb5f8fb8" kindref="member">playerBody</ref>.Rotate(Vector3.up<sp/>*<sp/>yRot);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_c___mouse_look_1a1f73cb059faa099b88a752b5fcd31985" kindref="member">yRot</ref><sp/>+=<sp/>deltaMouseX;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_c___mouse_look_1ab9d6717daecfc10e2c96fdc3cb5f8fb8" kindref="member">playerBody</ref>.Rotate(Vector3.up<sp/>*<sp/><ref refid="class_p_c___mouse_look_1a1f73cb059faa099b88a752b5fcd31985" kindref="member">yRot</ref>);</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prevMouseX<sp/>=<sp/>mouseX;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_c___mouse_look_1affa930b038b6ae57fa68e429b636054b" kindref="member">prevMouseX</ref><sp/>=<sp/>mouseX;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>prevMouseY<sp/>=<sp/>mouseY;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="45"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="FloorIsLava/Assets/Scripts/PC_MouseLook.cs"/>
+    <location file="Assets/Scripts/PC_MouseLook.cs"/>
   </compounddef>
 </doxygen>

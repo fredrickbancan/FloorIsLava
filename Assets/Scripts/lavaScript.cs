@@ -20,12 +20,15 @@ public class lavaScript : MonoBehaviour
     /// </summary>
     public float moveSpeed = 0.01F;
 
+
    /// <summary>
    /// Sets the lava height to the startHeight value
    /// </summary>
     void Start()
     {
-        lavaTransform.position = new Vector3(0, startHeight, 0);
+        Vector3 h = lavaTransform.position;
+        h.y = startHeight;
+        lavaTransform.position = h;
     }
 
    /// <summary>
