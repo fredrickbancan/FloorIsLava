@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['displaylosstext_3',['displayLossText',['../class_canvas_script.html#afa81268b9406d04d237efb7900a0b624',1,'CanvasScript']]],
-  ['displaywintext_4',['displayWinText',['../class_canvas_script.html#ae96103759accaacc3163cb4eee2f6568',1,'CanvasScript']]]
+  ['canvasscript_3',['CanvasScript',['../class_canvas_script.html',1,'']]],
+  ['canvasscript_2ecs_4',['CanvasScript.cs',['../_canvas_script_8cs.html',1,'']]],
+  ['cs_5',['cs',['../class_player_script.html#adc4f3dcd2e4f0b801ff6d13e95e3e4d3',1,'PlayerScript']]]
 ];

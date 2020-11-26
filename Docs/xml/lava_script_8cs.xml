@@ -18,19 +18,22 @@
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21" refid="classlava_script_1abca9120810f8c09f476f4ef755346cb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classlava_script_1abca9120810f8c09f476f4ef755346cb1" kindref="member">moveSpeed</ref><sp/>=<sp/>0.01F;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26" refid="classlava_script_1a11aaca301871da134a47fdba4a787ef2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classlava_script_1a11aaca301871da134a47fdba4a787ef2" kindref="member">Start</ref>()</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classlava_script_1a86046d5ca45fc1d025ab95ee6d818d11" kindref="member">lavaTransform</ref>.position<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Vector3(0,<sp/><ref refid="classlava_script_1a055c0df9f55aa81a901f6b275b52839c" kindref="member">startHeight</ref>,<sp/>0);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="classlava_script_1a2ac92810050f16332fd966d340938184" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classlava_script_1a2ac92810050f16332fd966d340938184" kindref="member">Update</ref>()</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>h<sp/>=<sp/><ref refid="classlava_script_1a86046d5ca45fc1d025ab95ee6d818d11" kindref="member">lavaTransform</ref>.position;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>h.y<sp/>+=<sp/><ref refid="classlava_script_1abca9120810f8c09f476f4ef755346cb1" kindref="member">moveSpeed</ref>;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classlava_script_1a86046d5ca45fc1d025ab95ee6d818d11" kindref="member">lavaTransform</ref>.position<sp/>=<sp/>h;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classlava_script_1a11aaca301871da134a47fdba4a787ef2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classlava_script_1a11aaca301871da134a47fdba4a787ef2" kindref="member">Start</ref>()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>h<sp/>=<sp/><ref refid="classlava_script_1a86046d5ca45fc1d025ab95ee6d818d11" kindref="member">lavaTransform</ref>.position;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>h.y<sp/>=<sp/><ref refid="classlava_script_1a055c0df9f55aa81a901f6b275b52839c" kindref="member">startHeight</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classlava_script_1a86046d5ca45fc1d025ab95ee6d818d11" kindref="member">lavaTransform</ref>.position<sp/>=<sp/>h;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classlava_script_1a2ac92810050f16332fd966d340938184" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classlava_script_1a2ac92810050f16332fd966d340938184" kindref="member">Update</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>h<sp/>=<sp/><ref refid="classlava_script_1a86046d5ca45fc1d025ab95ee6d818d11" kindref="member">lavaTransform</ref>.position;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>h.y<sp/>+=<sp/><ref refid="classlava_script_1abca9120810f8c09f476f4ef755346cb1" kindref="member">moveSpeed</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classlava_script_1a86046d5ca45fc1d025ab95ee6d818d11" kindref="member">lavaTransform</ref>.position<sp/>=<sp/>h;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="Assets/Scripts/lavaScript.cs"/>
+    <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/lavaScript.cs"/>
   </compounddef>
 </doxygen>

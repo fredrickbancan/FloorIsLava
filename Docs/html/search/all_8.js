@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['pc_5fmouselook_26',['PC_MouseLook',['../class_p_c___mouse_look.html',1,'']]],
-  ['pc_5fmouselook_2ecs_27',['PC_MouseLook.cs',['../_p_c___mouse_look_8cs.html',1,'']]],
-  ['pc_5fmovement_28',['PC_Movement',['../class_p_c___movement.html',1,'']]],
-  ['pc_5fmovement_2ecs_29',['PC_Movement.cs',['../_p_c___movement_8cs.html',1,'']]],
-  ['player_30',['player',['../class_player_script.html#a50797cd94984e84d427d6be998907965',1,'PlayerScript']]],
-  ['playerbody_31',['playerBody',['../class_p_c___mouse_look.html#ab9d6717daecfc10e2c96fdc3cb5f8fb8',1,'PC_MouseLook.playerBody()'],['../class_p_c___movement.html#a001bb6ad7ee608a270cb1adfde71ca66',1,'PC_Movement.playerBody()']]],
-  ['playerscript_32',['PlayerScript',['../class_player_script.html',1,'']]],
-  ['playerscript_2ecs_33',['PlayerScript.cs',['../_player_script_8cs.html',1,'']]],
-  ['playertransform_34',['playerTransform',['../class_p_c___movement.html#abf8204b782bb180404fbb38fa6301d15',1,'PC_Movement']]],
-  ['prevmousex_35',['prevMouseX',['../class_p_c___mouse_look.html#affa930b038b6ae57fa68e429b636054b',1,'PC_MouseLook']]]
+  ['maxlosstextdisplayticks_25',['maxLossTextDisplayTicks',['../class_canvas_script.html#aaa20089f1f93887cc5a5b1b5f42812b8',1,'CanvasScript']]],
+  ['maxrespawnticks_26',['maxRespawnTicks',['../class_player_script.html#a92f4f84ae798cf617031fa24a6b1589d',1,'PlayerScript']]],
+  ['maxvel_27',['maxVel',['../class_player_movement.html#a254811049e46f20ff3799459602c7cc3',1,'PlayerMovement']]],
+  ['maxwintextdisplayticks_28',['maxWinTextDisplayTicks',['../class_canvas_script.html#a8387725e5b8d845e02eda507f3e3514e',1,'CanvasScript']]],
+  ['movebackwardsbutton_29',['moveBackwardsButton',['../class_android___g_u_i_script.html#a68e36013085e91124eeb85f78be04498',1,'Android_GUIScript']]],
+  ['movefowardsbutton_30',['moveFowardsButton',['../class_android___g_u_i_script.html#af15259688e7f7520f1c9f9d71c94a9cc',1,'Android_GUIScript']]],
+  ['movespeed_31',['moveSpeed',['../classlava_script.html#abca9120810f8c09f476f4ef755346cb1',1,'lavaScript']]]
 ];

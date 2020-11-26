@@ -131,10 +131,12 @@ Private Member Functions</h2></td></tr>
 
 <p>Sets the lava height to the startHeight value </p>
 
-<p class="definition">Definition at line <a class="el" href="lava_script_8cs_source.html#l00026">26</a> of file <a class="el" href="lava_script_8cs_source.html">lavaScript.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classlava_script.html#a86046d5ca45fc1d025ab95ee6d818d11">lavaTransform</a>.position = <span class="keyword">new</span> Vector3(0, <a class="code" href="classlava_script.html#a055c0df9f55aa81a901f6b275b52839c">startHeight</a>, 0);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="lava_script_8cs_source.html#l00027">27</a> of file <a class="el" href="lava_script_8cs_source.html">lavaScript.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        Vector3 h = <a class="code" href="classlava_script.html#a86046d5ca45fc1d025ab95ee6d818d11">lavaTransform</a>.position;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        h.y = <a class="code" href="classlava_script.html#a055c0df9f55aa81a901f6b275b52839c">startHeight</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classlava_script.html#a86046d5ca45fc1d025ab95ee6d818d11">lavaTransform</a>.position = h;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -163,12 +165,12 @@ Private Member Functions</h2></td></tr>
 
 <p>Increases the lava plane height by moveSpeed units each update </p>
 
-<p class="definition">Definition at line <a class="el" href="lava_script_8cs_source.html#l00034">34</a> of file <a class="el" href="lava_script_8cs_source.html">lavaScript.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        Vector3 h = <a class="code" href="classlava_script.html#a86046d5ca45fc1d025ab95ee6d818d11">lavaTransform</a>.position;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        h.y += <a class="code" href="classlava_script.html#abca9120810f8c09f476f4ef755346cb1">moveSpeed</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classlava_script.html#a86046d5ca45fc1d025ab95ee6d818d11">lavaTransform</a>.position = h;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="lava_script_8cs_source.html#l00037">37</a> of file <a class="el" href="lava_script_8cs_source.html">lavaScript.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        Vector3 h = <a class="code" href="classlava_script.html#a86046d5ca45fc1d025ab95ee6d818d11">lavaTransform</a>.position;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        h.y += <a class="code" href="classlava_script.html#abca9120810f8c09f476f4ef755346cb1">moveSpeed</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classlava_script.html#a86046d5ca45fc1d025ab95ee6d818d11">lavaTransform</a>.position = h;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -228,7 +230,7 @@ Private Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Scripts/<a class="el" href="lava_script_8cs_source.html">lavaScript.cs</a></li>
+<li>C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/<a class="el" href="lava_script_8cs_source.html">lavaScript.cs</a></li>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclasslava_script_html_a86046d5ca45fc1d025ab95ee6d818d11"><div class="ttname"><a href="classlava_script.html#a86046d5ca45fc1d025ab95ee6d818d11">lavaScript.lavaTransform</a></div><div class="ttdeci">Transform lavaTransform</div><div class="ttdoc">Ref to lava plane transform for moving it</div><div class="ttdef"><b>Definition:</b> <a href="lava_script_8cs_source.html#l00011">lavaScript.cs:11</a></div></div>

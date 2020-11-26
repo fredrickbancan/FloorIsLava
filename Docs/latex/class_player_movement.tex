@@ -1,0 +1,346 @@
+\hypertarget{class_player_movement}{}\doxysection{Player\+Movement Class Reference}
+\label{class_player_movement}\index{PlayerMovement@{PlayerMovement}}
+
+
+Class for movement of player (Keyboard and android touch)  
+
+
+Inheritance diagram for Player\+Movement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_movement}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Rigidbody \mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{player\+Body}}
+\begin{DoxyCompactList}\small\item\em ref to player rigidbody for physics \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{player\+Transform}}
+\begin{DoxyCompactList}\small\item\em ref to player transform for movement \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_player_movement_a1184316364647dd7cdb2a857f26111e4}{player\+Rotation\+Amount}} = 1.\+0F
+\begin{DoxyCompactList}\small\item\em How much to rotate the player when android touch button for turning left/right is down. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_player_movement_a55cf4a38e7ce8f9d02715352e55b2de6}{jump\+Force}}
+\begin{DoxyCompactList}\small\item\em editable value to determine the power of the players jump \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_player_movement_a8f3cee81eb94d94c32e158a30beaaec3}{walk\+Speed}}
+\begin{DoxyCompactList}\small\item\em editable value to determine the speed of player movement \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_player_movement_a254811049e46f20ff3799459602c7cc3}{max\+Vel}}
+\begin{DoxyCompactList}\small\item\em editable value to determine the players maximum horizontal velocity \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_movement_aaf9b77d7177d538be9c1447d08191322}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Detects if the player is grounded using multiple raycasts below the player. If the player is grounded, then depending on input keys or touch screen buttons being pressed, they will move, jump and/or rotate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_movement_a99b8e8c8430a5378ea995435493539d8}{Update\+Android\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Moves the player based on the android touch inputs \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_android___g_u_i_script}{Android\+\_\+\+G\+U\+I\+Script}} \mbox{\hyperlink{class_player_movement_a8c9ef0293a554d197b32805decc3936c}{android\+Touch}}
+\begin{DoxyCompactList}\small\item\em ref to android touch input script \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_movement_a1a59782fc52356398194e29255f1a0ae}{is\+Jumping}} = false
+\item 
+bool \mbox{\hyperlink{class_player_movement_ae71be066b5ec2ee27709be5d046d0ff3}{is\+Walking\+Fowards}} = false
+\item 
+bool \mbox{\hyperlink{class_player_movement_a6ed333c8c8a473104eaee880375eb141}{is\+Walking\+Back}} = false
+\item 
+bool \mbox{\hyperlink{class_player_movement_a9e52d006ad201dc9412608cbb5b44197}{is\+Strafing\+Right}} = false
+\item 
+bool \mbox{\hyperlink{class_player_movement_a0ddda00f558f8ef5dfb70e995f4d1709}{is\+Strafing\+Left}} = false
+\item 
+bool \mbox{\hyperlink{class_player_movement_a27276d8e80bcd5acbb70354b06d66841}{is\+Grounded}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for movement of player (Keyboard and android touch) 
+
+
+
+Definition at line 6 of file Player\+Movement.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_movement_aaf9b77d7177d538be9c1447d08191322}\label{class_player_movement_aaf9b77d7177d538be9c1447d08191322}} 
+\index{PlayerMovement@{PlayerMovement}!Update@{Update}}
+\index{Update@{Update}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+Movement.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Detects if the player is grounded using multiple raycasts below the player. If the player is grounded, then depending on input keys or touch screen buttons being pressed, they will move, jump and/or rotate. 
+
+
+
+Definition at line 56 of file Player\+Movement.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57     \{}
+\DoxyCodeLine{58         \textcolor{comment}{//using rays on every bottom corner and edge of the player box to determine if they are standing on the ground.}}
+\DoxyCodeLine{59         \mbox{\hyperlink{class_player_movement_a27276d8e80bcd5acbb70354b06d66841}{isGrounded}} = }
+\DoxyCodeLine{60             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(0.5F, -\/0.2F, 0), Vector3.down), 0.5F) ||}
+\DoxyCodeLine{61             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(-\/0.5F, -\/0.2F, 0), Vector3.down), 0.5F) ||}
+\DoxyCodeLine{62             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(0.0F, -\/0.2F, 0.5F), Vector3.down), 0.5F) ||}
+\DoxyCodeLine{63             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(0.0F, -\/0.2F, -\/0.5F), Vector3.down), 0.5F) ||}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(0.5F, -\/0.2F, 0.5F), Vector3.down), 0.5F) ||}
+\DoxyCodeLine{66             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(-\/0.5F, -\/0.2F, -\/0.5F), Vector3.down), 0.5F) ||}
+\DoxyCodeLine{67             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(-\/0.5F, -\/0.2F, 0.5F), Vector3.down), 0.5F) ||}
+\DoxyCodeLine{68             Physics.Raycast(\textcolor{keyword}{new} Ray(\mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.position + \textcolor{keyword}{new} Vector3(0.5F, -\/0.2F, -\/0.5F), Vector3.down), 0.5F);}
+\DoxyCodeLine{69         \mbox{\hyperlink{class_player_movement_a1a59782fc52356398194e29255f1a0ae}{isJumping}} = Input.GetKeyDown(KeyCode.Space);}
+\DoxyCodeLine{70         \mbox{\hyperlink{class_player_movement_ae71be066b5ec2ee27709be5d046d0ff3}{isWalkingFowards}} = Input.GetKey(KeyCode.W);}
+\DoxyCodeLine{71         \mbox{\hyperlink{class_player_movement_a6ed333c8c8a473104eaee880375eb141}{isWalkingBack}} = Input.GetKey(KeyCode.S);}
+\DoxyCodeLine{72         \mbox{\hyperlink{class_player_movement_a9e52d006ad201dc9412608cbb5b44197}{isStrafingRight}} = Input.GetKey(KeyCode.D);}
+\DoxyCodeLine{73         \mbox{\hyperlink{class_player_movement_a0ddda00f558f8ef5dfb70e995f4d1709}{isStrafingLeft}} = Input.GetKey(KeyCode.A);}
+\DoxyCodeLine{74         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_player_movement_a27276d8e80bcd5acbb70354b06d66841}{isGrounded}})}
+\DoxyCodeLine{75         \{}
+\DoxyCodeLine{76             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_player_movement_a1a59782fc52356398194e29255f1a0ae}{isJumping}})}
+\DoxyCodeLine{77             \{}
+\DoxyCodeLine{78                 \mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.AddForce(Vector3.up * \mbox{\hyperlink{class_player_movement_a55cf4a38e7ce8f9d02715352e55b2de6}{jumpForce}}, ForceMode.Impulse);}
+\DoxyCodeLine{79             \}}
+\DoxyCodeLine{80             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_player_movement_ae71be066b5ec2ee27709be5d046d0ff3}{isWalkingFowards}})}
+\DoxyCodeLine{81             \{}
+\DoxyCodeLine{82                 \mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.velocity += \mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.forward * \mbox{\hyperlink{class_player_movement_a8f3cee81eb94d94c32e158a30beaaec3}{walkSpeed}};}
+\DoxyCodeLine{83             \}}
+\DoxyCodeLine{84             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_player_movement_a6ed333c8c8a473104eaee880375eb141}{isWalkingBack}})}
+\DoxyCodeLine{85             \{}
+\DoxyCodeLine{86                 \mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.velocity -\/= \mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.forward * \mbox{\hyperlink{class_player_movement_a8f3cee81eb94d94c32e158a30beaaec3}{walkSpeed}};}
+\DoxyCodeLine{87             \}}
+\DoxyCodeLine{88             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_player_movement_a9e52d006ad201dc9412608cbb5b44197}{isStrafingRight}})}
+\DoxyCodeLine{89             \{}
+\DoxyCodeLine{90                 \mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.velocity += \mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.right * \mbox{\hyperlink{class_player_movement_a8f3cee81eb94d94c32e158a30beaaec3}{walkSpeed}};}
+\DoxyCodeLine{91             \}}
+\DoxyCodeLine{92             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_player_movement_a0ddda00f558f8ef5dfb70e995f4d1709}{isStrafingLeft}})}
+\DoxyCodeLine{93             \{}
+\DoxyCodeLine{94                 \mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.velocity -\/= \mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.right * \mbox{\hyperlink{class_player_movement_a8f3cee81eb94d94c32e158a30beaaec3}{walkSpeed}};}
+\DoxyCodeLine{95             \}}
+\DoxyCodeLine{96         \}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98         \mbox{\hyperlink{class_player_movement_a99b8e8c8430a5378ea995435493539d8}{UpdateAndroidInput}}(); }
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101         \textcolor{keywordtype}{float} prevy = \mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.velocity.y;}
+\DoxyCodeLine{102         \mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.velocity = Vector3.ClampMagnitude(\textcolor{keyword}{new} Vector3(\mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.velocity.x, 0, \mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.velocity.z), \mbox{\hyperlink{class_player_movement_a254811049e46f20ff3799459602c7cc3}{maxVel}});}
+\DoxyCodeLine{103         \mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.velocity = \textcolor{keyword}{new} Vector3(\mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.velocity.x, prevy, \mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.velocity.z);}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_movement_a99b8e8c8430a5378ea995435493539d8}\label{class_player_movement_a99b8e8c8430a5378ea995435493539d8}} 
+\index{PlayerMovement@{PlayerMovement}!UpdateAndroidInput@{UpdateAndroidInput}}
+\index{UpdateAndroidInput@{UpdateAndroidInput}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{UpdateAndroidInput()}{UpdateAndroidInput()}}
+{\footnotesize\ttfamily void Player\+Movement.\+Update\+Android\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Moves the player based on the android touch inputs 
+
+
+
+Definition at line 110 of file Player\+Movement.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111     \{}
+\DoxyCodeLine{112         Vector4 values = \mbox{\hyperlink{class_player_movement_a8c9ef0293a554d197b32805decc3936c}{androidTouch}}.\mbox{\hyperlink{class_android___g_u_i_script_a83972aea463ec938132c3591fb337281}{GetInputValues}}();}
+\DoxyCodeLine{113         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_player_movement_a27276d8e80bcd5acbb70354b06d66841}{isGrounded}})}
+\DoxyCodeLine{114         \{}
+\DoxyCodeLine{115             \textcolor{keywordflow}{if} (values.x != 0)\textcolor{comment}{//movefowards}}
+\DoxyCodeLine{116             \{}
+\DoxyCodeLine{117                 \mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.velocity += \mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.forward * \mbox{\hyperlink{class_player_movement_a8f3cee81eb94d94c32e158a30beaaec3}{walkSpeed}};}
+\DoxyCodeLine{118             \}}
+\DoxyCodeLine{119             \textcolor{keywordflow}{if} (values.y != 0)\textcolor{comment}{//moveBack}}
+\DoxyCodeLine{120             \{}
+\DoxyCodeLine{121                 \mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.velocity -\/= \mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.forward * \mbox{\hyperlink{class_player_movement_a8f3cee81eb94d94c32e158a30beaaec3}{walkSpeed}};}
+\DoxyCodeLine{122             \}}
+\DoxyCodeLine{123             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_player_movement_a8c9ef0293a554d197b32805decc3936c}{androidTouch}}.\mbox{\hyperlink{class_android___g_u_i_script_a4ed5ceec5bfd901b166bd182b3d31ee1}{jumping}})}
+\DoxyCodeLine{124             \{}
+\DoxyCodeLine{125                 \mbox{\hyperlink{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}{playerBody}}.AddForce(Vector3.up * \mbox{\hyperlink{class_player_movement_a55cf4a38e7ce8f9d02715352e55b2de6}{jumpForce}}, ForceMode.Impulse);}
+\DoxyCodeLine{126                 \mbox{\hyperlink{class_player_movement_a8c9ef0293a554d197b32805decc3936c}{androidTouch}}.\mbox{\hyperlink{class_android___g_u_i_script_a4ed5ceec5bfd901b166bd182b3d31ee1}{jumping}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{127             \}}
+\DoxyCodeLine{128         \}}
+\DoxyCodeLine{129         \textcolor{keywordflow}{if} (values.z != 0)\textcolor{comment}{//rotateLeft}}
+\DoxyCodeLine{130         \{}
+\DoxyCodeLine{131             Vector3 ang = \mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.eulerAngles;}
+\DoxyCodeLine{132             ang.y -\/= \mbox{\hyperlink{class_player_movement_a1184316364647dd7cdb2a857f26111e4}{playerRotationAmount}};}
+\DoxyCodeLine{133             \mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.rotation = Quaternion.Euler(ang);}
+\DoxyCodeLine{134         \}}
+\DoxyCodeLine{135         \textcolor{keywordflow}{if} (values.w != 0)\textcolor{comment}{//rotateRight}}
+\DoxyCodeLine{136         \{}
+\DoxyCodeLine{137             Vector3 ang = \mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.eulerAngles;}
+\DoxyCodeLine{138             ang.y += \mbox{\hyperlink{class_player_movement_a1184316364647dd7cdb2a857f26111e4}{playerRotationAmount}};}
+\DoxyCodeLine{139             \mbox{\hyperlink{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}{playerTransform}}.rotation = Quaternion.Euler(ang);}
+\DoxyCodeLine{140         \}}
+\DoxyCodeLine{141     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_movement_a8c9ef0293a554d197b32805decc3936c}\label{class_player_movement_a8c9ef0293a554d197b32805decc3936c}} 
+\index{PlayerMovement@{PlayerMovement}!androidTouch@{androidTouch}}
+\index{androidTouch@{androidTouch}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{androidTouch}{androidTouch}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_android___g_u_i_script}{Android\+\_\+\+G\+U\+I\+Script}} Player\+Movement.\+android\+Touch\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ref to android touch input script 
+
+
+
+Definition at line 22 of file Player\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_player_movement_a27276d8e80bcd5acbb70354b06d66841}\label{class_player_movement_a27276d8e80bcd5acbb70354b06d66841}} 
+\index{PlayerMovement@{PlayerMovement}!isGrounded@{isGrounded}}
+\index{isGrounded@{isGrounded}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{isGrounded}{isGrounded}}
+{\footnotesize\ttfamily bool Player\+Movement.\+is\+Grounded = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 50 of file Player\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_player_movement_a1a59782fc52356398194e29255f1a0ae}\label{class_player_movement_a1a59782fc52356398194e29255f1a0ae}} 
+\index{PlayerMovement@{PlayerMovement}!isJumping@{isJumping}}
+\index{isJumping@{isJumping}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{isJumping}{isJumping}}
+{\footnotesize\ttfamily bool Player\+Movement.\+is\+Jumping = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 45 of file Player\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_player_movement_a0ddda00f558f8ef5dfb70e995f4d1709}\label{class_player_movement_a0ddda00f558f8ef5dfb70e995f4d1709}} 
+\index{PlayerMovement@{PlayerMovement}!isStrafingLeft@{isStrafingLeft}}
+\index{isStrafingLeft@{isStrafingLeft}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{isStrafingLeft}{isStrafingLeft}}
+{\footnotesize\ttfamily bool Player\+Movement.\+is\+Strafing\+Left = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 49 of file Player\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_player_movement_a9e52d006ad201dc9412608cbb5b44197}\label{class_player_movement_a9e52d006ad201dc9412608cbb5b44197}} 
+\index{PlayerMovement@{PlayerMovement}!isStrafingRight@{isStrafingRight}}
+\index{isStrafingRight@{isStrafingRight}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{isStrafingRight}{isStrafingRight}}
+{\footnotesize\ttfamily bool Player\+Movement.\+is\+Strafing\+Right = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 48 of file Player\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_player_movement_a6ed333c8c8a473104eaee880375eb141}\label{class_player_movement_a6ed333c8c8a473104eaee880375eb141}} 
+\index{PlayerMovement@{PlayerMovement}!isWalkingBack@{isWalkingBack}}
+\index{isWalkingBack@{isWalkingBack}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{isWalkingBack}{isWalkingBack}}
+{\footnotesize\ttfamily bool Player\+Movement.\+is\+Walking\+Back = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 47 of file Player\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_player_movement_ae71be066b5ec2ee27709be5d046d0ff3}\label{class_player_movement_ae71be066b5ec2ee27709be5d046d0ff3}} 
+\index{PlayerMovement@{PlayerMovement}!isWalkingFowards@{isWalkingFowards}}
+\index{isWalkingFowards@{isWalkingFowards}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{isWalkingFowards}{isWalkingFowards}}
+{\footnotesize\ttfamily bool Player\+Movement.\+is\+Walking\+Fowards = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 46 of file Player\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_player_movement_a55cf4a38e7ce8f9d02715352e55b2de6}\label{class_player_movement_a55cf4a38e7ce8f9d02715352e55b2de6}} 
+\index{PlayerMovement@{PlayerMovement}!jumpForce@{jumpForce}}
+\index{jumpForce@{jumpForce}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{jumpForce}{jumpForce}}
+{\footnotesize\ttfamily float Player\+Movement.\+jump\+Force}
+
+
+
+editable value to determine the power of the players jump 
+
+
+
+Definition at line 32 of file Player\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_player_movement_a254811049e46f20ff3799459602c7cc3}\label{class_player_movement_a254811049e46f20ff3799459602c7cc3}} 
+\index{PlayerMovement@{PlayerMovement}!maxVel@{maxVel}}
+\index{maxVel@{maxVel}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{maxVel}{maxVel}}
+{\footnotesize\ttfamily float Player\+Movement.\+max\+Vel}
+
+
+
+editable value to determine the players maximum horizontal velocity 
+
+
+
+Definition at line 42 of file Player\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}\label{class_player_movement_a539ba72ecb45b43168ee33a9be502bfd}} 
+\index{PlayerMovement@{PlayerMovement}!playerBody@{playerBody}}
+\index{playerBody@{playerBody}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{playerBody}{playerBody}}
+{\footnotesize\ttfamily Rigidbody Player\+Movement.\+player\+Body}
+
+
+
+ref to player rigidbody for physics 
+
+
+
+Definition at line 11 of file Player\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_player_movement_a1184316364647dd7cdb2a857f26111e4}\label{class_player_movement_a1184316364647dd7cdb2a857f26111e4}} 
+\index{PlayerMovement@{PlayerMovement}!playerRotationAmount@{playerRotationAmount}}
+\index{playerRotationAmount@{playerRotationAmount}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{playerRotationAmount}{playerRotationAmount}}
+{\footnotesize\ttfamily float Player\+Movement.\+player\+Rotation\+Amount = 1.\+0F}
+
+
+
+How much to rotate the player when android touch button for turning left/right is down. 
+
+
+
+Definition at line 27 of file Player\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}\label{class_player_movement_afd9627e73c1c8128c0c583e5ab9515f1}} 
+\index{PlayerMovement@{PlayerMovement}!playerTransform@{playerTransform}}
+\index{playerTransform@{playerTransform}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{playerTransform}{playerTransform}}
+{\footnotesize\ttfamily Transform Player\+Movement.\+player\+Transform}
+
+
+
+ref to player transform for movement 
+
+
+
+Definition at line 16 of file Player\+Movement.\+cs.
+
+\mbox{\Hypertarget{class_player_movement_a8f3cee81eb94d94c32e158a30beaaec3}\label{class_player_movement_a8f3cee81eb94d94c32e158a30beaaec3}} 
+\index{PlayerMovement@{PlayerMovement}!walkSpeed@{walkSpeed}}
+\index{walkSpeed@{walkSpeed}!PlayerMovement@{PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{walkSpeed}{walkSpeed}}
+{\footnotesize\ttfamily float Player\+Movement.\+walk\+Speed}
+
+
+
+editable value to determine the speed of player movement 
+
+
+
+Definition at line 37 of file Player\+Movement.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/disckord/\+Desktop/\+Cross Platform Development For Games/workspace/\+Floor\+Is\+Lava/\+Assets/\+Scripts/\mbox{\hyperlink{_player_movement_8cs}{Player\+Movement.\+cs}}\end{DoxyCompactItemize}

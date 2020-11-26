@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
+  <compounddef id="_touch_button_8cs" kind="file" language="C#">
+    <compoundname>TouchButton.cs</compoundname>
+    <innerclass refid="class_touch_button" prot="public">TouchButton</innerclass>
+    <innernamespace refid="namespace_unity_engine_1_1_events">UnityEngine::Events</innernamespace>
+    <innernamespace refid="namespace_unity_engine_1_1_event_systems">UnityEngine::EventSystems</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine.Events;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine.EventSystems;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine.UI;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">[AddComponentMenu(</highlight><highlight class="stringliteral">&quot;UI/TouchButton&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="10" refid="class_touch_button" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_touch_button" kindref="compound">TouchButton</ref><sp/>:<sp/>Button</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15" refid="class_touch_button_1a238a386eedf0aab86149fad0ce3e7d93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>UnityEvent<sp/><ref refid="class_touch_button_1a238a386eedf0aab86149fad0ce3e7d93" kindref="member">onButtonDown</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>UnityEvent();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_touch_button_1a195c1ba96c011c91a85f36f98b101eab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>UnityEvent<sp/><ref refid="class_touch_button_1a195c1ba96c011c91a85f36f98b101eab" kindref="member">onButtonUp</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>UnityEvent();</highlight></codeline>
+<codeline lineno="24" refid="class_touch_button_1a1890faaa9c5f0e7e52d00ae1121de7b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_touch_button_1a1890faaa9c5f0e7e52d00ae1121de7b5" kindref="member">OnPointerDown</ref>(PointerEventData<sp/>eventData)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base.OnPointerDown(eventData);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_touch_button_1a238a386eedf0aab86149fad0ce3e7d93" kindref="member">onButtonDown</ref>.Invoke();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_touch_button_1a4645ff4a86f7d0106f792eec9d878cca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_touch_button_1a4645ff4a86f7d0106f792eec9d878cca" kindref="member">OnPointerUp</ref>(PointerEventData<sp/>eventData)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base.OnPointerUp(eventData);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_touch_button_1a195c1ba96c011c91a85f36f98b101eab" kindref="member">onButtonUp</ref>.Invoke();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_touch_button_1a32bbb9cf1a2d80cf1ea230858ffa1a19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>UnityEvent<sp/><ref refid="class_touch_button_1a32bbb9cf1a2d80cf1ea230858ffa1a19" kindref="member">onButDown</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="class_touch_button_1a238a386eedf0aab86149fad0ce3e7d93" kindref="member">onButtonDown</ref>;<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43" refid="class_touch_button_1a612ae2387f59f8530a2e02ce423d5b60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>UnityEvent<sp/><ref refid="class_touch_button_1a612ae2387f59f8530a2e02ce423d5b60" kindref="member">onButUp</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="class_touch_button_1a195c1ba96c011c91a85f36f98b101eab" kindref="member">onButtonUp</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/TouchButton.cs"/>
+  </compounddef>
+</doxygen>

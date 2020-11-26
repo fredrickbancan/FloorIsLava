@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['maxlosstextdisplayticks_18',['maxLossTextDisplayTicks',['../class_canvas_script.html#aaa20089f1f93887cc5a5b1b5f42812b8',1,'CanvasScript']]],
-  ['maxrespawnticks_19',['maxRespawnTicks',['../class_player_script.html#a92f4f84ae798cf617031fa24a6b1589d',1,'PlayerScript']]],
-  ['maxvel_20',['maxVel',['../class_p_c___movement.html#aefcd88b4ecc3c47dc059d0cfc6dab619',1,'PC_Movement']]],
-  ['maxwintextdisplayticks_21',['maxWinTextDisplayTicks',['../class_canvas_script.html#a8387725e5b8d845e02eda507f3e3514e',1,'CanvasScript']]],
-  ['movespeed_22',['moveSpeed',['../classlava_script.html#abca9120810f8c09f476f4ef755346cb1',1,'lavaScript']]]
+  ['jumpbutton_17',['jumpButton',['../class_android___g_u_i_script.html#a666c451b1224d6bced91d423be67cd81',1,'Android_GUIScript']]],
+  ['jumpforce_18',['jumpForce',['../class_player_movement.html#a55cf4a38e7ce8f9d02715352e55b2de6',1,'PlayerMovement']]],
+  ['jumping_19',['jumping',['../class_android___g_u_i_script.html#a4ed5ceec5bfd901b166bd182b3d31ee1',1,'Android_GUIScript']]]
 ];

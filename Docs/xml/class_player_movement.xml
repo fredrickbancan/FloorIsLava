@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
+  <compounddef id="class_player_movement" kind="class" language="C#" prot="public">
+    <compoundname>PlayerMovement</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_player_movement_1a539ba72ecb45b43168ee33a9be502bfd" prot="public" static="no" mutable="no">
+        <type>Rigidbody</type>
+        <definition>Rigidbody PlayerMovement.playerBody</definition>
+        <argsstring></argsstring>
+        <name>playerBody</name>
+        <briefdescription>
+<para>ref to player rigidbody for physics </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="11" column="22" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_movement_1afd9627e73c1c8128c0c583e5ab9515f1" prot="public" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform PlayerMovement.playerTransform</definition>
+        <argsstring></argsstring>
+        <name>playerTransform</name>
+        <briefdescription>
+<para>ref to player transform for movement </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="16" column="22" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_movement_1a1184316364647dd7cdb2a857f26111e4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerMovement.playerRotationAmount</definition>
+        <argsstring></argsstring>
+        <name>playerRotationAmount</name>
+        <initializer>= 1.0F</initializer>
+        <briefdescription>
+<para>How much to rotate the player when android touch button for turning left/right is down. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="27" column="18" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_movement_1a55cf4a38e7ce8f9d02715352e55b2de6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerMovement.jumpForce</definition>
+        <argsstring></argsstring>
+        <name>jumpForce</name>
+        <briefdescription>
+<para>editable value to determine the power of the players jump </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="32" column="18" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_movement_1a8f3cee81eb94d94c32e158a30beaaec3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerMovement.walkSpeed</definition>
+        <argsstring></argsstring>
+        <name>walkSpeed</name>
+        <briefdescription>
+<para>editable value to determine the speed of player movement </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="37" column="18" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_movement_1a254811049e46f20ff3799459602c7cc3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerMovement.maxVel</definition>
+        <argsstring></argsstring>
+        <name>maxVel</name>
+        <briefdescription>
+<para>editable value to determine the players maximum horizontal velocity </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="42" column="18" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_movement_1a8c9ef0293a554d197b32805decc3936c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_android___g_u_i_script" kindref="compound">Android_GUIScript</ref></type>
+        <definition>Android_GUIScript PlayerMovement.androidTouch</definition>
+        <argsstring></argsstring>
+        <name>androidTouch</name>
+        <briefdescription>
+<para>ref to android touch input script </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="22" column="31" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_movement_1a1a59782fc52356398194e29255f1a0ae" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PlayerMovement.isJumping</definition>
+        <argsstring></argsstring>
+        <name>isJumping</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="45" column="10" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_movement_1ae71be066b5ec2ee27709be5d046d0ff3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PlayerMovement.isWalkingFowards</definition>
+        <argsstring></argsstring>
+        <name>isWalkingFowards</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="46" column="10" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_movement_1a6ed333c8c8a473104eaee880375eb141" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PlayerMovement.isWalkingBack</definition>
+        <argsstring></argsstring>
+        <name>isWalkingBack</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="47" column="10" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_movement_1a9e52d006ad201dc9412608cbb5b44197" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PlayerMovement.isStrafingRight</definition>
+        <argsstring></argsstring>
+        <name>isStrafingRight</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="48" column="10" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_movement_1a0ddda00f558f8ef5dfb70e995f4d1709" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PlayerMovement.isStrafingLeft</definition>
+        <argsstring></argsstring>
+        <name>isStrafingLeft</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="49" column="10" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_movement_1a27276d8e80bcd5acbb70354b06d66841" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PlayerMovement.isGrounded</definition>
+        <argsstring></argsstring>
+        <name>isGrounded</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="50" column="10" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_player_movement_1aaf9b77d7177d538be9c1447d08191322" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerMovement.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+<para>Detects if the player is grounded using multiple raycasts below the player. If the player is grounded, then depending on input keys or touch screen buttons being pressed, they will move, jump and/or rotate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="56" column="10" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="56" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_movement_1a99b8e8c8430a5378ea995435493539d8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerMovement.UpdateAndroidInput</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateAndroidInput</name>
+        <briefdescription>
+<para>Moves the player based on the android touch inputs </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="110" column="10" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="110" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class for movement of player (Keyboard and android touch) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>PlayerMovement</label>
+        <link refid="class_player_movement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Android_GUIScript</label>
+        <link refid="class_android___g_u_i_script"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>jumpButton</edgelabel>
+          <edgelabel>moveBackwardsButton</edgelabel>
+          <edgelabel>moveFowardsButton</edgelabel>
+          <edgelabel>rotateLeftButton</edgelabel>
+          <edgelabel>rotateRightButton</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Button</label>
+      </node>
+      <node id="4">
+        <label>TouchButton</label>
+        <link refid="class_touch_button"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>PlayerMovement</label>
+        <link refid="class_player_movement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>androidTouch</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" line="6" column="7" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/PlayerMovement.cs" bodystart="7" bodyend="142"/>
+    <listofallmembers>
+      <member refid="class_player_movement_1a8c9ef0293a554d197b32805decc3936c" prot="private" virt="non-virtual"><scope>PlayerMovement</scope><name>androidTouch</name></member>
+      <member refid="class_player_movement_1a27276d8e80bcd5acbb70354b06d66841" prot="private" virt="non-virtual"><scope>PlayerMovement</scope><name>isGrounded</name></member>
+      <member refid="class_player_movement_1a1a59782fc52356398194e29255f1a0ae" prot="private" virt="non-virtual"><scope>PlayerMovement</scope><name>isJumping</name></member>
+      <member refid="class_player_movement_1a0ddda00f558f8ef5dfb70e995f4d1709" prot="private" virt="non-virtual"><scope>PlayerMovement</scope><name>isStrafingLeft</name></member>
+      <member refid="class_player_movement_1a9e52d006ad201dc9412608cbb5b44197" prot="private" virt="non-virtual"><scope>PlayerMovement</scope><name>isStrafingRight</name></member>
+      <member refid="class_player_movement_1a6ed333c8c8a473104eaee880375eb141" prot="private" virt="non-virtual"><scope>PlayerMovement</scope><name>isWalkingBack</name></member>
+      <member refid="class_player_movement_1ae71be066b5ec2ee27709be5d046d0ff3" prot="private" virt="non-virtual"><scope>PlayerMovement</scope><name>isWalkingFowards</name></member>
+      <member refid="class_player_movement_1a55cf4a38e7ce8f9d02715352e55b2de6" prot="public" virt="non-virtual"><scope>PlayerMovement</scope><name>jumpForce</name></member>
+      <member refid="class_player_movement_1a254811049e46f20ff3799459602c7cc3" prot="public" virt="non-virtual"><scope>PlayerMovement</scope><name>maxVel</name></member>
+      <member refid="class_player_movement_1a539ba72ecb45b43168ee33a9be502bfd" prot="public" virt="non-virtual"><scope>PlayerMovement</scope><name>playerBody</name></member>
+      <member refid="class_player_movement_1a1184316364647dd7cdb2a857f26111e4" prot="public" virt="non-virtual"><scope>PlayerMovement</scope><name>playerRotationAmount</name></member>
+      <member refid="class_player_movement_1afd9627e73c1c8128c0c583e5ab9515f1" prot="public" virt="non-virtual"><scope>PlayerMovement</scope><name>playerTransform</name></member>
+      <member refid="class_player_movement_1aaf9b77d7177d538be9c1447d08191322" prot="private" virt="non-virtual"><scope>PlayerMovement</scope><name>Update</name></member>
+      <member refid="class_player_movement_1a99b8e8c8430a5378ea995435493539d8" prot="private" virt="non-virtual"><scope>PlayerMovement</scope><name>UpdateAndroidInput</name></member>
+      <member refid="class_player_movement_1a8f3cee81eb94d94c32e158a30beaaec3" prot="public" virt="non-virtual"><scope>PlayerMovement</scope><name>walkSpeed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

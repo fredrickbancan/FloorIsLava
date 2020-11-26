@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
 /// <summary>
-/// Class for PC movement of player (keyboard)
+/// Class for movement of player (Keyboard and android touch)
 /// </summary>
-public class PC_Movement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     /// <summary>
     /// ref to player rigidbody for physics
@@ -14,6 +14,17 @@ public class PC_Movement : MonoBehaviour
     /// ref to player transform for movement
     /// </summary>
     public Transform playerTransform;
+
+    /// <summary>
+    /// ref to android touch input script
+    /// </summary>
+    [SerializeField]
+    private Android_GUIScript androidTouch;
+
+    /// <summary>
+    /// How much to rotate the player when android touch button for turning left/right is down.
+    /// </summary>
+    public float playerRotationAmount = 1.0F;
 
     /// <summary>
     /// editable value to determine the power of the players jump
@@ -40,7 +51,7 @@ public class PC_Movement : MonoBehaviour
   
     /// <summary>
     /// Detects if the player is grounded using multiple raycasts below the player.
-    /// If the player is grounded, then depending on input keys being pressed, they will move or jump.
+    /// If the player is grounded, then depending on input keys or touch screen buttons being pressed, they will move, jump and/or rotate.
     /// </summary>
     void Update()
     {
@@ -83,11 +94,49 @@ public class PC_Movement : MonoBehaviour
                 playerBody.velocity -= playerTransform.right * walkSpeed;
             }
         }
-        
+
+        UpdateAndroidInput(); 
+
 
         float prevy = playerBody.velocity.y;
         playerBody.velocity = Vector3.ClampMagnitude(new Vector3(playerBody.velocity.x, 0, playerBody.velocity.z), maxVel);
         playerBody.velocity = new Vector3(playerBody.velocity.x, prevy, playerBody.velocity.z);
 
+    }
+
+    /// <summary>
+    /// Moves the player based on the android touch inputs
+    /// </summary>
+    void UpdateAndroidInput()
+    {
+        Vector4 values = androidTouch.GetInputValues();
+        if (isGrounded)
+        {
+            if (values.x != 0)//movefowards
+            {
+                playerBody.velocity += playerTransform.forward * walkSpeed;
+            }
+            if (values.y != 0)//moveBack
+            {
+                playerBody.velocity -= playerTransform.forward * walkSpeed;
+            }
+            if(androidTouch.jumping)
+            {
+                playerBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                androidTouch.jumping = false;
+            }
+        }
+        if (values.z != 0)//rotateLeft
+        {
+            Vector3 ang = playerTransform.eulerAngles;
+            ang.y -= playerRotationAmount;
+            playerTransform.rotation = Quaternion.Euler(ang);
+        }
+        if (values.w != 0)//rotateRight
+        {
+            Vector3 ang = playerTransform.eulerAngles;
+            ang.y += playerRotationAmount;
+            playerTransform.rotation = Quaternion.Euler(ang);
+        }
     }
 }

@@ -1,16 +1,18 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
   <compounddef id="dir_f13b41af88cf68434578284aaf699e39" kind="dir">
-    <compoundname>Assets/Scripts</compoundname>
+    <compoundname>C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts</compoundname>
+    <innerfile refid="_android___g_u_i_script_8cs">Android_GUIScript.cs</innerfile>
     <innerfile refid="_canvas_script_8cs">CanvasScript.cs</innerfile>
     <innerfile refid="lava_script_8cs">lavaScript.cs</innerfile>
     <innerfile refid="_p_c___mouse_look_8cs">PC_MouseLook.cs</innerfile>
-    <innerfile refid="_p_c___movement_8cs">PC_Movement.cs</innerfile>
+    <innerfile refid="_player_movement_8cs">PlayerMovement.cs</innerfile>
     <innerfile refid="_player_script_8cs">PlayerScript.cs</innerfile>
+    <innerfile refid="_touch_button_8cs">TouchButton.cs</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Assets/Scripts/"/>
+    <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/"/>
   </compounddef>
 </doxygen>

@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['maxlosstextdisplayticks_73',['maxLossTextDisplayTicks',['../class_canvas_script.html#aaa20089f1f93887cc5a5b1b5f42812b8',1,'CanvasScript']]],
-  ['maxrespawnticks_74',['maxRespawnTicks',['../class_player_script.html#a92f4f84ae798cf617031fa24a6b1589d',1,'PlayerScript']]],
-  ['maxvel_75',['maxVel',['../class_p_c___movement.html#aefcd88b4ecc3c47dc059d0cfc6dab619',1,'PC_Movement']]],
-  ['maxwintextdisplayticks_76',['maxWinTextDisplayTicks',['../class_canvas_script.html#a8387725e5b8d845e02eda507f3e3514e',1,'CanvasScript']]],
-  ['movespeed_77',['moveSpeed',['../classlava_script.html#abca9120810f8c09f476f4ef755346cb1',1,'lavaScript']]]
+  ['lavatransform_121',['lavaTransform',['../classlava_script.html#a86046d5ca45fc1d025ab95ee6d818d11',1,'lavaScript']]],
+  ['losstext_122',['lossText',['../class_canvas_script.html#accc2510263c8ae587337dddd85b52869',1,'CanvasScript']]],
+  ['losstextdisplayticks_123',['lossTextDisplayTicks',['../class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed',1,'CanvasScript']]]
 ];

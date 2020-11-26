@@ -1,5 +1,25 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.20" xml:lang="en-US">
+  <compound refid="class_android___g_u_i_script" kind="class"><name>Android_GUIScript</name>
+    <member refid="class_android___g_u_i_script_1af15259688e7f7520f1c9f9d71c94a9cc" kind="variable"><name>moveFowardsButton</name></member>
+    <member refid="class_android___g_u_i_script_1ad1fe16d1dfb1c6cf232367b53b83d6d7" kind="variable"><name>rotateLeftButton</name></member>
+    <member refid="class_android___g_u_i_script_1a59bdd0639ccaf0e2ad13f5ba160b7414" kind="variable"><name>rotateRightButton</name></member>
+    <member refid="class_android___g_u_i_script_1a68e36013085e91124eeb85f78be04498" kind="variable"><name>moveBackwardsButton</name></member>
+    <member refid="class_android___g_u_i_script_1a666c451b1224d6bced91d423be67cd81" kind="variable"><name>jumpButton</name></member>
+    <member refid="class_android___g_u_i_script_1a06a1ae62c4c643dd3fb405c0951c30fe" kind="variable"><name>inputValues</name></member>
+    <member refid="class_android___g_u_i_script_1a4ed5ceec5bfd901b166bd182b3d31ee1" kind="variable"><name>jumping</name></member>
+    <member refid="class_android___g_u_i_script_1a4c79a73805cdffbf919f1ce2780f6486" kind="function"><name>Start</name></member>
+    <member refid="class_android___g_u_i_script_1ab39f671ec132bd0c1847437f025eb0a6" kind="function"><name>OnMoveFowardsButtonDown</name></member>
+    <member refid="class_android___g_u_i_script_1a2102427c0b255632b3c61313b033f55f" kind="function"><name>OnMoveFowardsButtonUp</name></member>
+    <member refid="class_android___g_u_i_script_1a9b746a5b121fb0e7f2aec1a42257fcc3" kind="function"><name>OnMoveBackwardsButtonDown</name></member>
+    <member refid="class_android___g_u_i_script_1a93e9b93cf6e564bc39637f06bcde7467" kind="function"><name>OnMoveBackwardsButtonUp</name></member>
+    <member refid="class_android___g_u_i_script_1ad54c93a02872cb0a7576dd5ea882eece" kind="function"><name>OnRotateLeftButtonDown</name></member>
+    <member refid="class_android___g_u_i_script_1af666541bdcd7496987f31bf1260e6352" kind="function"><name>OnRotateLeftButtonUp</name></member>
+    <member refid="class_android___g_u_i_script_1af0bc1920ff9485238c4c5210f510858a" kind="function"><name>OnRotateRightButtonDown</name></member>
+    <member refid="class_android___g_u_i_script_1a07389a6a1268f5c640b87077f3b65927" kind="function"><name>OnRotateRightButtonUp</name></member>
+    <member refid="class_android___g_u_i_script_1a411c6da9df284edb65687d5155ed74a4" kind="function"><name>OnJumpButton</name></member>
+    <member refid="class_android___g_u_i_script_1a83972aea463ec938132c3591fb337281" kind="function"><name>GetInputValues</name></member>
+  </compound>
   <compound refid="class_canvas_script" kind="class"><name>CanvasScript</name>
     <member refid="class_canvas_script_1ad895a27077a6c7a1368e2ee7f6f467f9" kind="variable"><name>winText</name></member>
     <member refid="class_canvas_script_1accc2510263c8ae587337dddd85b52869" kind="variable"><name>lossText</name></member>
@@ -26,19 +46,22 @@
     <member refid="class_p_c___mouse_look_1ab9d6717daecfc10e2c96fdc3cb5f8fb8" kind="variable"><name>playerBody</name></member>
     <member refid="class_p_c___mouse_look_1ac6a67b858bac4d5934a1ea8982c1566e" kind="function"><name>Update</name></member>
   </compound>
-  <compound refid="class_p_c___movement" kind="class"><name>PC_Movement</name>
-    <member refid="class_p_c___movement_1a001bb6ad7ee608a270cb1adfde71ca66" kind="variable"><name>playerBody</name></member>
-    <member refid="class_p_c___movement_1abf8204b782bb180404fbb38fa6301d15" kind="variable"><name>playerTransform</name></member>
-    <member refid="class_p_c___movement_1aa826cf2ae48541b3a5911fb219a53a64" kind="variable"><name>jumpForce</name></member>
-    <member refid="class_p_c___movement_1a3eace894901d8d851e3d83ac820d6083" kind="variable"><name>walkSpeed</name></member>
-    <member refid="class_p_c___movement_1aefcd88b4ecc3c47dc059d0cfc6dab619" kind="variable"><name>maxVel</name></member>
-    <member refid="class_p_c___movement_1aac02227825d942a2fcb43f9495ab677b" kind="variable"><name>isJumping</name></member>
-    <member refid="class_p_c___movement_1a4925e830df4f7177e95b877a44630e50" kind="variable"><name>isWalkingFowards</name></member>
-    <member refid="class_p_c___movement_1aa810a5651df017cad38fc83fd11043d3" kind="variable"><name>isWalkingBack</name></member>
-    <member refid="class_p_c___movement_1af1b1494928b97050a7e3728fe24317fe" kind="variable"><name>isStrafingRight</name></member>
-    <member refid="class_p_c___movement_1acefa24eefb2a5f8c1bd2aa16a8535fac" kind="variable"><name>isStrafingLeft</name></member>
-    <member refid="class_p_c___movement_1ac84c14c634ede8508af66dae4315b7e0" kind="variable"><name>isGrounded</name></member>
-    <member refid="class_p_c___movement_1a5fa6dcf809fe4c35032990a90cc387e9" kind="function"><name>Update</name></member>
+  <compound refid="class_player_movement" kind="class"><name>PlayerMovement</name>
+    <member refid="class_player_movement_1a539ba72ecb45b43168ee33a9be502bfd" kind="variable"><name>playerBody</name></member>
+    <member refid="class_player_movement_1afd9627e73c1c8128c0c583e5ab9515f1" kind="variable"><name>playerTransform</name></member>
+    <member refid="class_player_movement_1a1184316364647dd7cdb2a857f26111e4" kind="variable"><name>playerRotationAmount</name></member>
+    <member refid="class_player_movement_1a55cf4a38e7ce8f9d02715352e55b2de6" kind="variable"><name>jumpForce</name></member>
+    <member refid="class_player_movement_1a8f3cee81eb94d94c32e158a30beaaec3" kind="variable"><name>walkSpeed</name></member>
+    <member refid="class_player_movement_1a254811049e46f20ff3799459602c7cc3" kind="variable"><name>maxVel</name></member>
+    <member refid="class_player_movement_1a8c9ef0293a554d197b32805decc3936c" kind="variable"><name>androidTouch</name></member>
+    <member refid="class_player_movement_1a1a59782fc52356398194e29255f1a0ae" kind="variable"><name>isJumping</name></member>
+    <member refid="class_player_movement_1ae71be066b5ec2ee27709be5d046d0ff3" kind="variable"><name>isWalkingFowards</name></member>
+    <member refid="class_player_movement_1a6ed333c8c8a473104eaee880375eb141" kind="variable"><name>isWalkingBack</name></member>
+    <member refid="class_player_movement_1a9e52d006ad201dc9412608cbb5b44197" kind="variable"><name>isStrafingRight</name></member>
+    <member refid="class_player_movement_1a0ddda00f558f8ef5dfb70e995f4d1709" kind="variable"><name>isStrafingLeft</name></member>
+    <member refid="class_player_movement_1a27276d8e80bcd5acbb70354b06d66841" kind="variable"><name>isGrounded</name></member>
+    <member refid="class_player_movement_1aaf9b77d7177d538be9c1447d08191322" kind="function"><name>Update</name></member>
+    <member refid="class_player_movement_1a99b8e8c8430a5378ea995435493539d8" kind="function"><name>UpdateAndroidInput</name></member>
   </compound>
   <compound refid="class_player_script" kind="class"><name>PlayerScript</name>
     <member refid="class_player_script_1adc4f3dcd2e4f0b801ff6d13e95e3e4d3" kind="variable"><name>cs</name></member>
@@ -49,11 +72,25 @@
     <member refid="class_player_script_1a9464a6aa07d259841f54bc24a9522f7c" kind="function"><name>Update</name></member>
     <member refid="class_player_script_1a7f13d1a39a3a90c097c07a7a37cd103c" kind="function"><name>OnTriggerEnter</name></member>
   </compound>
+  <compound refid="class_touch_button" kind="class"><name>TouchButton</name>
+    <member refid="class_touch_button_1a238a386eedf0aab86149fad0ce3e7d93" kind="variable"><name>onButtonDown</name></member>
+    <member refid="class_touch_button_1a195c1ba96c011c91a85f36f98b101eab" kind="variable"><name>onButtonUp</name></member>
+    <member refid="class_touch_button_1a32bbb9cf1a2d80cf1ea230858ffa1a19" kind="property"><name>onButDown</name></member>
+    <member refid="class_touch_button_1a612ae2387f59f8530a2e02ce423d5b60" kind="property"><name>onButUp</name></member>
+    <member refid="class_touch_button_1a1890faaa9c5f0e7e52d00ae1121de7b5" kind="function"><name>OnPointerDown</name></member>
+    <member refid="class_touch_button_1a4645ff4a86f7d0106f792eec9d878cca" kind="function"><name>OnPointerUp</name></member>
+  </compound>
   <compound refid="namespace_unity_engine" kind="namespace"><name>UnityEngine</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_events" kind="namespace"><name>UnityEngine::Events</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_event_systems" kind="namespace"><name>UnityEngine::EventSystems</name>
   </compound>
   <compound refid="namespace_unity_engine_1_1_scene_management" kind="namespace"><name>UnityEngine::SceneManagement</name>
   </compound>
   <compound refid="namespace_unity_engine_1_1_u_i" kind="namespace"><name>UnityEngine::UI</name>
+  </compound>
+  <compound refid="_android___g_u_i_script_8cs" kind="file"><name>Android_GUIScript.cs</name>
   </compound>
   <compound refid="_canvas_script_8cs" kind="file"><name>CanvasScript.cs</name>
   </compound>
@@ -61,12 +98,14 @@
   </compound>
   <compound refid="_p_c___mouse_look_8cs" kind="file"><name>PC_MouseLook.cs</name>
   </compound>
-  <compound refid="_p_c___movement_8cs" kind="file"><name>PC_Movement.cs</name>
+  <compound refid="_player_movement_8cs" kind="file"><name>PlayerMovement.cs</name>
   </compound>
   <compound refid="_player_script_8cs" kind="file"><name>PlayerScript.cs</name>
   </compound>
-  <compound refid="dir_84bbf7b3c7f28a5a18725745e1505219" kind="dir"><name>Assets</name>
+  <compound refid="_touch_button_8cs" kind="file"><name>TouchButton.cs</name>
   </compound>
-  <compound refid="dir_f13b41af88cf68434578284aaf699e39" kind="dir"><name>Assets/Scripts</name>
+  <compound refid="dir_84bbf7b3c7f28a5a18725745e1505219" kind="dir"><name>C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets</name>
+  </compound>
+  <compound refid="dir_f13b41af88cf68434578284aaf699e39" kind="dir"><name>C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts</name>
   </compound>
 </doxygenindex>

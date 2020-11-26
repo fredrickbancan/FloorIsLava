@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
+  <compounddef id="class_android___g_u_i_script" kind="class" language="C#" prot="public">
+    <compoundname>Android_GUIScript</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_android___g_u_i_script_1af15259688e7f7520f1c9f9d71c94a9cc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_touch_button" kindref="compound">TouchButton</ref></type>
+        <definition>TouchButton Android_GUIScript.moveFowardsButton</definition>
+        <argsstring></argsstring>
+        <name>moveFowardsButton</name>
+        <briefdescription>
+<para>Touchscreen input button reference </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="13" column="25" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_android___g_u_i_script_1ad1fe16d1dfb1c6cf232367b53b83d6d7" prot="private" static="no" mutable="no">
+        <type><ref refid="class_touch_button" kindref="compound">TouchButton</ref></type>
+        <definition>TouchButton Android_GUIScript.rotateLeftButton</definition>
+        <argsstring></argsstring>
+        <name>rotateLeftButton</name>
+        <briefdescription>
+<para>Touchscreen input button reference </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="19" column="25" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_android___g_u_i_script_1a59bdd0639ccaf0e2ad13f5ba160b7414" prot="private" static="no" mutable="no">
+        <type><ref refid="class_touch_button" kindref="compound">TouchButton</ref></type>
+        <definition>TouchButton Android_GUIScript.rotateRightButton</definition>
+        <argsstring></argsstring>
+        <name>rotateRightButton</name>
+        <briefdescription>
+<para>Touchscreen input button reference </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="25" column="25" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_android___g_u_i_script_1a68e36013085e91124eeb85f78be04498" prot="private" static="no" mutable="no">
+        <type><ref refid="class_touch_button" kindref="compound">TouchButton</ref></type>
+        <definition>TouchButton Android_GUIScript.moveBackwardsButton</definition>
+        <argsstring></argsstring>
+        <name>moveBackwardsButton</name>
+        <briefdescription>
+<para>Touchscreen input button reference </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="31" column="25" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_android___g_u_i_script_1a666c451b1224d6bced91d423be67cd81" prot="private" static="no" mutable="no">
+        <type><ref refid="class_touch_button" kindref="compound">TouchButton</ref></type>
+        <definition>TouchButton Android_GUIScript.jumpButton</definition>
+        <argsstring></argsstring>
+        <name>jumpButton</name>
+        <briefdescription>
+<para>Touchscreen input button reference </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="37" column="25" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_android___g_u_i_script_1a06a1ae62c4c643dd3fb405c0951c30fe" prot="private" static="no" mutable="no">
+        <type>Vector4</type>
+        <definition>Vector4 Android_GUIScript.inputValues</definition>
+        <argsstring></argsstring>
+        <name>inputValues</name>
+        <initializer>= new Vector4()</initializer>
+        <briefdescription>
+<para>Vector4 to keep track of all input buttons </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="42" column="21" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_android___g_u_i_script_1a4ed5ceec5bfd901b166bd182b3d31ee1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Android_GUIScript.jumping</definition>
+        <argsstring></argsstring>
+        <name>jumping</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Vector4 to keep track of jump </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="47" column="17" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_android___g_u_i_script_1a4c79a73805cdffbf919f1ce2780f6486" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Android_GUIScript.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+<para>Add all listeners to buttons </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="52" column="10" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="52" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_android___g_u_i_script_1ab39f671ec132bd0c1847437f025eb0a6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Android_GUIScript.OnMoveFowardsButtonDown</definition>
+        <argsstring>()</argsstring>
+        <name>OnMoveFowardsButtonDown</name>
+        <briefdescription>
+<para>Listener function for button to allow touch input </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="68" column="11" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_android___g_u_i_script_1a2102427c0b255632b3c61313b033f55f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Android_GUIScript.OnMoveFowardsButtonUp</definition>
+        <argsstring>()</argsstring>
+        <name>OnMoveFowardsButtonUp</name>
+        <briefdescription>
+<para>Listener function for button to allow touch input </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="76" column="11" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_android___g_u_i_script_1a9b746a5b121fb0e7f2aec1a42257fcc3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Android_GUIScript.OnMoveBackwardsButtonDown</definition>
+        <argsstring>()</argsstring>
+        <name>OnMoveBackwardsButtonDown</name>
+        <briefdescription>
+<para>Listener function for button to allow touch input </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="84" column="11" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_android___g_u_i_script_1a93e9b93cf6e564bc39637f06bcde7467" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Android_GUIScript.OnMoveBackwardsButtonUp</definition>
+        <argsstring>()</argsstring>
+        <name>OnMoveBackwardsButtonUp</name>
+        <briefdescription>
+<para>Listener function for button to allow touch input </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="92" column="11" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_android___g_u_i_script_1ad54c93a02872cb0a7576dd5ea882eece" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Android_GUIScript.OnRotateLeftButtonDown</definition>
+        <argsstring>()</argsstring>
+        <name>OnRotateLeftButtonDown</name>
+        <briefdescription>
+<para>Listener function for button to allow touch input </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="100" column="11" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_android___g_u_i_script_1af666541bdcd7496987f31bf1260e6352" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Android_GUIScript.OnRotateLeftButtonUp</definition>
+        <argsstring>()</argsstring>
+        <name>OnRotateLeftButtonUp</name>
+        <briefdescription>
+<para>Listener function for button to allow touch input </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="108" column="11" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_android___g_u_i_script_1af0bc1920ff9485238c4c5210f510858a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Android_GUIScript.OnRotateRightButtonDown</definition>
+        <argsstring>()</argsstring>
+        <name>OnRotateRightButtonDown</name>
+        <briefdescription>
+<para>Listener function for button to allow touch input </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="116" column="11" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_android___g_u_i_script_1a07389a6a1268f5c640b87077f3b65927" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Android_GUIScript.OnRotateRightButtonUp</definition>
+        <argsstring>()</argsstring>
+        <name>OnRotateRightButtonUp</name>
+        <briefdescription>
+<para>Listener function for button to allow touch input </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="124" column="11" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_android___g_u_i_script_1a411c6da9df284edb65687d5155ed74a4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Android_GUIScript.OnJumpButton</definition>
+        <argsstring>()</argsstring>
+        <name>OnJumpButton</name>
+        <briefdescription>
+<para>Listener function for button to allow touch input </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="132" column="11" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="132" bodyend="135"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_android___g_u_i_script_1a83972aea463ec938132c3591fb337281" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector4</type>
+        <definition>Vector4 Android_GUIScript.GetInputValues</definition>
+        <argsstring>()</argsstring>
+        <name>GetInputValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="137" column="20" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="137" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Script for integration of android touch screen buttons </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Android_GUIScript</label>
+        <link refid="class_android___g_u_i_script"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Android_GUIScript</label>
+        <link refid="class_android___g_u_i_script"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>jumpButton</edgelabel>
+          <edgelabel>moveBackwardsButton</edgelabel>
+          <edgelabel>moveFowardsButton</edgelabel>
+          <edgelabel>rotateLeftButton</edgelabel>
+          <edgelabel>rotateRightButton</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Button</label>
+      </node>
+      <node id="3">
+        <label>TouchButton</label>
+        <link refid="class_touch_button"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" line="6" column="7" bodyfile="C:/Users/disckord/Desktop/Cross Platform Development For Games/workspace/FloorIsLava/Assets/Scripts/Android_GUIScript.cs" bodystart="7" bodyend="141"/>
+    <listofallmembers>
+      <member refid="class_android___g_u_i_script_1a83972aea463ec938132c3591fb337281" prot="public" virt="non-virtual"><scope>Android_GUIScript</scope><name>GetInputValues</name></member>
+      <member refid="class_android___g_u_i_script_1a06a1ae62c4c643dd3fb405c0951c30fe" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>inputValues</name></member>
+      <member refid="class_android___g_u_i_script_1a666c451b1224d6bced91d423be67cd81" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>jumpButton</name></member>
+      <member refid="class_android___g_u_i_script_1a4ed5ceec5bfd901b166bd182b3d31ee1" prot="public" virt="non-virtual"><scope>Android_GUIScript</scope><name>jumping</name></member>
+      <member refid="class_android___g_u_i_script_1a68e36013085e91124eeb85f78be04498" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>moveBackwardsButton</name></member>
+      <member refid="class_android___g_u_i_script_1af15259688e7f7520f1c9f9d71c94a9cc" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>moveFowardsButton</name></member>
+      <member refid="class_android___g_u_i_script_1a411c6da9df284edb65687d5155ed74a4" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>OnJumpButton</name></member>
+      <member refid="class_android___g_u_i_script_1a9b746a5b121fb0e7f2aec1a42257fcc3" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>OnMoveBackwardsButtonDown</name></member>
+      <member refid="class_android___g_u_i_script_1a93e9b93cf6e564bc39637f06bcde7467" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>OnMoveBackwardsButtonUp</name></member>
+      <member refid="class_android___g_u_i_script_1ab39f671ec132bd0c1847437f025eb0a6" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>OnMoveFowardsButtonDown</name></member>
+      <member refid="class_android___g_u_i_script_1a2102427c0b255632b3c61313b033f55f" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>OnMoveFowardsButtonUp</name></member>
+      <member refid="class_android___g_u_i_script_1ad54c93a02872cb0a7576dd5ea882eece" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>OnRotateLeftButtonDown</name></member>
+      <member refid="class_android___g_u_i_script_1af666541bdcd7496987f31bf1260e6352" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>OnRotateLeftButtonUp</name></member>
+      <member refid="class_android___g_u_i_script_1af0bc1920ff9485238c4c5210f510858a" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>OnRotateRightButtonDown</name></member>
+      <member refid="class_android___g_u_i_script_1a07389a6a1268f5c640b87077f3b65927" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>OnRotateRightButtonUp</name></member>
+      <member refid="class_android___g_u_i_script_1ad1fe16d1dfb1c6cf232367b53b83d6d7" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>rotateLeftButton</name></member>
+      <member refid="class_android___g_u_i_script_1a59bdd0639ccaf0e2ad13f5ba160b7414" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>rotateRightButton</name></member>
+      <member refid="class_android___g_u_i_script_1a4c79a73805cdffbf919f1ce2780f6486" prot="private" virt="non-virtual"><scope>Android_GUIScript</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

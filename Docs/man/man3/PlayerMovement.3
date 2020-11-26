@@ -1,0 +1,256 @@
+.TH "PlayerMovement" 3 "Thu Nov 26 2020" "Version 1.0" "FloorIsLava" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PlayerMovement \- Class for movement of player (Keyboard and android touch)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits MonoBehaviour\&.
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Rigidbody \fBplayerBody\fP"
+.br
+.RI "ref to player rigidbody for physics "
+.ti -1c
+.RI "Transform \fBplayerTransform\fP"
+.br
+.RI "ref to player transform for movement "
+.ti -1c
+.RI "float \fBplayerRotationAmount\fP = 1\&.0F"
+.br
+.RI "How much to rotate the player when android touch button for turning left/right is down\&. "
+.ti -1c
+.RI "float \fBjumpForce\fP"
+.br
+.RI "editable value to determine the power of the players jump "
+.ti -1c
+.RI "float \fBwalkSpeed\fP"
+.br
+.RI "editable value to determine the speed of player movement "
+.ti -1c
+.RI "float \fBmaxVel\fP"
+.br
+.RI "editable value to determine the players maximum horizontal velocity "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "Detects if the player is grounded using multiple raycasts below the player\&. If the player is grounded, then depending on input keys or touch screen buttons being pressed, they will move, jump and/or rotate\&. "
+.ti -1c
+.RI "void \fBUpdateAndroidInput\fP ()"
+.br
+.RI "Moves the player based on the android touch inputs "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBAndroid_GUIScript\fP \fBandroidTouch\fP"
+.br
+.RI "ref to android touch input script "
+.ti -1c
+.RI "bool \fBisJumping\fP = false"
+.br
+.ti -1c
+.RI "bool \fBisWalkingFowards\fP = false"
+.br
+.ti -1c
+.RI "bool \fBisWalkingBack\fP = false"
+.br
+.ti -1c
+.RI "bool \fBisStrafingRight\fP = false"
+.br
+.ti -1c
+.RI "bool \fBisStrafingLeft\fP = false"
+.br
+.ti -1c
+.RI "bool \fBisGrounded\fP = true"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class for movement of player (Keyboard and android touch) 
+
+
+.PP
+Definition at line 6 of file PlayerMovement\&.cs\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void PlayerMovement\&.Update ()\fC [private]\fP"
+
+.PP
+Detects if the player is grounded using multiple raycasts below the player\&. If the player is grounded, then depending on input keys or touch screen buttons being pressed, they will move, jump and/or rotate\&. 
+.PP
+Definition at line 56 of file PlayerMovement\&.cs\&.
+.PP
+.nf
+57     {
+58         //using rays on every bottom corner and edge of the player box to determine if they are standing on the ground\&.
+59         isGrounded = 
+60             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(0\&.5F, -0\&.2F, 0), Vector3\&.down), 0\&.5F) ||
+61             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(-0\&.5F, -0\&.2F, 0), Vector3\&.down), 0\&.5F) ||
+62             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(0\&.0F, -0\&.2F, 0\&.5F), Vector3\&.down), 0\&.5F) ||
+63             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(0\&.0F, -0\&.2F, -0\&.5F), Vector3\&.down), 0\&.5F) ||
+64 
+65             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(0\&.5F, -0\&.2F, 0\&.5F), Vector3\&.down), 0\&.5F) ||
+66             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(-0\&.5F, -0\&.2F, -0\&.5F), Vector3\&.down), 0\&.5F) ||
+67             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(-0\&.5F, -0\&.2F, 0\&.5F), Vector3\&.down), 0\&.5F) ||
+68             Physics\&.Raycast(new Ray(playerTransform\&.position + new Vector3(0\&.5F, -0\&.2F, -0\&.5F), Vector3\&.down), 0\&.5F);
+69         isJumping = Input\&.GetKeyDown(KeyCode\&.Space);
+70         isWalkingFowards = Input\&.GetKey(KeyCode\&.W);
+71         isWalkingBack = Input\&.GetKey(KeyCode\&.S);
+72         isStrafingRight = Input\&.GetKey(KeyCode\&.D);
+73         isStrafingLeft = Input\&.GetKey(KeyCode\&.A);
+74         if(isGrounded)
+75         {
+76             if (isJumping)
+77             {
+78                 playerBody\&.AddForce(Vector3\&.up * jumpForce, ForceMode\&.Impulse);
+79             }
+80             if (isWalkingFowards)
+81             {
+82                 playerBody\&.velocity += playerTransform\&.forward * walkSpeed;
+83             }
+84             if (isWalkingBack)
+85             {
+86                 playerBody\&.velocity -= playerTransform\&.forward * walkSpeed;
+87             }
+88             if (isStrafingRight)
+89             {
+90                 playerBody\&.velocity += playerTransform\&.right * walkSpeed;
+91             }
+92             if (isStrafingLeft)
+93             {
+94                 playerBody\&.velocity -= playerTransform\&.right * walkSpeed;
+95             }
+96         }
+97 
+98         UpdateAndroidInput(); 
+99 
+100 
+101         float prevy = playerBody\&.velocity\&.y;
+102         playerBody\&.velocity = Vector3\&.ClampMagnitude(new Vector3(playerBody\&.velocity\&.x, 0, playerBody\&.velocity\&.z), maxVel);
+103         playerBody\&.velocity = new Vector3(playerBody\&.velocity\&.x, prevy, playerBody\&.velocity\&.z);
+104 
+105     }
+.fi
+.SS "void PlayerMovement\&.UpdateAndroidInput ()\fC [private]\fP"
+
+.PP
+Moves the player based on the android touch inputs 
+.PP
+Definition at line 110 of file PlayerMovement\&.cs\&.
+.PP
+.nf
+111     {
+112         Vector4 values = androidTouch\&.GetInputValues();
+113         if (isGrounded)
+114         {
+115             if (values\&.x != 0)//movefowards
+116             {
+117                 playerBody\&.velocity += playerTransform\&.forward * walkSpeed;
+118             }
+119             if (values\&.y != 0)//moveBack
+120             {
+121                 playerBody\&.velocity -= playerTransform\&.forward * walkSpeed;
+122             }
+123             if(androidTouch\&.jumping)
+124             {
+125                 playerBody\&.AddForce(Vector3\&.up * jumpForce, ForceMode\&.Impulse);
+126                 androidTouch\&.jumping = false;
+127             }
+128         }
+129         if (values\&.z != 0)//rotateLeft
+130         {
+131             Vector3 ang = playerTransform\&.eulerAngles;
+132             ang\&.y -= playerRotationAmount;
+133             playerTransform\&.rotation = Quaternion\&.Euler(ang);
+134         }
+135         if (values\&.w != 0)//rotateRight
+136         {
+137             Vector3 ang = playerTransform\&.eulerAngles;
+138             ang\&.y += playerRotationAmount;
+139             playerTransform\&.rotation = Quaternion\&.Euler(ang);
+140         }
+141     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBAndroid_GUIScript\fP PlayerMovement\&.androidTouch\fC [private]\fP"
+
+.PP
+ref to android touch input script 
+.PP
+Definition at line 22 of file PlayerMovement\&.cs\&.
+.SS "bool PlayerMovement\&.isGrounded = true\fC [private]\fP"
+
+.PP
+Definition at line 50 of file PlayerMovement\&.cs\&.
+.SS "bool PlayerMovement\&.isJumping = false\fC [private]\fP"
+
+.PP
+Definition at line 45 of file PlayerMovement\&.cs\&.
+.SS "bool PlayerMovement\&.isStrafingLeft = false\fC [private]\fP"
+
+.PP
+Definition at line 49 of file PlayerMovement\&.cs\&.
+.SS "bool PlayerMovement\&.isStrafingRight = false\fC [private]\fP"
+
+.PP
+Definition at line 48 of file PlayerMovement\&.cs\&.
+.SS "bool PlayerMovement\&.isWalkingBack = false\fC [private]\fP"
+
+.PP
+Definition at line 47 of file PlayerMovement\&.cs\&.
+.SS "bool PlayerMovement\&.isWalkingFowards = false\fC [private]\fP"
+
+.PP
+Definition at line 46 of file PlayerMovement\&.cs\&.
+.SS "float PlayerMovement\&.jumpForce"
+
+.PP
+editable value to determine the power of the players jump 
+.PP
+Definition at line 32 of file PlayerMovement\&.cs\&.
+.SS "float PlayerMovement\&.maxVel"
+
+.PP
+editable value to determine the players maximum horizontal velocity 
+.PP
+Definition at line 42 of file PlayerMovement\&.cs\&.
+.SS "Rigidbody PlayerMovement\&.playerBody"
+
+.PP
+ref to player rigidbody for physics 
+.PP
+Definition at line 11 of file PlayerMovement\&.cs\&.
+.SS "float PlayerMovement\&.playerRotationAmount = 1\&.0F"
+
+.PP
+How much to rotate the player when android touch button for turning left/right is down\&. 
+.PP
+Definition at line 27 of file PlayerMovement\&.cs\&.
+.SS "Transform PlayerMovement\&.playerTransform"
+
+.PP
+ref to player transform for movement 
+.PP
+Definition at line 16 of file PlayerMovement\&.cs\&.
+.SS "float PlayerMovement\&.walkSpeed"
+
+.PP
+editable value to determine the speed of player movement 
+.PP
+Definition at line 37 of file PlayerMovement\&.cs\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FloorIsLava from the source code\&.

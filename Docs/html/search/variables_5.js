@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['lavatransform_70',['lavaTransform',['../classlava_script.html#a86046d5ca45fc1d025ab95ee6d818d11',1,'lavaScript']]],
-  ['losstext_71',['lossText',['../class_canvas_script.html#accc2510263c8ae587337dddd85b52869',1,'CanvasScript']]],
-  ['losstextdisplayticks_72',['lossTextDisplayTicks',['../class_canvas_script.html#adfdad6120c1f09070b598858bf4e2eed',1,'CanvasScript']]]
+  ['jumpbutton_118',['jumpButton',['../class_android___g_u_i_script.html#a666c451b1224d6bced91d423be67cd81',1,'Android_GUIScript']]],
+  ['jumpforce_119',['jumpForce',['../class_player_movement.html#a55cf4a38e7ce8f9d02715352e55b2de6',1,'PlayerMovement']]],
+  ['jumping_120',['jumping',['../class_android___g_u_i_script.html#a4ed5ceec5bfd901b166bd182b3d31ee1',1,'Android_GUIScript']]]
 ];
