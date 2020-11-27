@@ -1125,7 +1125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lavaTransform: {fileID: 552109375}
   startHeight: -10
-  moveSpeed: 0.001
+  moveSpeed: 0.01
 --- !u!1 &634233970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,7 +1855,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123866992}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2170bf924172baf4fbdf5eb62c7e9f97, type: 3}
   m_Name: 
@@ -1876,6 +1876,7 @@ MonoBehaviour:
   playerBody: {fileID: 1123866997}
   playerTransform: {fileID: 1123866996}
   androidTouch: {fileID: 1360895504}
+  playerRotationAmount: 1
   jumpForce: 40
   walkSpeed: 200
   maxVel: 2.5
@@ -1893,7 +1894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cs: {fileID: 1846120244}
   player: {fileID: 1123866992}
-  maxRespawnTicks: 500
+  maxRespawnTicks: 175
 --- !u!1 &1151116029
 GameObject:
   m_ObjectHideFlags: 0
@@ -2468,6 +2469,7 @@ MonoBehaviour:
   rotateRightButton: {fileID: 1665395518}
   moveBackwardsButton: {fileID: 1337707431}
   jumpButton: {fileID: 2146719025}
+  jumping: 0
 --- !u!1 &1372525334
 GameObject:
   m_ObjectHideFlags: 0
@@ -3671,7 +3673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2097729851
 RectTransform:
   m_ObjectHideFlags: 0

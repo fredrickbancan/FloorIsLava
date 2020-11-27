@@ -71,6 +71,10 @@ public class PlayerMovement : MonoBehaviour
         isWalkingBack = Input.GetKey(KeyCode.S);
         isStrafingRight = Input.GetKey(KeyCode.D);
         isStrafingLeft = Input.GetKey(KeyCode.A);
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
         if(isGrounded)
         {
             if (isJumping)
