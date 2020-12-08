@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
@@ -53,21 +54,30 @@ public class PlayerScript : MonoBehaviour
     /// Checks if player has touched either the lava plane or the finish trigger.
     /// Depending which, will pause the game and call cs.onWin()/cs.onLoss(). 
     /// Sets hasWonOrLost to TRUE and sets Time.timeScale to 0 to effectively pause game untill respawn.
+    /// RESUBMISSION ADDITION: Added exception handling here.
     /// </summary>
     /// <param name="other">Object collided with</param>
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Finish")//end touch
+        //RESUBMISSION ADDITION: Added exception handling here.
+        try
         {
-            cs.onWin();
-            hasWonOrLost = true;
-            Time.timeScale = 0;
+            if (other.tag == "Finish")//end touch
+            {
+                cs.onWin();
+                hasWonOrLost = true;
+                Time.timeScale = 0;
+            }
+            else if (other.tag == "Respawn")//lava touch
+            {
+                cs.onLoss();
+                hasWonOrLost = true;
+                Time.timeScale = 0;
+            }
         }
-        else if (other.tag == "Respawn")//lava touch
+        catch(Exception e)
         {
-            cs.onLoss();
-            hasWonOrLost = true;
-            Time.timeScale = 0;
+            Debug.LogException(e, this);
         }
     }
 }

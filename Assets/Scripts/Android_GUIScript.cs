@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 /// <summary>
 /// Script for integration of android touch screen buttons
@@ -48,18 +49,27 @@ public class Android_GUIScript : MonoBehaviour
 
     /// <summary>
     /// Add all listeners to buttons
+    /// RESUBMISSION ADDITION: Added exception handling here.
     /// </summary>
     void Start()
     {
-        moveFowardsButton.onButDown.AddListener(OnMoveFowardsButtonDown);
-        moveFowardsButton.onButUp.AddListener(OnMoveFowardsButtonUp);
-        moveBackwardsButton.onButDown.AddListener(OnMoveBackwardsButtonDown);
-        moveBackwardsButton.onButUp.AddListener(OnMoveBackwardsButtonUp);
-        rotateLeftButton.onButDown.AddListener(OnRotateLeftButtonDown);
-        rotateLeftButton.onButUp.AddListener(OnRotateLeftButtonUp);
-        rotateRightButton.onButDown.AddListener(OnRotateRightButtonDown);
-        rotateRightButton.onButUp.AddListener(OnRotateRightButtonUp);
-        jumpButton.onButDown.AddListener(OnJumpButton);
+        //RESUBMISSION ADDITION: Added exception handling here.
+        try
+        {
+            moveFowardsButton.onButDown.AddListener(OnMoveFowardsButtonDown);
+            moveFowardsButton.onButUp.AddListener(OnMoveFowardsButtonUp);
+            moveBackwardsButton.onButDown.AddListener(OnMoveBackwardsButtonDown);
+            moveBackwardsButton.onButUp.AddListener(OnMoveBackwardsButtonUp);
+            rotateLeftButton.onButDown.AddListener(OnRotateLeftButtonDown);
+            rotateLeftButton.onButUp.AddListener(OnRotateLeftButtonUp);
+            rotateRightButton.onButDown.AddListener(OnRotateRightButtonDown);
+            rotateRightButton.onButUp.AddListener(OnRotateRightButtonUp);
+            jumpButton.onButDown.AddListener(OnJumpButton);
+        }
+        catch(Exception e)
+        {
+            Debug.LogException(e, this);
+        }
     }
 
     /// <summary>

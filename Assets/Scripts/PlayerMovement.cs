@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 /// <summary>
 /// Class for movement of player (Keyboard and android touch)
@@ -48,63 +49,72 @@ public class PlayerMovement : MonoBehaviour
     bool isStrafingRight = false;
     bool isStrafingLeft = false;
     bool isGrounded = true;
-  
+
     /// <summary>
     /// Detects if the player is grounded using multiple raycasts below the player.
     /// If the player is grounded, then depending on input keys or touch screen buttons being pressed, they will move, jump and/or rotate.
+    /// RESUBMISSION ADDITION: Added exception handling here.
     /// </summary>
     void Update()
     {
-        //using rays on every bottom corner and edge of the player box to determine if they are standing on the ground.
-        isGrounded = 
-            Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.5F, -0.2F, 0), Vector3.down), 0.5F) ||
-            Physics.Raycast(new Ray(playerTransform.position + new Vector3(-0.5F, -0.2F, 0), Vector3.down), 0.5F) ||
-            Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.0F, -0.2F, 0.5F), Vector3.down), 0.5F) ||
-            Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.0F, -0.2F, -0.5F), Vector3.down), 0.5F) ||
-
-            Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.5F, -0.2F, 0.5F), Vector3.down), 0.5F) ||
-            Physics.Raycast(new Ray(playerTransform.position + new Vector3(-0.5F, -0.2F, -0.5F), Vector3.down), 0.5F) ||
-            Physics.Raycast(new Ray(playerTransform.position + new Vector3(-0.5F, -0.2F, 0.5F), Vector3.down), 0.5F) ||
-            Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.5F, -0.2F, -0.5F), Vector3.down), 0.5F);
-        isJumping = Input.GetKeyDown(KeyCode.Space);
-        isWalkingFowards = Input.GetKey(KeyCode.W);
-        isWalkingBack = Input.GetKey(KeyCode.S);
-        isStrafingRight = Input.GetKey(KeyCode.D);
-        isStrafingLeft = Input.GetKey(KeyCode.A);
-        if(Input.GetKey(KeyCode.Escape))
+        //RESUBMISSION ADDITION: Added exception handling here.
+        try
         {
-            Application.Quit();
+            //using rays on every bottom corner and edge of the player box to determine if they are standing on the ground.
+            isGrounded =
+                Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.5F, -0.2F, 0), Vector3.down), 0.5F) ||
+                Physics.Raycast(new Ray(playerTransform.position + new Vector3(-0.5F, -0.2F, 0), Vector3.down), 0.5F) ||
+                Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.0F, -0.2F, 0.5F), Vector3.down), 0.5F) ||
+                Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.0F, -0.2F, -0.5F), Vector3.down), 0.5F) ||
+
+                Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.5F, -0.2F, 0.5F), Vector3.down), 0.5F) ||
+                Physics.Raycast(new Ray(playerTransform.position + new Vector3(-0.5F, -0.2F, -0.5F), Vector3.down), 0.5F) ||
+                Physics.Raycast(new Ray(playerTransform.position + new Vector3(-0.5F, -0.2F, 0.5F), Vector3.down), 0.5F) ||
+                Physics.Raycast(new Ray(playerTransform.position + new Vector3(0.5F, -0.2F, -0.5F), Vector3.down), 0.5F);
+            isJumping = Input.GetKeyDown(KeyCode.Space);
+            isWalkingFowards = Input.GetKey(KeyCode.W);
+            isWalkingBack = Input.GetKey(KeyCode.S);
+            isStrafingRight = Input.GetKey(KeyCode.D);
+            isStrafingLeft = Input.GetKey(KeyCode.A);
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
+            if (isGrounded)
+            {
+                if (isJumping)
+                {
+                    playerBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                }
+                if (isWalkingFowards)
+                {
+                    playerBody.velocity += playerTransform.forward * walkSpeed;
+                }
+                if (isWalkingBack)
+                {
+                    playerBody.velocity -= playerTransform.forward * walkSpeed;
+                }
+                if (isStrafingRight)
+                {
+                    playerBody.velocity += playerTransform.right * walkSpeed;
+                }
+                if (isStrafingLeft)
+                {
+                    playerBody.velocity -= playerTransform.right * walkSpeed;
+                }
+            }
+
+            UpdateAndroidInput();
+
+
+            float prevy = playerBody.velocity.y;
+            playerBody.velocity = Vector3.ClampMagnitude(new Vector3(playerBody.velocity.x, 0, playerBody.velocity.z), maxVel);
+            playerBody.velocity = new Vector3(playerBody.velocity.x, prevy, playerBody.velocity.z);
         }
-        if(isGrounded)
+        catch(Exception e)
         {
-            if (isJumping)
-            {
-                playerBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            }
-            if (isWalkingFowards)
-            {
-                playerBody.velocity += playerTransform.forward * walkSpeed;
-            }
-            if (isWalkingBack)
-            {
-                playerBody.velocity -= playerTransform.forward * walkSpeed;
-            }
-            if (isStrafingRight)
-            {
-                playerBody.velocity += playerTransform.right * walkSpeed;
-            }
-            if (isStrafingLeft)
-            {
-                playerBody.velocity -= playerTransform.right * walkSpeed;
-            }
+            Debug.LogException(e, this);
         }
-
-        UpdateAndroidInput(); 
-
-
-        float prevy = playerBody.velocity.y;
-        playerBody.velocity = Vector3.ClampMagnitude(new Vector3(playerBody.velocity.x, 0, playerBody.velocity.z), maxVel);
-        playerBody.velocity = new Vector3(playerBody.velocity.x, prevy, playerBody.velocity.z);
 
     }
 
